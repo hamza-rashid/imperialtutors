@@ -1,6 +1,5 @@
 "use client"
 
-import '@fontsource/Manrope';
 import {
     Container,
     Stack,
@@ -69,7 +68,7 @@ import {
                   Book Now!
               </Button>
               <Box textAlign={{ base: 'center', sm: 'unset' }}> 
-                <Text fontSize={'lg'} fontFamily={'Manrope'} transform={'rotate(10deg)'} marginBottom={{ base: 7, sm: 'none' }}>
+                <Text fontSize={'lg'} transform={'rotate(10deg)'} marginBottom={{ base: 7, sm: 'none' }}>
                   At £15 per lesson
                 </Text>
                 <Icon

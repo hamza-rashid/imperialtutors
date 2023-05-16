@@ -1,5 +1,4 @@
 "use client"
-import '@fontsource/Manrope';
 import {
     Avatar,
     Box,
@@ -97,7 +96,6 @@ import {
           <chakra.p fontWeight={'bold'} fontSize={14}>
             {name}
             <chakra.span
-              fontFamily={'Manrope'}
               fontWeight={'medium'}
               color={'gray.600'}>
               {' '}
@@ -137,7 +135,6 @@ import {
           <chakra.h2
             margin={'auto'}
             width={'70%'}
-            fontFamily={'Manrope'}
             fontWeight={'medium'}
             color={useColorModeValue('gray.600', 'gray.400')}>
             See what our students say from over{' '}
