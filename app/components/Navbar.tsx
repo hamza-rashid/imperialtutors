@@ -44,6 +44,7 @@ import {
             <Image
             src="images/logo.svg"
             h="50px"
+            marginLeft={2}
             objectFit="contain" // Maintain the aspect ratio of the image while fitting within the height
             />
           </Flex>
