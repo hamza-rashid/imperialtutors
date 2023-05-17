@@ -42,7 +42,7 @@ import {
                   bg: 'green.500',
                   zIndex: -1,
                 }}>
-                Affordable Tuition &
+                Get GCSE Tuition &
               </Text>
               <br />
               <Text as={'span'} color={'green.500'}>
