@@ -13,6 +13,7 @@ import {
     Popover,
     PopoverTrigger,
     PopoverContent,
+    Image,
     useColorModeValue,
     useBreakpointValue,
     useDisclosure,
@@ -40,12 +41,11 @@ import {
           borderColor={useColorModeValue('gray.200', 'gray.900')}
           align={'center'}>
           <Flex flex={{ base: 1 }} justify={{ base: 'left', md: 'left' }}>
-            <Text
-              textAlign={useBreakpointValue({ base: 'left', md: 'left' })}
-              fontFamily={'heading'}
-              color={useColorModeValue('gray.800', 'white')}>
-              Logo
-            </Text>
+            <Image
+            src="images/logo.svg"
+            h="50px"
+            objectFit="contain" // Maintain the aspect ratio of the image while fitting within the height
+            />
           </Flex>
   
           <Stack
