@@ -81,8 +81,10 @@ import {
                   Book Now!
               </Button>
               <text fontSize={'sm'}> 
-              <Highlight query={`Next Lesson in ${remainingDays} day${remainingDays !== 1 ? 's' : ''}!`} styles={{px: "2", rounded: '2', bg: "rgba(224, 90, 82, 0.4)"}}> 
-              {[`Next Lesson in ${remainingDays} day${remainingDays !== 1 ? 's' : ''}!`].join('')}
+              <Highlight   query={remainingDays === 0 ? 'Next Lesson today!' : `Next Lesson in ${remainingDays} day${remainingDays !== 1 ? 's' : ''}!`} styles={{ px: '2', rounded: '2', bg: 'rgba(224, 90, 82, 0.4)' }}> 
+              {remainingDays === 0
+                ? 'Next Lesson today!'
+                : [`Next Lesson in ${remainingDays} day${remainingDays !== 1 ? 's' : ''}!`].join('')}
               </Highlight>
               </text>
               </Stack>
