@@ -14,9 +14,21 @@ import {
     createIcon,
     IconProps,
     useColorModeValue,
+    Highlight
   } from '@chakra-ui/react';
+
+  const NextLesson = () => {
+      // Calculate remaining days until the next lesson
+      const nextLessonDate = new Date('May 20, 2023'); // Replace with your actual next lesson date
+      const today = new Date();
+      const timeDiff = nextLessonDate.getTime() - today.getTime();
+      const remainingDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+
+    return remainingDays;
+  };
   
   export default function CallToActionWithVideo() {
+    const remainingDays = NextLesson();
     return (
       <Container maxW={'7xl'}>
         <Stack
@@ -50,13 +62,14 @@ import {
               </Text>
             </Heading>
             <Text color={'gray.500'}>
-              Group Science<Text as="span" fontWeight="bold"> GCSE Tuition with Dr Rashid </Text> at a fraction of the cost. After each lesson you will 
+              Group Science <Text as="span" fontWeight="bold"> GCSE Tuition with Dr Rashid </Text> at a fraction of the cost. After each lesson you will 
               receive a question bank as well as <Text as="span" fontWeight="bold"> marked feedback, at no extra cost to you! </Text>
             </Text>
             <Stack
               spacing={{ base: 4, sm: 6 }}
               direction={{ base: 'column', sm: 'row' }}>
             <Stack direction={{ base: 'column-reverse', sm: 'row' }}>
+              <Stack direction={'column'} textAlign="center">
               <Button as={"a"} href="https://calendly.com/imperialtutors" target="_blank"
                 rounded={'full'}
                 size={'lg'}
@@ -67,6 +80,12 @@ import {
                 _hover={{ bg: 'green.600' }}>
                   Book Now!
               </Button>
+              <text fontSize={'sm'}> 
+              <Highlight query={`Next Lesson in ${remainingDays} day${remainingDays !== 1 ? 's' : ''}!`} styles={{px: "2", rounded: '2', bg: "rgba(224, 90, 82, 0.4)"}}> 
+              {[`Next Lesson in ${remainingDays} day${remainingDays !== 1 ? 's' : ''}!`].join('')}
+              </Highlight>
+              </text>
+              </Stack>
               <Box textAlign={{ base: 'center', sm: 'unset' }}> 
                 <Text fontSize={'lg'} transform={'rotate(10deg)'} marginBottom={{ base: 7, sm: 'none' }}>
                   At £15 per lesson
