@@ -8,7 +8,6 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: 'GCSE Doctor',
   description: 'Affordable, high-quality tutoring for GCSE Sciences and Maths.',
-  content: '/images/open-graph-image.png',
 }
 
 export default function RootLayout({
