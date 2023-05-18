@@ -54,7 +54,7 @@ function ProductSimple() {
               width={282}
               objectFit={'cover'}
               src={IMAGE}
-              alt=""
+              alt="Studied at Imperial College London"
             />
           </Box>
           <Stack pt={10} align={'center'}>

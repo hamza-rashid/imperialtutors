@@ -119,7 +119,7 @@ import {
               width={'full'}
               overflow={'hidden'}>
               <Image
-                alt={'Hero Image'}
+                alt={'Affordable GCSE Science Tuition'}
                 fit={'cover'}
                 align={'center'}
                 w={'100%'}

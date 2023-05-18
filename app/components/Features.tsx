@@ -93,7 +93,7 @@ import {
           <Flex>
             <Image
               rounded={'md'}
-              alt={'feature image'}
+              alt={'free paper marking'}
               src={
                 '/images/feedback.png'
               }
