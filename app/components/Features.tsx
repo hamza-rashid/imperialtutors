@@ -79,14 +79,14 @@ import {
                 <Icon as={MdOutlineQuiz} color={'green.500'} w={5} h={5} />
                 }
                 iconBg={useColorModeValue('green.100', 'green.900')}
-                text={'Complete and send us your exam questions'}
+                text={'Once a month Dr Rashid will test you on a topic with past exam questions'}
               />
               <Feature
                 icon={
                   <Icon as={MdOutlineFeedback} color={'green.500'} w={5} h={5} />
                 }
                 iconBg={useColorModeValue('green.100', 'green.900')}
-                text={'Get personalised feedback straight to your email'}
+                text={'Send him your answers and get personalised feedback straight to your email'}
               />
             </Stack>
           </Stack>

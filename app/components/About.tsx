@@ -9,9 +9,10 @@ import {
     Stack,
     Image,
     chakra,
+    Highlight,
   } from '@chakra-ui/react';
   
-  const IMAGE ='/images/profile.jpg'
+  const IMAGE ='/images/profile.png'
   
 function ProductSimple() {
     return (
@@ -30,7 +31,7 @@ function ProductSimple() {
             rounded={'lg'}
             mt={-12}
             pos={'relative'}
-            height={'230px'}
+            height={'340px'}
             _after={{
               transition: 'all .3s ease',
               content: '""',
@@ -50,7 +51,7 @@ function ProductSimple() {
             }}>
             <Image
               rounded={'lg'}
-              height={230}
+              height={340}
               width={282}
               objectFit={'cover'}
               src={IMAGE}
@@ -72,6 +73,9 @@ function ProductSimple() {
                 Imperial College London
               </Text>
             </Stack>
+            <Highlight query='450+ hours tutoring experience' styles={{ px: '2', rounded: '2', bg: 'rgba(210,244,211,1)' , fontWeight:'400', fontSize:'l'}}> 
+                450+ hours tutoring experience
+            </Highlight>
           </Stack>
         </Box>
       </Center>
@@ -86,7 +90,7 @@ function ProductSimple() {
           fontSize={'4xl'}
           py={10}
           fontWeight={'bold'}>
-          About Us
+          About Me
         </chakra.h1>
         <ProductSimple /> 
       </Box>

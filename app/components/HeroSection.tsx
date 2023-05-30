@@ -19,7 +19,7 @@ import {
 
   const NextLesson = () => {
       // Calculate remaining days until the next lesson
-      const nextLessonDate = new Date('May 20, 2023'); // Replace with your actual next lesson date
+      const nextLessonDate = new Date('June 03, 2023'); // Replace with your actual next lesson date
       const today = new Date();
       const timeDiff = nextLessonDate.getTime() - today.getTime();
       const remainingDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
@@ -54,23 +54,22 @@ import {
                   bg: 'green.500',
                   zIndex: -1,
                 }}>
-                Get GCSE Tuition &
+                Group GCSE Tuition
               </Text>
               <br />
               <Text as={'span'} color={'green.500'}>
-                we mark your papers for free!
+              with Dr Rashid at £15/hr!
               </Text>
             </Heading>
             <Text color={'gray.500'}>
-              Group Science <Text as="span" fontWeight="bold"> GCSE Tuition with Dr Rashid </Text> at a fraction of the cost. After each lesson you will 
-              receive a question bank as well as <Text as="span" fontWeight="bold"> marked feedback, at no extra cost to you! </Text>
+            Dr Rashid is a graduate from <Text as="span" fontWeight="bold"> Imperial College London</Text> with over <Text as="span" fontWeight="bold">  450+ hours</Text> of tutoring experience! Join him for his group Science and Maths GCSE Tuition sessions, <Text as="span" fontWeight="bold">every weekend.</Text>
             </Text>
             <Stack
               spacing={{ base: 4, sm: 6 }}
               direction={{ base: 'column', sm: 'row' }}>
             <Stack direction={{ base: 'column-reverse', sm: 'row' }}>
               <Stack direction={'column'} textAlign="center">
-              <Button as={"a"} href="https://calendly.com/imperialtutors" target="_blank"
+              <Button as={"a"} href="https://calendly.com/gcsedoctor" target="_blank"
                 rounded={'full'}
                 size={'lg'}
                 fontWeight={'normal'}

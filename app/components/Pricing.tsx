@@ -75,7 +75,7 @@ import {
                 Free exam questions and marking
               </ListItem>
             </List>
-            <Button as={"a"} href="https://calendly.com/imperialtutors" target='_blank'
+            <Button as={"a"} href="https://calendly.com/gcsedoctor" target='_blank'
               mt={10}
               w={'full'}
               bg={'green.400'}

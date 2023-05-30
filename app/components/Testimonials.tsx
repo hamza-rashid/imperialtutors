@@ -12,20 +12,20 @@ import {
   
   const testimonials = [
     {
-      name: 'Sammy M.',
-      role: 'Dartford Grammar School',
+      name: 'Ragul S.',
+      role: 'Dartford Grammar School (GCSE Chemistry and Biology)',
       content:
       "Hamza is an exceptional tutor! His deep knowledge and passion for the subject matter made our sessions engaging and enjoyable. He patiently explains complex concepts in a simple manner, greatly contributing to my understanding and success. Highly recommended!",
     },
     {
       name: 'Iffah R.',
-      role: 'North London Collegiate School', 
+      role: 'North London Collegiate School (GCSE Sciences and Maths)', 
       content:
       "Working with Hamza has been an incredible learning experience. He effortlessly breaks down difficult concepts and goes the extra mile to help his students succeed. Thanks to his guidance, I've seen significant improvement in my understanding and grades.",
     },
     {
       name: 'Imran S.',
-      role: 'Watford Grammar School for Boys',
+      role: 'Watford Grammar School for Boys (GCSE Biology)',
       content:
       "Being mentored by Dr. Hamza was transformative. His expertise and personalized teaching approach built my confidence. He was always available for questions and genuinely cared about my progress. Grateful for his lasting impact on my academic journey.",
     },
