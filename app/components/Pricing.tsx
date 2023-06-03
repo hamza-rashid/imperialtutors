@@ -50,7 +50,7 @@ import {
             <Stack direction={'row'} align={'center'} justify={'center'}>
               <Text fontSize={'3xl'}>£</Text>
               <Text fontSize={'6xl'} fontWeight={800}>
-                15
+                40
               </Text>
               <Text color={'gray.500'}>/lesson</Text>
             </Stack>
@@ -60,22 +60,22 @@ import {
             <List spacing={3}>
               <ListItem>
                 <ListIcon as={CheckIcon} color="green.400" />
-                Affordable price
+                Highly qualified tutor
               </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color="green.400" />
-                1 hour group lesson
+                1 hour lesson
               </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color="green.400" />
-                Capped at 10 students per lesson
+                The subject of your choice
               </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color="green.400" />
-                Free exam questions and marking
+                A focus on exam technique
               </ListItem>
             </List>
-            <Button as={"a"} href="https://calendly.com/gcsedoctor" target='_blank'
+            <Button as={"a"} href="https://f0bg5c5ixzh.typeform.com/to/SAD6oNmE" target='_blank'
               mt={10}
               w={'full'}
               bg={'green.400'}
@@ -117,11 +117,11 @@ import {
             </Text>
             <Stack direction={'row'} align={'center'} justify={'center'}>
             <Text fontSize={'larger'} textDecoration={'line-through'} color={'gray.600'} marginTop={-68}>
-              £60 
+              £160
             </Text>
               <Text fontSize={'3xl'}>£</Text>
               <Text fontSize={'6xl'} fontWeight={800}>
-                50
+                140
               </Text>
               <Text color={'gray.900'}>/month</Text>
             </Stack>
@@ -135,15 +135,15 @@ import {
               </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color="green.400" />
-                4 x 1 hour group lessons per month
+                <strong>4 x 1 hour lessons</strong> per month
               </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color="green.400" />
-                Capped at 10 students per lesson
+                The subject of your choice
                 </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color="green.400" />
-                Free exam questions and marking
+                <strong>Monthly progress test</strong>
                 </ListItem>
             </List>
 

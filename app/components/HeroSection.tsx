@@ -54,22 +54,22 @@ import {
                   bg: 'green.500',
                   zIndex: -1,
                 }}>
-                Group GCSE Tuition
+                Science GCSE Tuition
               </Text>
               <br />
               <Text as={'span'} color={'green.500'}>
-              with Dr Rashid at £15/hr!
+              with Dr Rashid!
               </Text>
             </Heading>
             <Text color={'gray.500'}>
-            Dr Rashid is a graduate from <Text as="span" fontWeight="bold"> Imperial College London</Text> with over <Text as="span" fontWeight="bold">  450+ hours</Text> of tutoring experience! Join him for his group Science and Maths GCSE Tuition sessions, <Text as="span" fontWeight="bold">every weekend.</Text>
+            Dr Rashid is a graduate from <Text as="span" fontWeight="bold"> Imperial College London</Text> with over <Text as="span" fontWeight="bold">  450+ hours</Text> of tutoring experience! Join him for his Science and Maths GCSE Tuition sessions, <Text as="span" fontWeight="bold">every weekend.</Text>
             </Text>
             <Stack
               spacing={{ base: 4, sm: 6 }}
               direction={{ base: 'column', sm: 'row' }}>
             <Stack direction={{ base: 'column-reverse', sm: 'row' }}>
               <Stack direction={'column'} textAlign="center">
-              <Button as={"a"} href="https://calendly.com/gcsedoctor" target="_blank"
+              <Button as={"a"} href="https://f0bg5c5ixzh.typeform.com/to/SAD6oNmE" target="_blank"
                 rounded={'full'}
                 size={'lg'}
                 fontWeight={'normal'}
@@ -89,7 +89,7 @@ import {
               </Stack>
               <Box textAlign={{ base: 'center', sm: 'unset' }}> 
                 <Text fontSize={'lg'} transform={'rotate(10deg)'} marginBottom={{ base: 7, sm: 'none' }}>
-                  At £15 per lesson
+                  At £40 per hour
                 </Text>
                 <Icon
                   as={Arrow}

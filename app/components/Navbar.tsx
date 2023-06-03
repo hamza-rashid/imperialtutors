@@ -59,7 +59,7 @@ import {
               fontWeight={600}
               color={'white'}
               bg={'green.500'}
-              href={'https://calendly.com/gcsedoctor'}
+              href={'https://f0bg5c5ixzh.typeform.com/to/SAD6oNmE'}
               target={'_blank'}
               _hover={{
                 bg: 'green.600',
