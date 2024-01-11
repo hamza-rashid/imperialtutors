@@ -19,7 +19,7 @@ import {
 
   const NextLesson = () => {
       // Calculate remaining days until the next lesson
-      const nextLessonDate = new Date('June 04, 2023'); // Replace with your actual next lesson date
+      const nextLessonDate = new Date('Jan 29, 2024'); // Replace with your actual next lesson date
       const today = new Date();
       const timeDiff = nextLessonDate.getTime() - today.getTime();
       const remainingDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
