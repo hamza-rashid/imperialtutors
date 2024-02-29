@@ -20,16 +20,19 @@ import {
 
   import { useEffect, useState } from 'react';
 
-
   const NextLesson = () => {
-      // Calculate remaining days until the next lesson
-      const nextLessonDate = new Date('March 29, 2024'); // Replace with your actual next lesson date
-      const today = new Date();
-      const timeDiff = nextLessonDate.getTime() - today.getTime();
-      const remainingDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+    const today = new Date();
+    const todayDayOfWeek = today.getDay(); // This returns a number where 0 is Sunday and 6 is Saturday
+    let remainingDays;
+
+    if (todayDayOfWeek === 6) { // If today is Saturday
+      remainingDays = 7; // Next Saturday
+    } else {
+      remainingDays = 6 - todayDayOfWeek; // Calculate the difference to the next Saturday
+    }
 
     return remainingDays;
-  };
+};
   
   export default function CallToActionWithVideo() {
     const remainingDays = NextLesson();
