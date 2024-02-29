@@ -3,6 +3,8 @@ import Features from './components/Features'
 import Testimonials from './components/Testimonials'
 import About from './components/About'
 import Pricing from './components/Pricing'
+import Footer from './components/Footer'
+
 
 
 
@@ -14,7 +16,7 @@ export default function Home() {
         <div id="about-me"> <About/> </div>
           <div id="testimonials"> <Testimonials/> </div>
             <div id="pricing"> <Pricing/> </div>
-
+              <Footer />
     </>
   )
 }
