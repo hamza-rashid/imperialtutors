@@ -14,8 +14,12 @@ import {
     createIcon,
     IconProps,
     useColorModeValue,
-    Highlight
+    Highlight,
+    Input
   } from '@chakra-ui/react';
+
+  import { useEffect, useState } from 'react';
+
 
   const NextLesson = () => {
       // Calculate remaining days until the next lesson
@@ -68,8 +72,9 @@ import {
               spacing={{ base: 4, sm: 6 }}
               direction={{ base: 'column', sm: 'row' }}>
             <Stack direction={{ base: 'column-reverse', sm: 'row' }}>
+
               <Stack direction={'column'} textAlign="center">
-              <Button as={"a"} href="https://f0bg5c5ixzh.typeform.com/to/SAD6oNmE" target="_blank"
+              <Button
                 rounded={'full'}
                 size={'lg'}
                 fontWeight={'normal'}
@@ -77,10 +82,10 @@ import {
                 colorScheme={'green'}
                 bg={'green.500'}
                 _hover={{ bg: 'green.600' }}>
-                  Book Now!
+                Join Waitlist
               </Button>
               <text fontSize={'sm'}> 
-              <Highlight   query={remainingDays === 0 ? 'Next Lesson today!' : `Next Lesson in ${remainingDays} day${remainingDays !== 1 ? 's' : ''}!`} styles={{ px: '2', rounded: '2', bg: 'rgba(224, 90, 82, 0.4)' }}> 
+              <Highlight query={remainingDays === 0 ? 'Next Lesson today!' : `Next Lesson in ${remainingDays} day${remainingDays !== 1 ? 's' : ''}!`} styles={{ px: '2', rounded: '2', bg: 'rgba(224, 90, 82, 0.4)' }}> 
               {remainingDays === 0
                 ? 'Next Lesson today!'
                 : [`Next Lesson in ${remainingDays} day${remainingDays !== 1 ? 's' : ''}!`].join('')}
