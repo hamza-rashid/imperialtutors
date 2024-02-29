@@ -12,7 +12,7 @@ export default function Home() {
       <Features />
         <div id="about-me"> <About/> </div>
           <div id="testimonials"> <Testimonials/> </div>
-            <Pricing />
+            <div id="pricing"> <Pricing/> </div>
 
     </>
   )

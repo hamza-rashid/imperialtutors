@@ -94,7 +94,7 @@ export default function Navbar() {
             px={2}
             py={1}
             rounded={'md'}
-            href={'#fees'}
+            href={'#pricing'}
             fontSize={'sm'}
             fontWeight={600}
             color={useColorModeValue('gray.600', 'white')}
