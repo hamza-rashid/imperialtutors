@@ -13,7 +13,7 @@ import {
   const testimonials = [
     {
       name: 'Ragul S.',
-      role: 'Dartford Grammar School (GCSE Chemistry and Biology)',
+      role: 'Slough Grammar School (GCSE Chemistry and Biology)',
       content:
       "Hamza is an exceptional tutor! His deep knowledge and passion for the subject matter made our sessions engaging and enjoyable. He patiently explains complex concepts in a simple manner, greatly contributing to my understanding and success. Highly recommended!",
     },
@@ -27,7 +27,7 @@ import {
       name: 'Imran S.',
       role: 'Watford Grammar School for Boys (GCSE Biology)',
       content:
-      "Being mentored by Dr. Hamza was transformative. His expertise and personalized teaching approach built my confidence and was the key to my medical application. He was always available for questions and genuinely cared about my progress. Grateful for his lasting impact on my academic journey and future career.",
+      "Being mentored by Hamza was great. His personalized teaching approach built my confidence which was the key to my medical application. He was always available for questions and genuinely cared about my progress. Grateful for his lasting impact on my academic journey and future career.",
     },
   ];
   
