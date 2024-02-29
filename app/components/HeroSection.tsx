@@ -66,7 +66,7 @@ import {
               </Text>
             </Heading>
             <Text color={'gray.500'}>
-            Dr Rashid is a graduate from <Text as="span" fontWeight="bold"> Imperial College London</Text> with over <Text as="span" fontWeight="bold">  450+ hours</Text> of tutoring experience! Join him for his Science and Maths GCSE Tuition sessions, <Text as="span" fontWeight="bold">every weekend.</Text>
+            Join our weekend tuition sessions and turn potential into high grades with <Text as="span" fontWeight="bold">Dr. Rashid</Text>, a graduate of <Text as="span" fontWeight="bold">Imperial College London</Text>. In small groups of just <Text as="span" fontWeight="bold">10 students</Text>, focus on core content and exam techniques designed to boost your performance. Start your journey to a <Text as="span" fontWeight="bold">grade 9</Text> today!
             </Text>
             <Stack
               spacing={{ base: 4, sm: 6 }}
@@ -94,7 +94,7 @@ import {
               </Stack>
               <Box textAlign={{ base: 'center', sm: 'unset' }}> 
                 <Text fontSize={'lg'} transform={'rotate(10deg)'} marginBottom={{ base: 7, sm: 'none' }}>
-                  At £40 per hour
+                  At £15 per hour
                 </Text>
                 <Icon
                   as={Arrow}
