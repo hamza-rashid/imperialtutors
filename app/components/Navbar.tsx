@@ -64,7 +64,7 @@ import {
               _hover={{
                 bg: 'green.600',
               }}>
-              Book Now!
+              Join Waitlist
             </Button>
           </Stack>
         </Flex>

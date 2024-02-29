@@ -13,7 +13,7 @@ import {
     SimpleGrid,
     Tooltip,
   } from '@chakra-ui/react';
-  import { CheckIcon } from '@chakra-ui/icons';
+  import { CheckIcon, CloseIcon } from '@chakra-ui/icons';
   import Link from 'next/link';
   
   export default function Pricing() {
@@ -50,7 +50,7 @@ import {
             <Stack direction={'row'} align={'center'} justify={'center'}>
               <Text fontSize={'3xl'}>£</Text>
               <Text fontSize={'6xl'} fontWeight={800}>
-                40
+                30
               </Text>
               <Text color={'gray.500'}>/lesson</Text>
             </Stack>
@@ -60,19 +60,19 @@ import {
             <List spacing={3}>
               <ListItem>
                 <ListIcon as={CheckIcon} color="green.400" />
-                Highly qualified tutor
+                <strong>2 hour</strong> group lesson
               </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color="green.400" />
-                1 hour lesson
+                capped at <strong>10 students per class</strong>
               </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color="green.400" />
-                The subject of your choice
+                Covering course <strong>content & exam technique</strong>
               </ListItem>
               <ListItem>
-                <ListIcon as={CheckIcon} color="green.400" />
-                A focus on exam technique
+                <ListIcon as={CloseIcon} color="red.400" />
+                Access to the <strong>Medicine entry Mentorship</strong> programme
               </ListItem>
             </List>
             <Button as={"a"} href="https://f0bg5c5ixzh.typeform.com/to/SAD6oNmE" target='_blank'
@@ -116,12 +116,9 @@ import {
               Pay Monthly
             </Text>
             <Stack direction={'row'} align={'center'} justify={'center'}>
-            <Text fontSize={'larger'} textDecoration={'line-through'} color={'gray.600'} marginTop={-68}>
-              £160
-            </Text>
               <Text fontSize={'3xl'}>£</Text>
               <Text fontSize={'6xl'} fontWeight={800}>
-                140
+                120
               </Text>
               <Text color={'gray.900'}>/month</Text>
             </Stack>
@@ -131,24 +128,23 @@ import {
             <List spacing={3}>
               <ListItem>
                 <ListIcon as={CheckIcon} color="green.400" />
-                Discounted Price
+                <strong>8 hours</strong> of group lessons per month 
               </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color="green.400" />
-                <strong>4 x 1 hour lessons</strong> per month
+                Covering course <strong>content & exam technique</strong>
               </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color="green.400" />
-                The subject of your choice
+                Confirmed lesson place
                 </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color="green.400" />
-                <strong>Monthly progress test</strong>
+                Exclusive access to the <strong>Medicine entry Mentorship</strong> programme
                 </ListItem>
             </List>
 
-            <Tooltip label="Available Soon">
-            <Button isDisabled
+            <Button as={"a"} href="https://f0bg5c5ixzh.typeform.com/to/SAD6oNmE" target='_blank'
               mt={10}
               w={'full'}
               bg={'green.400'}
@@ -161,9 +157,8 @@ import {
               _focus={{
                 bg: 'green.500',
               }}>
-              Available soon
+              Book now
             </Button>
-            </Tooltip>
           </Box>
         </Box>
         </SimpleGrid>
