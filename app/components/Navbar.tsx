@@ -42,17 +42,48 @@ import {
           align={'center'}>
           <Flex flex={{ base: 1 }} justify={{ base: 'left', md: 'left' }}>
             <Image
-            src="images/logo.svg"
-            h="50px"
-            marginLeft={2}
-            objectFit="contain" // Maintain the aspect ratio of the image while fitting within the height
+              src="images/logo.svg"
+              h="50px"
+              marginLeft={2}
+              objectFit="contain"
             />
           </Flex>
   
           <Stack
-            justify={'flex-end'}
             direction={'row'}
-            spacing={6}>
+            spacing={4}
+            align={'center'}
+            justify={'flex-end'}
+            flex={{ base: 1, md: 'auto' }}
+            mr={{ base: -2, md: 0 }}>
+            <Link
+              px={2}
+              py={1}
+              rounded={'md'}
+              href={"#about-me"}
+              fontSize={'sm'}
+              fontWeight={600}
+              color={useColorModeValue('gray.600', 'white')}
+              _hover={{
+                textDecoration: 'none',
+                color: '#37A169', // Text color changes on hover
+              }}>
+              About
+            </Link>
+            <Link
+              px={2}
+              py={1}
+              rounded={'md'}
+              href={'#testimonials'}
+              fontSize={'sm'}
+              fontWeight={600}
+              color={useColorModeValue('gray.600', 'white')}
+              _hover={{
+                textDecoration: 'none',
+                color: '#37A169', // Text color changes on hover
+              }}>
+              Reviews
+            </Link>
             <Button
               as={'a'}
               fontSize={'sm'}
@@ -71,4 +102,3 @@ import {
       </Box>
     );
   }
-  
