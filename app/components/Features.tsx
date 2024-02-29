@@ -19,10 +19,10 @@ import {
     MdOutlineQuiz,
     MdOutlineFeedback
   } from 'react-icons/md';
-  import { ReactElement } from 'react';
+  import { ReactElement, ReactNode, } from 'react';
   
   interface FeatureProps {
-    text: string;
+    text: ReactNode;
     iconBg: string;
     icon?: ReactElement;
   }
@@ -60,7 +60,7 @@ import {
               rounded={'md'}>
               How it works
             </Text>
-            <Heading>Free personalised feedback</Heading>
+            <Heading>Join Our Waitlist for Tailored GCSE Success!</Heading>
             <br />  
             <Stack
               spacing={4}
@@ -72,21 +72,21 @@ import {
               <Feature
                 icon={<Icon as={TbBrandZoom} color={'green.500'} w={5} h={5} />}
                 iconBg={useColorModeValue('green.100', 'green.900')}
-                text={'Take part in the interactive zoom lesson with Dr Rashid'}
+                text={<span><strong>Quick Start:</strong> Sign up and get a call from us within 48 hours to set up your initial consultation.</span>}
               />
               <Feature
                 icon={
                 <Icon as={MdOutlineQuiz} color={'green.500'} w={5} h={5} />
                 }
                 iconBg={useColorModeValue('green.100', 'green.900')}
-                text={'Once a month Dr Rashid will test you on a topic with past exam questions'}
+                text={<span><strong>Effective Learning:</strong> Engage in 2-hour weekly sessions per subject, with 1 hour for content and 1 hour for exam technique.</span>}
               />
               <Feature
                 icon={
                   <Icon as={MdOutlineFeedback} color={'green.500'} w={5} h={5} />
                 }
                 iconBg={useColorModeValue('green.100', 'green.900')}
-                text={'Send him your answers and get personalised feedback straight to your email'}
+                text={<span><strong>Ongoing Support:</strong> Receive weekly homework and dedicated time in sessions to review any challenges.</span>}
               />
             </Stack>
           </Stack>

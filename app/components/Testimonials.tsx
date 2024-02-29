@@ -27,7 +27,7 @@ import {
       name: 'Imran S.',
       role: 'Watford Grammar School for Boys (GCSE Biology)',
       content:
-      "Being mentored by Dr. Hamza was transformative. His expertise and personalized teaching approach built my confidence. He was always available for questions and genuinely cared about my progress. Grateful for his lasting impact on my academic journey.",
+      "Being mentored by Dr. Hamza was transformative. His expertise and personalized teaching approach built my confidence and was the key to my medical application. He was always available for questions and genuinely cared about my progress. Grateful for his lasting impact on my academic journey and future career.",
     },
   ];
   
