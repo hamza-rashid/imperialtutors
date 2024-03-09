@@ -69,7 +69,7 @@ import {
               </Text>
             </Heading>
             <Text color={'gray.500'}>
-            Join our weekend tuition sessions and turn potential into high grades with <Text as="span" fontWeight="bold">Hamza</Text>, a graduate of <Text as="span" fontWeight="bold">Imperial College London</Text>. In <Text as="span" fontWeight="bold">small groups</Text> of just <Text as="span" fontWeight="bold">10 students</Text>, focus on core content and exam techniques designed to boost your performance. Start your journey to a <Text as="span" fontWeight="bold">grade 9</Text> today!
+            Join our weekend tuition sessions and turn potential into high grades with <Text as="span" fontWeight="bold">Hamza</Text>, a graduate of <Text as="span" fontWeight="bold">Imperial College London</Text>. In <Text as="span" fontWeight="bold">small groups</Text> of just <Text as="span" fontWeight="bold">5 students</Text>, focus on core content and exam techniques designed to boost your performance. Start your journey to a <Text as="span" fontWeight="bold">grade 9</Text> today!
             </Text>
             <Stack
               spacing={{ base: 4, sm: 6 }}
