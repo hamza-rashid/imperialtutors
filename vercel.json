@@ -3,7 +3,7 @@
       {
         "source": "/bookings",
         "destination": "https://f0bg5c5ixzh.typeform.com/to/SAD6oNmE", 
-        "permanent": false
+        "permanent": true
       }
     ]
   }
