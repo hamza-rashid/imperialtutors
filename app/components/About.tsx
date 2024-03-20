@@ -90,7 +90,7 @@ function ProductSimple() {
           fontSize={'4xl'}
           py={2}
           fontWeight={'bold'}>
-          About Me
+          About Us
         </chakra.h1>
         <ProductSimple /> 
       </Box>

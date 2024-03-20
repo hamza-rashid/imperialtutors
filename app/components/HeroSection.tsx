@@ -61,15 +61,15 @@ import {
                   bg: 'green.500',
                   zIndex: -1,
                 }}>
-                Science GCSE Tuition
+                GCSE Science Tuition
               </Text>
               <br />
               <Text as={'span'} color={'green.500'}>
-              with Dr Rashid!
+              with qualified Doctors!
               </Text>
             </Heading>
-            <Text color={'gray.500'}>
-            Join our weekend tuition sessions and turn potential into high grades with <Text as="span" fontWeight="bold">Hamza</Text>, a graduate of <Text as="span" fontWeight="bold">Imperial College London</Text>. In <Text as="span" fontWeight="bold">small groups</Text> of just <Text as="span" fontWeight="bold">5 students</Text>, focus on core content and exam techniques designed to boost your performance. Start your journey to a <Text as="span" fontWeight="bold">grade 9</Text> today!
+            <Text color={'gray.600'}>
+            Join our <Text as="span" fontWeight="bold">online tuition sessions</Text> with doctors like Hamza! <Text as="span" fontWeight="bold">In small groups of 5 students</Text>, cover the whole GCSE & A-level Science syllabus. Over 2 hours per subject, our tutors <Text as="span" fontWeight="bold">cover both content and exam technique!</Text>
             </Text>
             <Stack
               spacing={{ base: 4, sm: 6 }}

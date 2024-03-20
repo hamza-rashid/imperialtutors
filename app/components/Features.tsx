@@ -13,12 +13,10 @@ import {
     useColorModeValue,
   } from '@chakra-ui/react';
   import {
-    TbBrandZoom
-  } from 'react-icons/tb';
-  import {
+    MdOutlineSchool, 
     MdOutlineQuiz,
-    MdOutlineFeedback
   } from 'react-icons/md';
+  import { IoCallOutline } from "react-icons/io5";
   import { ReactElement, ReactNode, } from 'react';
   
   interface FeatureProps {
@@ -60,7 +58,7 @@ import {
               rounded={'md'}>
               How it works
             </Text>
-            <Heading>Join Our Waitlist for Tailored GCSE Success!</Heading>
+            <Heading>Join today for Tailored GCSE Success!</Heading>
             <br />  
             <Stack
               spacing={4}
@@ -70,20 +68,20 @@ import {
                 />
               }>
               <Feature
-                icon={<Icon as={TbBrandZoom} color={'green.500'} w={5} h={5} />}
+                icon={<Icon as={IoCallOutline} color={'green.500'} w={5} h={5} />}
                 iconBg={useColorModeValue('green.100', 'green.900')}
-                text={<span><strong>Quick Start:</strong> Sign up and get a call from us within 48 hours to set up your initial consultation.</span>}
+                text={<span><strong>Quick Start:</strong> Sign up and get a call from us within 48 hours for your initial consultation.</span>}
               />
               <Feature
                 icon={
-                <Icon as={MdOutlineQuiz} color={'green.500'} w={5} h={5} />
+                <Icon as={MdOutlineSchool} color={'green.500'} w={5} h={5} />
                 }
                 iconBg={useColorModeValue('green.100', 'green.900')}
                 text={<span><strong>Effective Learning:</strong> Engage in 2-hour weekly group sessions per subject, with 1 hour for content and 1 hour for exam technique.</span>}
               />
               <Feature
                 icon={
-                  <Icon as={MdOutlineFeedback} color={'green.500'} w={5} h={5} />
+                  <Icon as={MdOutlineQuiz} color={'green.500'} w={5} h={5} />
                 }
                 iconBg={useColorModeValue('green.100', 'green.900')}
                 text={<span><strong>Ongoing Support:</strong> Receive weekly homework and dedicated time in sessions to review any challenges.</span>}

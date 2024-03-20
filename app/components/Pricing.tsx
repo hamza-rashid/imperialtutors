@@ -64,16 +64,17 @@ import {
               </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color="green.400" />
+                <strong>1 subject per week</strong>  (choose from Maths, Biology, Chemistry and Physics)
+              </ListItem>
+              <ListItem>
+                <ListIcon as={CheckIcon} color="green.400" />
                 capped at <strong>5 students per class</strong>
               </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color="green.400" />
                 Covering course <strong>content & exam technique</strong>
               </ListItem>
-              <ListItem>
-                <ListIcon as={CloseIcon} color="red.400" />
-                Access to the <strong>Medicine entry Mentorship</strong> programme
-              </ListItem>
+
             </List>
             <Button as={"a"} href="https://f0bg5c5ixzh.typeform.com/to/SAD6oNmE" target='_blank'
               mt={10}
