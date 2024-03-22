@@ -3,29 +3,30 @@
 import { useEffect, useRef } from 'react';
 import {
   Box,
-  chakra,
   Flex,
   useColorModeValue,
 } from '@chakra-ui/react';
 
 export default function GridBlurredBackdrop() {
-  const widgetRef = useRef(null); // Create a ref for the container
+  // Specify the type as HTMLDivElement
+  const widgetRef = useRef<HTMLDivElement>(null); 
 
   useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://widget.trustmary.com/O4_62wwqn';
-    script.async = true;
+    if (widgetRef.current) {
+      const script = document.createElement('script');
+      script.src = 'https://widget.trustmary.com/O4_62wwqn';
+      script.async = true;
 
-    widgetRef.current.innerHTML = ''; // Clear the container
-    widgetRef.current.appendChild(script); // Append the script to the container
+      widgetRef.current.innerHTML = ''; // Clear the container
+      widgetRef.current.appendChild(script); // Append the script to the container
+    }
 
     return () => {
-      // Cleanup the script when the component unmounts
       if (widgetRef.current) {
-        widgetRef.current.innerHTML = '';
+        widgetRef.current.innerHTML = ''; // Clear the inner HTML of the container
       }
     };
-  }, []); // The empty array ensures this effect runs once when the component mounts
+  }, []); // Ensures this effect runs once when the component mounts
 
   return (
     <Flex
@@ -34,7 +35,6 @@ export default function GridBlurredBackdrop() {
       direction={'column'}
       width={'full'}
       overflow={'hidden'}>
-      {/* Create a specific container for the widget */}
       <Box ref={widgetRef} />
     </Flex>
   );
