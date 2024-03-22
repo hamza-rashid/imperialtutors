@@ -47,7 +47,7 @@ import {
             <Heading
               lineHeight={1.1}
               fontWeight={600}
-              fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}>
+              fontSize={{ base: '3xl', sm: '4xl', lg: '5xl' }}>
               <Text
                 as={'span'}
                 position={'relative'}
@@ -65,7 +65,7 @@ import {
               </Text>
               <br />
               <Text as={'span'} color={'green.500'}>
-              with qualified Doctors!
+              with Qualified Doctors!
               </Text>
             </Heading>
             <Text color={'gray.600'}>
