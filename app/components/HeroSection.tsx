@@ -69,7 +69,7 @@ import {
               </Text>
             </Heading>
             <Text color={'gray.600'}>
-            Join our <Text as="span" fontWeight="bold">online tuition sessions</Text> with doctors like Hamza! <Text as="span" fontWeight="bold">In small groups of 5 students</Text>, cover the whole GCSE & A-level Science syllabus. Over 2 hours per subject, our tutors <Text as="span" fontWeight="bold">cover both content and exam technique!</Text>
+            Join our <Text as="span" fontWeight="bold">online tuition sessions</Text> with doctors like Hamza! <Text as="span" fontWeight="bold">In small groups of 5 students</Text>, cover the whole GCSE & A-level Science syllabus. Over 2 hours per subject weekly, our tutors <Text as="span" fontWeight="bold">cover both content and exam technique!</Text>
             </Text>
             <Stack
               spacing={{ base: 4, sm: 6 }}
