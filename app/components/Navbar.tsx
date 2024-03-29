@@ -44,12 +44,15 @@ export default function Navbar() {
         align={'center'}
       >
         <Flex flex={{ base: 1 }} justify={{ base: 'left', md: 'left' }}>
-          <Image
-            src="images/logo.svg"
-            h="50px"
-            marginLeft={2}
-            objectFit="contain"
-          />
+          <a href="/">
+            <Image
+              src="images/logo.svg"
+              h="50px"
+              marginLeft={2}
+              objectFit="contain"
+              alt="Logo"
+            />
+          </a>
         </Flex>
 
         <Stack
@@ -64,7 +67,7 @@ export default function Navbar() {
             px={2}
             py={1}
             rounded={'md'}
-            href={"#about-me"}
+            href={"https://gcsedoctor.co.uk/#about-me"}
             fontSize={'sm'}
             fontWeight={600}
             color={useColorModeValue('gray.600', 'white')}
@@ -94,7 +97,7 @@ export default function Navbar() {
             px={2}
             py={1}
             rounded={'md'}
-            href={'#pricing'}
+            href={'https://gcsedoctor.co.uk/#pricing'}
             fontSize={'sm'}
             fontWeight={600}
             color={useColorModeValue('gray.600', 'white')}

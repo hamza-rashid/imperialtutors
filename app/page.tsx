@@ -6,16 +6,14 @@ import Pricing from './components/Pricing'
 import Footer from './components/Footer'
 
 
-
-
 export default function Home() {
   return (
     <>
     <HeroSection /> 
+    <div id="testimonials"> <Testimonials/> </div>
       <Features />
         <div id="about-me"> <About/> </div>
         <div id="pricing"> <Pricing/> </div>
-          <div id="testimonials"> <Testimonials/> </div>
               <Footer />
     </>
   )
