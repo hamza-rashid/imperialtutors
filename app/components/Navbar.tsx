@@ -117,7 +117,6 @@ export default function Navbar() {
               color={'white'}
               bg={'green.500'}
               href={'https://gcsedoctor.co.uk/bookings'}
-              target={'_blank'}
               _hover={{
                 bg: 'green.600',
               }}
