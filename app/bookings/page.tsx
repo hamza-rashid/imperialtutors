@@ -28,6 +28,7 @@ const BookingPage = () => {
         }}
       />
       {/* Updated Widget component with inlineOnMobile prop set to true */}
+      <Navbar />
       <Widget 
         id="SAD6oNmE" 
         style={{ width: '100%', height: '100vh' }} 
