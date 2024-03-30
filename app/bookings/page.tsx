@@ -28,9 +28,7 @@ const BookingPage = () => {
           `,
         }}
       />
-      <Navbar />
       <Widget id="SAD6oNmE" style={{ width: '100%', height: '100vh' }} />
-      <Footer />
     </>
   );
 };
