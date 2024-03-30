@@ -58,7 +58,7 @@ import {
               rounded={'md'}>
               How it works
             </Text>
-            <Heading>Join today for Tailored GCSE Success!</Heading>
+            <Heading>Join today for Tailored GCSE & A-Level Success!</Heading>
             <br />  
             <Stack
               spacing={4}
