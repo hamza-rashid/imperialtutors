@@ -24,14 +24,9 @@ import {
     ChevronDownIcon,
     ChevronRightIcon,
   } from '@chakra-ui/icons';
-  import { useLocation } from 'react-router-dom';
-
 
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
-  const location = useLocation(); // Use useLocation hook to get the current location object
-  // Determine the href for the Reviews link based on the current page
-  const reviewsHref = location.pathname === '/bookings' ? 'https://www.gcsedoctor.co.uk/reviews' : '#testimonials';
 
 
   return (
@@ -86,7 +81,7 @@ export default function Navbar() {
             px={2}
             py={1}
             rounded={'md'}
-            href={reviewsHref} // Use the conditionally set href
+            href={"https://gcsedoctor.co.uk/reviews"} // Use the conditionally set href
             fontSize={'sm'}
             fontWeight={600}
             color={useColorModeValue('gray.600', 'white')}
