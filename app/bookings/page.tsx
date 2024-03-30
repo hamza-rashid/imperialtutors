@@ -11,12 +11,12 @@ const BookingPage = () => {
       {/* Google Tag Manager - Global site tag (gtag.js) */}
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=AW-16477682494"
-        strategy="beforeInteractive"
+        strategy="afterInteractive"
         async
       />
       <Script
         id="google-analytics-setup-redirect-page"
-        strategy="beforeInteractive"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];

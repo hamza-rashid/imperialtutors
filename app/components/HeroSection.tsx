@@ -78,7 +78,7 @@ import {
 
               <Stack direction={'column'} textAlign="center">
 
-              <Button as={"a"} href="https://gcsedoctor.co.uk/bookings" target='_blank'
+              <Button as={"a"} href="https://gcsedoctor.co.uk/bookings"
                 rounded={'full'}
                 size={'lg'}
                 fontWeight={'normal'}
