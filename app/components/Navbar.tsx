@@ -116,7 +116,7 @@ export default function Navbar() {
               fontWeight={600}
               color={'white'}
               bg={'green.500'}
-              href={'https://f0bg5c5ixzh.typeform.com/to/SAD6oNmE'}
+              href={'https://gcsedoctor.co.uk/bookings'}
               target={'_blank'}
               _hover={{
                 bg: 'green.600',

@@ -78,7 +78,7 @@ import {
 
               <Stack direction={'column'} textAlign="center">
 
-              <Button as={"a"} href="https://f0bg5c5ixzh.typeform.com/to/SAD6oNmE" target='_blank'
+              <Button as={"a"} href="https://gcsedoctor.co.uk/bookings" target='_blank'
                 rounded={'full'}
                 size={'lg'}
                 fontWeight={'normal'}

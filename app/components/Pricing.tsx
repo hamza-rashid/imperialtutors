@@ -76,7 +76,7 @@ import {
               </ListItem>
 
             </List>
-            <Button as={"a"} href="https://f0bg5c5ixzh.typeform.com/to/SAD6oNmE" target='_blank'
+            <Button as={"a"} href="https://gcsedoctor.co.uk/bookings" target='_blank'
               mt={10}
               w={'full'}
               bg={'green.400'}
@@ -145,7 +145,7 @@ import {
                 </ListItem>
             </List>
 
-            <Button as={"a"} href="https://f0bg5c5ixzh.typeform.com/to/SAD6oNmE" target='_blank'
+            <Button as={"a"} href="https://gcsedoctor.co.uk/bookings" target='_blank'
               mt={10}
               w={'full'}
               bg={'green.400'}
