@@ -2,14 +2,10 @@
 
 import { useEffect } from 'react';
 import Script from 'next/script';
+import { Widget } from '@typeform/embed-react';
+
 
 const BookingPage = () => {
-  useEffect(() => {
-    // It's important to note that because this page redirects immediately,
-    // tracking on this page might be limited or not capture all users if the redirect happens before the script can load and run.
-    window.location.replace('https://f0bg5c5ixzh.typeform.com/to/SAD6oNmE');
-  }, []);
-
   return (
     <>
       {/* Google Tag Manager - Global site tag (gtag.js) */}
@@ -20,7 +16,7 @@ const BookingPage = () => {
       />
       <Script
         id="google-analytics-setup-redirect-page"
-        strategy="afterInteractive"
+        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];
@@ -31,7 +27,7 @@ const BookingPage = () => {
           `,
         }}
       />
-      {/* Render nothing else since this is a redirect page */}
+      <Widget id="SAD6oNmE" style={{ width: '100%', height: '100vh' }} />
     </>
   );
 };

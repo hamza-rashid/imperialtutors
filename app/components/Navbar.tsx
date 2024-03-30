@@ -24,8 +24,7 @@ import {
     ChevronDownIcon,
     ChevronRightIcon,
   } from '@chakra-ui/icons';
-
-  // Existing imports...
+  import { PopupButton } from '@typeform/embed-react'; // Add this import
 
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
