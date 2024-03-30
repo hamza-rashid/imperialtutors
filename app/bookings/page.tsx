@@ -1,8 +1,8 @@
 "use client"
 
-import { useEffect } from 'react';
 import Script from 'next/script';
 import { Widget } from '@typeform/embed-react';
+import Navbar from '../components/Navbar';
 
 
 const BookingPage = () => {
@@ -27,6 +27,7 @@ const BookingPage = () => {
           `,
         }}
       />
+      <Navbar />
       <Widget id="SAD6oNmE" style={{ width: '100%', height: '100vh' }} />
     </>
   );
