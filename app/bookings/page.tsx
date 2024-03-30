@@ -3,6 +3,7 @@
 import Script from 'next/script';
 import { Widget } from '@typeform/embed-react';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 
 const BookingPage = () => {
@@ -29,6 +30,7 @@ const BookingPage = () => {
       />
       <Navbar />
       <Widget id="SAD6oNmE" style={{ width: '100%', height: '100vh' }} />
+      <Footer />
     </>
   );
 };
