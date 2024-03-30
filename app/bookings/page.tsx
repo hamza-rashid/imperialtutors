@@ -1,21 +1,23 @@
+import { useEffect } from 'react';
 import Script from 'next/script';
-import Testimonials from '../components/Testimonials';
-import HeroSection from '../components/HeroSection';
-import Features from '../components/Features';
-import Pricing from '../components/Pricing';
-import Footer from '../components/Footer';
 
-export default function ReviewPage() {
+const BookingPage = () => {
+  useEffect(() => {
+    // It's important to note that because this page redirects immediately,
+    // tracking on this page might be limited or not capture all users if the redirect happens before the script can load and run.
+    window.location.replace('https://f0bg5c5ixzh.typeform.com/to/SAD6oNmE');
+  }, []);
+
   return (
     <>
       {/* Google Tag Manager - Global site tag (gtag.js) */}
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=AW-16477682494"
-        strategy="afterInteractive"
+        strategy="beforeInteractive"
         async
       />
       <Script
-        id="google-analytics-setup"
+        id="google-analytics-setup-redirect-page"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
@@ -27,12 +29,9 @@ export default function ReviewPage() {
           `,
         }}
       />
-
-      <div id="testimonials"> <Testimonials/> </div>
-      <HeroSection />
-      <Features />
-      <Pricing />
-      <Footer />
+      {/* Render nothing else since this is a redirect page */}
     </>
   );
-}
+};
+
+export default BookingPage;
