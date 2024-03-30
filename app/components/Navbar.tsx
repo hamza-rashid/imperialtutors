@@ -81,7 +81,7 @@ export default function Navbar() {
             px={2}
             py={1}
             rounded={'md'}
-            href={"https://gcsedoctor.co.uk/reviews"} // Use the conditionally set href
+            href={"https://gcsedoctor.co.uk/#testimonials"}
             fontSize={'sm'}
             fontWeight={600}
             color={useColorModeValue('gray.600', 'white')}
