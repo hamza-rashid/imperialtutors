@@ -1,0 +1,10 @@
+{
+    "redirects": [
+      {
+        "source": "/reviews",
+        "destination": "https://gcsedoctor.co.uk/#testimonials",
+        "permanent": true
+      }
+    ]
+  }
+  
