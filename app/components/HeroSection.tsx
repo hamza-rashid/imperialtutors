@@ -89,7 +89,7 @@ import {
                 colorScheme={'green'}
                 bg={'green.500'}
                 _hover={{ bg: 'green.600' }}>
-                Join Waitlist
+                Sign Up
               </Button>
               <text fontSize={'sm'}> 
               <Highlight query={remainingDays === 7 ? 'Next Lesson today!' : `Next Lesson in ${remainingDays} day${remainingDays !== 1 ? 's' : ''}!`} styles={{ px: '2', rounded: '2', bg: 'rgba(224, 90, 82, 0.4)' }}> 
