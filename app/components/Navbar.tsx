@@ -120,7 +120,7 @@ export default function Navbar() {
                 bg: 'green.600',
               }}
             >
-              Join Waitlist
+              Sign Up
             </Button>
           )}
         </Stack>
