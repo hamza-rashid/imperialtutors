@@ -77,7 +77,7 @@ import {
                 <Icon as={MdOutlineSchool} color={'green.500'} w={5} h={5} />
                 }
                 iconBg={useColorModeValue('green.100', 'green.900')}
-                text={<span><strong>Effective Learning:</strong> Engage in 1.5-hour weekly group sessions per subject, with 45 minutes for content and 45 minutes for exam technique.</span>}
+                text={<span><strong>Effective Learning:</strong> Engage in 1.5-hour weekly group sessions per subject, with 1 hour for content and 30 minutes for exam technique.</span>}
               />
               <Feature
                 icon={
