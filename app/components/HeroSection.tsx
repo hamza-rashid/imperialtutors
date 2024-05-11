@@ -101,7 +101,7 @@ import {
               </text>
               </Stack>
               <Box textAlign={{ base: 'center', sm: 'unset' }}> 
-                <Text fontSize={'lg'} transform={'rotate(10deg)'} marginBottom={{ base: 7, sm: 'none' }}>
+                <Text fontSize={'lg'} fontWeight={'bold'} transform={'rotate(10deg)'} marginBottom={{ base: 7, sm: 'none' }}>
                   At £15 per hour
                 </Text>
                 <Icon
