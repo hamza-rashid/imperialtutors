@@ -102,7 +102,7 @@ import {
               </Stack>
               <Box textAlign={{ base: 'center', sm: 'unset' }}> 
               <Text fontSize={'lg'} transform={'rotate(10deg)'} marginBottom={{ base: 7, sm: 'none' }}>
-                <Text as="span" fontWeight="bold">£15</Text>/hour
+                <Text as="span" fontWeight="bold">£20</Text>/lesson
               </Text>
                 <Icon
                   as={Arrow}
