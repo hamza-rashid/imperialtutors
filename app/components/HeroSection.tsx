@@ -69,7 +69,7 @@ import {
               </Text>
             </Heading>
             <Text color={'gray.600'}>
-              Join our online tuition with an <Text as="span" fontWeight="bold">Imperial graduate Dr. Hamza</Text>! In <Text as="span" fontWeight="bold">small groups</Text>, cover the entire GCSE & A-level Science and Maths syllabus.
+              Join our online tuition with an <Text as="span" fontWeight="bold">Imperial graduate, Dr. Hamza</Text>! In <Text as="span" fontWeight="bold">small groups</Text>, cover the entire GCSE & A-level Science and Maths syllabus.
               <Box as="span" display="block" height="1rem" />
               For A-level students we also offer <Text as="span" fontWeight="bold">mentorship for medical school entry</Text>, with personalised help on your personal statement and interview prep to boost your admission chances.
             </Text>
