@@ -69,7 +69,7 @@ import {
               </Text>
             </Heading>
             <Text color={'gray.600'} fontSize={{ base: 'lg', md: 'xl' }}>
-            Join our online tuition with <Text as="span" fontWeight="bold">Imperial graduate Dr. Hamza</Text>! In small groups, cover the entire GCSE & A-level Science and Maths syllabus. Get 1.5 hours of focused, weekly sessions on content and exam techniques.            </Text>
+            Join our online tuition with <Text as="span" fontWeight="bold">Imperial graduate Dr. Hamza</Text>! In small groups, cover the entire GCSE & A-level Science and Maths syllabus. Get 1.5 hours per subject, of weekly sessions on content and exam techniques.            </Text>
             <Text color={'gray.600'} fontSize={{ base: 'lg', md: 'xl' }}>
             For A-level students we also offer <Text as="span" fontWeight="bold">mentorship for medical school entry</Text>, with personalised help on your personal statement and interview prep to boost your admission chances.            </Text>
             <Stack
