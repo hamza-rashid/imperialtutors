@@ -101,9 +101,9 @@ import {
               </text>
               </Stack>
               <Box textAlign={{ base: 'center', sm: 'unset' }}> 
-                <Text fontSize={'lg'} fontWeight={'bold'} transform={'rotate(10deg)'} marginBottom={{ base: 7, sm: 'none' }}>
-                  At £15 per hour
-                </Text>
+              <Text fontSize={'lg'} transform={'rotate(10deg)'} marginBottom={{ base: 7, sm: 'none' }}>
+                <Text as="span" fontWeight="bold">£15</Text> per hour
+              </Text>
                 <Icon
                   as={Arrow}
                   color={useColorModeValue('gray.800', 'gray.300')}
