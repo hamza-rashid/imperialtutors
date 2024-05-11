@@ -68,7 +68,7 @@ import {
               </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color="green.400" />
-                capped at <strong>Small class sizes</strong>
+                <strong>Small class sizes</strong>
               </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color="green.400" />
