@@ -68,9 +68,12 @@ import {
               with Qualified Doctors!
               </Text>
             </Heading>
-            <Text color={'gray.600'}>Join our online tuition with <Text as="span" fontWeight="bold">Imperial graduate Dr. Hamza</Text>! In small groups, cover the entire GCSE & A-level Science and Maths syllabus.
-            <br></br>
-            For A-level students we also offer <Text as="span" fontWeight="bold">mentorship for medical school entry</Text>, with personalised help on your personal statement and interview prep to boost your admission chances.</Text>
+            <Text color={'gray.600'} fontSize={{ base: 'lg', md: 'xl' }}>
+              Join our online tuition with <Text as="span" fontWeight="bold">Imperial graduate Dr. Hamza</Text>! In small groups, cover the entire GCSE & A-level Science and Maths syllabus.
+              <Box as="br" />
+              For A-level students we also offer <Text as="span" fontWeight="bold">mentorship for medical school entry</Text>, with personalised help on your personal statement and interview prep to boost your admission chances.
+            </Text>
+
             <Stack
               spacing={{ base: 4, sm: 6 }}
               direction={{ base: 'column', sm: 'row' }}>
