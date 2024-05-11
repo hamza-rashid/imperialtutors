@@ -93,10 +93,10 @@ import {
                 Sign Up
               </Button>
               <text fontSize={'sm'}> 
-              <Highlight query={remainingDays === 7 ? 'Next Lesson today!' : `Next Lesson in ${remainingDays} day${remainingDays !== 1 ? 's' : ''}!`} styles={{ px: '2', rounded: '2', bg: 'rgba(224, 90, 82, 0.4)' }}> 
+              <Highlight query={remainingDays === 7 ? 'Next Lesson today! Join now.' : `Next Lesson in ${remainingDays} day${remainingDays !== 1 ? 's' : ''}! Sign up now.`} styles={{ px: '2', rounded: '2', bg: 'rgba(224, 90, 82, 0.4)' }}> 
               {remainingDays === 7
-                ? 'Next Lesson today!'
-                : [`Next Lesson in ${remainingDays} day${remainingDays !== 1 ? 's' : ''}!`].join('')}
+                ? 'Next Lesson today! Join now.'
+                : [`Next Lesson in ${remainingDays} day${remainingDays !== 1 ? 's' : ''}! Sign up now.`].join('')}
               </Highlight>
               </text>
               </Stack>
