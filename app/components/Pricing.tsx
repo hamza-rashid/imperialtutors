@@ -50,7 +50,7 @@ import {
             <Stack direction={'row'} align={'center'} justify={'center'}>
               <Text fontSize={'3xl'}>£</Text>
               <Text fontSize={'6xl'} fontWeight={800}>
-                20
+                15
               </Text>
               <Text color={'gray.500'}>/lesson</Text>
             </Stack>
@@ -60,7 +60,7 @@ import {
             <List spacing={3}>
               <ListItem>
                 <ListIcon as={CheckIcon} color="green.400" />
-                <strong>1.5 hour</strong> group lesson
+                <strong>1 hour</strong> group lesson
               </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color="green.400" />
@@ -119,7 +119,7 @@ import {
             <Stack direction={'row'} align={'center'} justify={'center'}>
               <Text fontSize={'3xl'}>£</Text>
               <Text fontSize={'6xl'} fontWeight={800}>
-                80
+                60
               </Text>
               <Text color={'gray.900'}>/month</Text>
             </Stack>
@@ -129,7 +129,7 @@ import {
             <List spacing={3}>
               <ListItem>
                 <ListIcon as={CheckIcon} color="green.400" />
-                <strong>6 hours</strong> of group lessons per month 
+                <strong>4 hours</strong> of group lessons per month 
               </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color="green.400" />
