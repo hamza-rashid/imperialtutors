@@ -64,7 +64,7 @@ import {
               </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color="green.400" />
-                <strong>1 subject per week</strong>  (choose from Maths, Biology, Chemistry and Physics)
+                <strong>1 GCSE subject per week</strong>  (choose from Maths, Biology, Chemistry and Physics)
               </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color="green.400" />
