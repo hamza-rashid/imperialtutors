@@ -45,7 +45,7 @@ import {
               px={3}
               color={'green.500'}
               rounded={'full'}>
-              Pay per lesson
+              Pay per lesson (Year 7 - GCSE)
             </Text>
             <Stack direction={'row'} align={'center'} justify={'center'}>
               <Text fontSize={'3xl'}>£</Text>
@@ -114,7 +114,7 @@ import {
               px={3}
               color={'green.500'}
               rounded={'full'}>
-              Pay Monthly
+              Pay Monthly (Year 7 - GCSE)
             </Text>
             <Stack direction={'row'} align={'center'} justify={'center'}>
               <Text fontSize={'3xl'}>£</Text>
