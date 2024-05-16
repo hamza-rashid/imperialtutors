@@ -60,11 +60,11 @@ import {
             <List spacing={3}>
               <ListItem>
                 <ListIcon as={CheckIcon} color="green.400" />
-                <strong>1 hour</strong> group lesson
+                <strong>1 hour</strong> group GCSE lesson
               </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color="green.400" />
-                <strong>1 GCSE subject per week</strong>  (choose from Maths, Biology, Chemistry and Physics)
+                <strong>1 subject per week</strong>  (choose from Maths, Biology, Chemistry and Physics)
               </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color="green.400" />
@@ -129,7 +129,7 @@ import {
             <List spacing={3}>
               <ListItem>
                 <ListIcon as={CheckIcon} color="green.400" />
-                <strong>4 hours</strong> of group lessons per month 
+                <strong>4 hours</strong> of group GCSE lessons per month 
               </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color="green.400" />
