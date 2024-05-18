@@ -13,7 +13,8 @@ import {
     createIcon,
     IconProps,
     useColorModeValue,
-    Highlight
+    Highlight,
+    SimpleGrid
 } from '@chakra-ui/react';
 
 import { useEffect, useState } from 'react';
@@ -134,12 +135,12 @@ export default function CallToActionWithVideo() {
                     </Box>
                 </Flex>
             </Stack>
-            <Stack direction="row" spacing={12} align="center" justify="center" mt={8} wrap="wrap">
+            <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8} alignItems="center" justifyContent="center" mt={12}>
                 <Image src="/images/icl_logo.png" alt="Imperial College" width="200px" height="55px" />
                 <Image src="/images/ucl_logo.png" alt="UCL" width="200px" height="55px" />
                 <Image src="/images/cambridge_logo.png" alt="Cambridge" width="200px" height="160px" />
                 <Image src="/images/oxford_logo.png" alt="Oxford" width="200px" height="55px" />
-            </Stack>
+            </SimpleGrid>
         </Container>
     );
 }
