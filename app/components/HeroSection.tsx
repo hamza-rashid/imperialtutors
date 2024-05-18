@@ -68,8 +68,8 @@ import {
               with Qualified Doctors!
               </Text>
             </Heading>
-            <Text color={'gray.600'} fontSize={'m'}>
-            <Text as="span" fontWeight="bold">Personalised Online Group Tuition in Science & Maths for Year 7 to A-level by Imperial and Oxbridge Graduates.</Text> Affordable Rates, Small Class Sizes, and Medical School Mentorship.</Text>
+            <Text color={'gray.600'} fontSize={'lg'}>
+            Personalised Online Group Tuition in <Text as="span" fontWeight="bold">Science & Maths for Year 7 to A-level by Imperial and Oxbridge Graduates.</Text> Affordable Rates, Small Class Sizes, and Medical School Mentorship.</Text>
             <Stack
               spacing={{ base: 4, sm: 6 }}
               direction={{ base: 'column', sm: 'row' }}>
