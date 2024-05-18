@@ -84,7 +84,7 @@ export default function CallToActionWithVideo() {
                                     _hover={{ bg: 'green.600' }}>
                                     Sign Up
                                 </Button>
-                                <Text fontSize={'sm'}>
+                                <Text fontSize={'m'}>
                                     <Highlight query={remainingDays === 7 ? 'Next Lesson today! Join now.' : `Next Lesson in ${remainingDays} day${remainingDays !== 1 ? 's' : ''}! Sign up now.`} styles={{ px: '2', rounded: '2', bg: 'rgba(224, 90, 82, 0.4)' }}>
                                         {remainingDays === 7
                                             ? 'Next Lesson today! Join now.'
@@ -135,10 +135,10 @@ export default function CallToActionWithVideo() {
                 </Flex>
             </Stack>
             <Stack direction="row" spacing={8} align="center" justify="center" mt={8}>
-                <Image src="/images/icl_logo.png" alt="Imperial College" boxSize="60px" />
-                <Image src="/images/ucl_logo.png" alt="UCL" boxSize="60px" />
-                <Image src="/images/cambridge_logo.png" alt="Cambridge" boxSize="60px" />
-                <Image src="/images/oxford_logo.png" alt="Oxford" boxSize="60px" />
+                <Image src="/images/icl_logo.png" alt="Imperial College" boxSize="80px" />
+                <Image src="/images/ucl_logo.png" alt="UCL" boxSize="80px" />
+                <Image src="/images/cambridge_logo.png" alt="Cambridge" boxSize="80px" />
+                <Image src="/images/oxford_logo.png" alt="Oxford" boxSize="80px" />
             </Stack>
         </Container>
     );
