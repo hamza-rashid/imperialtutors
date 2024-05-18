@@ -134,11 +134,11 @@ export default function CallToActionWithVideo() {
                     </Box>
                 </Flex>
             </Stack>
-            <Stack direction="row" spacing={8} align="center" justify="center" mt={8}>
-                <Image src="/images/icl_logo.png" alt="Imperial College" boxSize="60px" />
-                <Image src="/images/ucl_logo.png" alt="UCL" boxSize="60px" />
-                <Image src="/images/cambridge_logo.png" alt="Cambridge" boxSize="60px" />
-                <Image src="/images/oxford_logo.png" alt="Oxford" boxSize="60px" />
+            <Stack direction="row" spacing={16} align="center" justify="center" mt={12}>
+                <Image src="/images/icl_logo.png" alt="Imperial College" boxSize="70px" />
+                <Image src="/images/ucl_logo.png" alt="UCL" boxSize="70px" />
+                <Image src="/images/cambridge_logo.png" alt="Cambridge" boxSize="70px" />
+                <Image src="/images/oxford_logo.png" alt="Oxford" boxSize="70px" />
             </Stack>
         </Container>
     );
