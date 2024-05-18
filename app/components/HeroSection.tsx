@@ -110,11 +110,11 @@ import {
               </Box>
               </Stack>
             </Stack>
-            <Stack direction="row" spacing={4} align="center">
+            <Stack direction="row" spacing={4} align="center" justify="center" mt={4}>
                 <Image src="/images/icl_logo.png" alt="Imperial College" boxSize="50px" />
-                <Image src="/images/ucl_logo.png" alt="Oxford" boxSize="50px" />
+                <Image src="/images/ucl_logo.png" alt="UCL" boxSize="50px" />
                 <Image src="/images/cambridge_logo.png" alt="Cambridge" boxSize="50px" />
-                <Image src="/images/oxford_logo.png" alt="Cambridge" boxSize="50px" />
+                <Image src="/images/oxford_logo.png" alt="Oxford" boxSize="50px" />
             </Stack>
           </Stack>
           <Flex
