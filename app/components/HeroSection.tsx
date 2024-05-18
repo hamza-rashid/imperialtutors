@@ -68,13 +68,8 @@ import {
               with Qualified Doctors!
               </Text>
             </Heading>
-            <Text color={'gray.600'}>
-              Join our online tuition with an <Text as="span" fontWeight="bold">Imperial College graduate, Dr. Hamza</Text>! In <Text as="span" fontWeight="bold">small groups for year 7 to 13 </Text>, cover the entire GCSE & A-level Science and Maths syllabus.
-              <Box as="span" display="block" height="1rem" />
-              For A-level students we also offer <Text as="span" fontWeight="bold">mentorship for medical school entry</Text>, with personalised help on your personal statement and interview prep to boost your admission chances.
-            </Text>
-
-
+            <Text color={'gray.600'} fontSize={'m'}>
+            <Text as="span" fontWeight="bold"></Text>Personalised Online Group Tuition in Science & Maths for Year 7 to A-level by Imperial and Oxbridge Graduates.</Text> Affordable Rates, Small Class Sizes, and Medical School Mentorship.
             <Stack
               spacing={{ base: 4, sm: 6 }}
               direction={{ base: 'column', sm: 'row' }}>
@@ -102,7 +97,7 @@ import {
               </Stack>
               <Box textAlign={{ base: 'center', sm: 'unset' }}> 
               <Text fontSize={'lg'} transform={'rotate(10deg)'} marginBottom={{ base: 7, sm: 'none' }}>
-                <Text as="span" fontWeight="bold">£15</Text> per hour
+                <Text as="span" fontWeight="bold">£15</Text> per hour ()
               </Text>
                 <Icon
                   as={Arrow}
