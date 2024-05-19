@@ -68,7 +68,7 @@ export default function CallToActionWithVideo() {
                         </Text>
                     </Heading>
                     <Text color={'gray.600'} fontSize={'xl'}>
-                        Personalised Online Group Classes in <Text as="span" fontWeight="bold">Science & Maths for Year 7 to 13 by Top London & Oxbridge Graduates.</Text> Affordable Rates, Small Class Sizes, and Medical School Mentorship.
+                        Personalised Online Group Classes in <Text as="span" fontWeight="bold">Science & Maths for Year 7 to 13 by top London & Oxbridge Graduates.</Text> Affordable Rates, Small Class Sizes, and Medical School Mentorship.
                     </Text>
                     <Stack
                         spacing={{ base: 4, sm: 6 }}
