@@ -68,7 +68,7 @@ export default function CallToActionWithVideo() {
                         </Text>
                     </Heading>
                     <Text color={'gray.600'} fontSize={'lg'}>
-                        Personalised Online Group Tuition in <Text as="span" fontWeight="bold">Science & Maths for Year 7 to A-level by Imperial and Oxbridge Graduates.</Text> Affordable Rates, Small Class Sizes, and Medical School Mentorship.
+                        Personalised Online Group Tuition in <Text as="span" fontWeight="bold">Science & Maths for Year 7 to 13 by Imperial and Oxbridge Graduates.</Text> Affordable Rates, Small Class Sizes, and Medical School Mentorship.
                     </Text>
                     <Stack
                         spacing={{ base: 4, sm: 6 }}
@@ -136,7 +136,8 @@ export default function CallToActionWithVideo() {
                 </Flex>
             </Stack>
             <Stack align={'center'} mb={6}>
-                <Heading as="h3" size="lg">Elite Educators from Leading Universities</Heading>
+
+                <Heading as="h3" color={'gray.600'} size="lg">Elite Educators from Leading Universities</Heading>
             </Stack>
             <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={6} alignItems="center" justifyItems="center" mt={2}>
                 <Image src="/images/icl_logo.png" alt="Imperial College" width="200px" height="55px" />
