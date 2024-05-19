@@ -135,7 +135,10 @@ export default function CallToActionWithVideo() {
                     </Box>
                 </Flex>
             </Stack>
-            <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8} alignItems="center" justifyItems="center" mt={12}>
+            <Stack align={'center'} mb={6}>
+                <Heading as="h3" size="lg">Elite Educators from Leading Universities</Heading>
+            </Stack>
+            <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={6} alignItems="center" justifyItems="center" mt={12}>
                 <Image src="/images/icl_logo.png" alt="Imperial College" width="200px" height="55px" />
                 <Image src="/images/ucl_logo.png" alt="UCL" width="200px" height="55px" />
                 <Image src="/images/cambridge_logo.png" alt="Cambridge" width="200px" height="160px" />
