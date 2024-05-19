@@ -136,13 +136,21 @@ export default function CallToActionWithVideo() {
                 </Flex>
             </Stack>
             <Stack align={'center'} mb={6}>
-                <Heading as="h3" color={'gray.400'} size="lg" textAlign="center">Elite Educators from Leading Universities</Heading>
+                <Heading as="h3" color={'gray.500'} size="lg" textAlign="center">Elite Educators from Leading Universities</Heading>
             </Stack>
-            <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={6} alignItems="center" justifyItems="center" mt={2}>
-                <Image src="/images/icl_logo.png" alt="Imperial College" width="200px" height="55px" />
-                <Image src="/images/ucl_logo.png" alt="UCL" width="200px" height="55px" />
-                <Image src="/images/cambridge_logo.png" alt="Cambridge" width="200px" height="160px" />
-                <Image src="/images/oxford_logo.png" alt="Oxford" width="200px" height="55px" />
+            <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={10} alignItems="center" justifyItems="center">
+                <Box display="flex" justifyContent="center" alignItems="center">
+                    <Image src="/images/icl_logo.png" alt="Imperial College" width="200px" height="55px" />
+                </Box>
+                <Box display="flex" justifyContent="center" alignItems="center">
+                    <Image src="/images/ucl_logo.png" alt="UCL" width="200px" height="55px" />
+                </Box>
+                <Box display="flex" justifyContent="center" alignItems="center">
+                    <Image src="/images/cambridge_logo.png" alt="Cambridge" width="200px" height="160px" />
+                </Box>
+                <Box display="flex" justifyContent="center" alignItems="center">
+                    <Image src="/images/oxford_logo.png" alt="Oxford" width="200px" height="55px" />
+                </Box>
             </SimpleGrid>
         </Container>
     );
