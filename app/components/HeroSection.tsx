@@ -136,9 +136,9 @@ export default function CallToActionWithVideo() {
                 </Flex>
             </Stack>
             <Stack align={'center'} mb={6}>
-                <Heading as="h3" size="lg" textAlign="center">Elite Educators from Leading Universities</Heading>
+                <Heading mt={6} as="h3" size="lg" textAlign="center">Elite Educators from Leading Universities</Heading>
             </Stack>
-            <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={6} alignItems="center" justifyItems="center" mt={12} mb={12}>
+            <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={6} alignItems="center" justifyItems="center" mt={6} mb={12}>
                 <Image src="/images/icl_logo.png" alt="Imperial College" width="200px" height="55px" />
                 <Image src="/images/ucl_logo.png" alt="UCL" width="200px" height="55px" />
                 <Image src="/images/cambridge_logo.png" alt="Cambridge" width="200px" height="70px" />
