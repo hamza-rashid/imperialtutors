@@ -67,7 +67,7 @@ export default function CallToActionWithVideo() {
                             with Qualified Doctors!
                         </Text>
                     </Heading>
-                    <Text color={'gray.600'} fontSize={'lg'}>
+                    <Text color={'gray.600'} fontSize={'xl'}>
                         Personalised Online Group Classes in <Text as="span" fontWeight="bold">Science & Maths for Year 7 to 13 by Imperial and Oxbridge Graduates.</Text> Affordable Rates, Small Class Sizes, and Medical School Mentorship.
                     </Text>
                     <Stack
