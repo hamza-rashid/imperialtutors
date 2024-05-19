@@ -85,7 +85,7 @@ export default function CallToActionWithVideo() {
                                     _hover={{ bg: 'green.600' }}>
                                     Sign Up
                                 </Button>
-                                <Text fontSize={'m'}>
+                                <Text fontSize={'lg'}>
                                     <Highlight query={remainingDays === 7 ? 'Next Lesson today! Join now.' : `Next Lesson in ${remainingDays} day${remainingDays !== 1 ? 's' : ''}! Sign up now.`} styles={{ px: '2', rounded: '2', bg: 'rgba(224, 90, 82, 0.4)' }}>
                                         {remainingDays === 7
                                             ? 'Next Lesson today! Join now.'
