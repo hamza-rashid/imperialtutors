@@ -16,7 +16,7 @@ export default function Testimonials() {
 
   useEffect(() => {
     const script = document.createElement('script');
-    script.src = 'https://widget.trustmary.com/O4_62wwqn';
+    script.src = "https://widget.trustmary.com/RifRScI9A";
     script.async = true;
 
     script.onload = () => {
