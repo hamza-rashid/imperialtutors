@@ -7,12 +7,15 @@ import {
   Skeleton,
   SkeletonCircle,
   SkeletonText,
-  useColorModeValue,
+  useBreakpointValue,
 } from '@chakra-ui/react';
 
 export default function Testimonials() {
   const [widgetLoaded, setWidgetLoaded] = useState(false);
   const widgetRef = useRef<HTMLDivElement>(null);
+
+  // Define padding values based on the screen size
+  const padding = useBreakpointValue({ base: 4, md: 0 });
 
   useEffect(() => {
     const script = document.createElement('script');
@@ -40,6 +43,7 @@ export default function Testimonials() {
       direction={'column'}
       width={'full'}
       overflow={'hidden'}
+      px={padding} // Add responsive padding here
     >
       {!widgetLoaded && (
         // Placeholder content while widget is loading
