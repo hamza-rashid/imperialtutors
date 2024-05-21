@@ -16,19 +16,20 @@ export default function Testimonials() {
 
   useEffect(() => {
     const script = document.createElement('script');
-    script.src = 'https://widget.trustmary.com/RifRScI9A';
-    script.async = true;
+    script.src = 'https://static.elfsight.com/platform/platform.js';
+    script.defer = true;
 
     script.onload = () => {
       setWidgetLoaded(true);
     };
 
-    widgetRef.current?.appendChild(script);
+    document.body.appendChild(script);
 
     return () => {
       if (widgetRef.current) {
         widgetRef.current.innerHTML = ''; // Clear the inner HTML of the container
       }
+      document.body.removeChild(script); // Cleanup script when component unmounts
     };
   }, []);
 
@@ -67,7 +68,7 @@ export default function Testimonials() {
           ))}
         </Flex>
       )}
-      <Box ref={widgetRef} />
+      <Box ref={widgetRef} className="elfsight-app-7e29a44d-74ac-4fc6-8c11-db555d1bc93d" data-elfsight-app-lazy />
     </Flex>
   );
 }
