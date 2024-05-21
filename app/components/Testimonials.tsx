@@ -7,7 +7,6 @@ import {
   Skeleton,
   SkeletonCircle,
   SkeletonText,
-  useColorModeValue,
 } from '@chakra-ui/react';
 
 export default function Testimonials() {
@@ -16,18 +15,29 @@ export default function Testimonials() {
 
   useEffect(() => {
     const script = document.createElement('script');
-    script.src = "https://widget.trustmary.com/RifRScI9A";
+    script.src = 'https://widget.trustmary.com/RifRScI9A';
     script.async = true;
 
     script.onload = () => {
+      console.log('Trustmary widget script loaded.');
       setWidgetLoaded(true);
     };
 
-    widgetRef.current?.appendChild(script);
+    script.onerror = () => {
+      console.error('Error loading Trustmary widget script.');
+    };
 
+    if (widgetRef.current) {
+      widgetRef.current.appendChild(script);
+      console.log('Trustmary widget script appended to widgetRef.');
+    } else {
+      console.error('widgetRef.current is null.');
+    }
+
+    // Cleanup function to remove the script if the component is unmounted
     return () => {
       if (widgetRef.current) {
-        widgetRef.current.innerHTML = ''; // Clear the inner HTML of the container
+        // widgetRef.current.innerHTML = ''; // This line is removed to avoid potential issues with the widget
       }
     };
   }, []);
