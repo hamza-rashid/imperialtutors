@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'GCSE Doctor',
-  description: 'Affordable, high-quality tutoring for GCSE Sciences and Maths.',
+  description: 'Affordable KS3, GCSE & A-Level tutoring for Sciences & Maths at a high-quality',
 }
 
 export default function RootLayout({
