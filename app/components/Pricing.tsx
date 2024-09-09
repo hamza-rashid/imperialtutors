@@ -50,7 +50,7 @@ import {
             <Stack direction={'row'} align={'center'} justify={'center'}>
               <Text fontSize={'3xl'}>£</Text>
               <Text fontSize={'6xl'} fontWeight={800}>
-                15
+                20
               </Text>
               <Text color={'gray.500'}>/lesson</Text>
             </Stack>
@@ -119,7 +119,7 @@ import {
             <Stack direction={'row'} align={'center'} justify={'center'}>
               <Text fontSize={'3xl'}>£</Text>
               <Text fontSize={'6xl'} fontWeight={800}>
-                60
+                80
               </Text>
               <Text color={'gray.900'}>/month</Text>
             </Stack>
