@@ -1,33 +1,23 @@
-"use client"
+"use client";
 
 import {
-    Box,
-    Flex,
-    Text,
-    IconButton,
-    Button,
-    Stack,
-    Collapse,
-    Icon,
-    Link,
-    Popover,
-    PopoverTrigger,
-    PopoverContent,
-    Image,
-    useColorModeValue,
-    useBreakpointValue,
-    useDisclosure,
-  } from '@chakra-ui/react';
-  import {
-    HamburgerIcon,
-    CloseIcon,
-    ChevronDownIcon,
-    ChevronRightIcon,
-  } from '@chakra-ui/icons';
+  Box,
+  Flex,
+  IconButton,
+  Button,
+  Stack,
+  Link,
+  Image,
+  useColorModeValue,
+  useBreakpointValue,
+  useDisclosure,
+  Collapse,
+} from '@chakra-ui/react';
+import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
-
+  const isDesktop = useBreakpointValue({ base: false, md: true });
 
   return (
     <Box>
@@ -41,90 +31,120 @@ export default function Navbar() {
         borderStyle={'solid'}
         borderColor={useColorModeValue('gray.200', 'gray.900')}
         align={'center'}
+        justify={'space-between'}
       >
-        <Flex flex={{ base: 1 }} justify={{ base: 'left', md: 'left' }}>
+        <Flex justify={{ base: 'center', md: 'left' }} flex={{ base: 1 }}>
           <a href="/">
             <Image
               src="images/logo.svg"
               h="50px"
-              marginLeft={2}
               objectFit="contain"
               alt="Logo"
             />
           </a>
         </Flex>
 
-        <Stack
-          spacing={{ base: 0, md: 4 }} // Adjusted spacing based on breakpoints
-          align={'center'}
-          justify={'flex-end'}
-          flex={{ base: 1, md: 'auto' }}
-          mr={{ base: -2, md: 0 }}
-          direction="row" // Set direction to row
-        >
-          <Link
-            px={2}
-            py={1}
-            rounded={'md'}
-            href={"https://gcsedoctor.co.uk/#about-me"}
-            fontSize={'sm'}
-            fontWeight={600}
-            color={useColorModeValue('gray.600', 'white')}
-            _hover={{
-              textDecoration: 'none',
-              color: '#37A169', // Text color changes on hover
-            }}
-          >
-            About
-          </Link>
-          <Link
-            px={2}
-            py={1}
-            rounded={'md'}
-            href={"https://gcsedoctor.co.uk/#testimonials"}
-            fontSize={'sm'}
-            fontWeight={600}
-            color={useColorModeValue('gray.600', 'white')}
-            _hover={{
-              textDecoration: 'none',
-              color: '#37A169', // Text color changes on hover
-            }}
-          >
-            Reviews
-          </Link>
-          <Link
-            px={2}
-            py={1}
-            rounded={'md'}
-            href={'https://gcsedoctor.co.uk/#pricing'}
-            fontSize={'sm'}
-            fontWeight={600}
-            color={useColorModeValue('gray.600', 'white')}
-            pr={{ base: 5, md: 5 }} // Apply pr=2 only on mobile
-            _hover={{
-              textDecoration: 'none',
-              color: '#37A169', // Text color changes on hover
-            }}
-          >
-            Fees
-          </Link>
-          {useBreakpointValue({ base: false, md: true }) && (
-            <Button
-              as={'a'}
-              fontSize={'sm'}
-              fontWeight={600}
-              color={'white'}
-              bg={'green.500'}
-              href={'https://gcsedoctor.co.uk/bookings'}
-              _hover={{
-                bg: 'green.600',
-              }}
-            >
-              Sign Up
-            </Button>
-          )}
-        </Stack>
+        {isDesktop ? (
+          <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
+            <DesktopNav />
+          </Flex>
+        ) : (
+          <IconButton
+            onClick={onToggle}
+            icon={isOpen ? <CloseIcon w={5} h={5} /> : <HamburgerIcon w={5} h={5} />}
+            variant={'ghost'}
+            aria-label={'Toggle Navigation'}
+            display={{ md: 'none' }}
+          />
+        )}
       </Flex>
+
+      {/* Mobile menu */}
+      {!isDesktop && (
+        <Collapse in={isOpen} animateOpacity>
+          <MobileNav />
+        </Collapse>
+      )}
     </Box>
   );
 }
+
+const DesktopNav = () => {
+  return (
+    <Stack direction={'row'} spacing={8} alignItems="center">
+      <NavItem label="About" href="https://gcsedoctor.co.uk/#about-me" />
+      <NavItem label="Reviews" href="https://gcsedoctor.co.uk/#testimonials" />
+      <NavItem label="Fees" href="https://gcsedoctor.co.uk/#pricing" />
+      <NavItem
+        label="📚 Free Revision Guide"
+        href="https://gcsedoctor.co.uk/revision"
+        isButton
+        isDesktop
+      />
+      <Button
+        as={'a'}
+        fontSize={'sm'}
+        fontWeight={600}
+        color={'white'}
+        bg={'green.500'}
+        href={'https://gcsedoctor.co.uk/bookings'}
+        _hover={{
+          bg: 'green.600',
+        }}
+      >
+        Sign Up
+      </Button>
+    </Stack>
+  );
+};
+
+const MobileNav = () => {
+  return (
+    <Flex
+      direction="column"
+      align="center"
+      bg={useColorModeValue('white', 'gray.800')}
+      p={4}
+      pt={2} // Reduced padding-top to decrease space above
+      pb={2} // Reduced padding-bottom to decrease space below
+      display={{ md: 'none' }}
+    >
+      {/* First line with links */}
+      <Stack direction={'row'} spacing={4} align="center" justify="center" w="100%" mb={3}>
+        <NavItem label="About" href="https://gcsedoctor.co.uk/#about-me" />
+        <NavItem label="Reviews" href="https://gcsedoctor.co.uk/#testimonials" />
+        <NavItem label="Fees" href="https://gcsedoctor.co.uk/#pricing" />
+      </Stack>
+
+      {/* Second line with the centered button */}
+      <Flex mt={3} justify="center" w="100%">
+        <NavItem label="📚 Free Revision Guide" href="https://gcsedoctor.co.uk/revision" isButton isMobile />
+      </Flex>
+    </Flex>
+  );
+};
+
+const NavItem = ({ label, href, isButton, isDesktop, isMobile }) => {
+  return (
+    <Link
+      href={href}
+      px={4} // Increase padding for better visual spacing
+      py={2}
+      rounded={'md'}
+      bg={isButton ? (isDesktop ? 'white' : 'white') : 'transparent'}
+      color={isButton ? '#37A169' : useColorModeValue('gray.600', 'white')}
+      border={isButton ? '2px solid #37A169' : 'none'}
+      fontWeight={600}
+      whiteSpace={'nowrap'} // Prevent text wrapping
+      textAlign="center"
+      _hover={{
+        textDecoration: 'none',
+        bg: isButton ? '#F0F0F0' : useColorModeValue('gray.100', 'gray.700'),
+      }}
+      target={isMobile && isButton ? '_blank' : undefined}
+      rel={isMobile && isButton ? 'noopener noreferrer' : undefined}
+    >
+      {label}
+    </Link>
+  );
+};
