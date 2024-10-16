@@ -14,6 +14,23 @@ import {
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
+interface NavItemProps {
+  label: string;
+  href: string;
+  isButton?: boolean;
+  isDesktop?: boolean;
+  isMobile?: boolean;
+  buttonHoverBg?: string;
+}
+
+interface DesktopNavProps {
+  buttonHoverBg: string;
+}
+
+interface MobileNavProps {
+  buttonHoverBg: string;
+}
+
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
   const isDesktop = useBreakpointValue({ base: false, md: true });
@@ -74,14 +91,15 @@ export default function Navbar() {
   );
 }
 
-const DesktopNav = ({ buttonHoverBg }) => {
+const DesktopNav = ({ buttonHoverBg }: DesktopNavProps) => {
   return (
-    <Stack direction={'row'} spacing={8} alignItems="center">
+    <Stack         fontSize={'sm'}
+    direction={'row'} spacing={6} alignItems="center">
       <NavItem label="About" href="https://gcsedoctor.co.uk/#about-me" />
       <NavItem label="Reviews" href="https://gcsedoctor.co.uk/#testimonials" />
       <NavItem label="Fees" href="https://gcsedoctor.co.uk/#pricing" />
       <NavItem
-        label="📚 Free Revision Guide"
+        label="📚 Free Revision Blueprint"
         href="https://gcsedoctor.co.uk/revision"
         isButton
         isDesktop
@@ -104,7 +122,7 @@ const DesktopNav = ({ buttonHoverBg }) => {
   );
 };
 
-const MobileNav = ({ buttonHoverBg }) => {
+const MobileNav = ({ buttonHoverBg }: MobileNavProps) => {
   return (
     <Flex
       direction="column"
@@ -125,7 +143,7 @@ const MobileNav = ({ buttonHoverBg }) => {
       {/* Second line with the centered button */}
       <Flex mt={3} justify="center" w="100%">
         <NavItem
-          label="📚 Free Revision Guide"
+          label="📚 Free Revision Blueprint"
           href="https://gcsedoctor.co.uk/revision"
           isButton
           isMobile
@@ -136,7 +154,7 @@ const MobileNav = ({ buttonHoverBg }) => {
   );
 };
 
-const NavItem = ({ label, href, isButton, isDesktop, isMobile, buttonHoverBg }) => {
+const NavItem = ({ label, href, isButton, isDesktop, isMobile, buttonHoverBg }: NavItemProps) => {
   return (
     <Link
       href={href}
@@ -151,7 +169,7 @@ const NavItem = ({ label, href, isButton, isDesktop, isMobile, buttonHoverBg }) 
       textAlign="center"
       _hover={{
         textDecoration: 'none',
-        bg: isButton ? buttonHoverBg : 'gray.100',
+        bg: isButton && buttonHoverBg ? buttonHoverBg : 'gray.100',
       }}
       target={isMobile && isButton ? '_blank' : undefined}
       rel={isMobile && isButton ? 'noopener noreferrer' : undefined}
