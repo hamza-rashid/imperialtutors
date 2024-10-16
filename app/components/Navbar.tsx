@@ -19,17 +19,23 @@ export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
   const isDesktop = useBreakpointValue({ base: false, md: true });
 
+  // Always call hooks outside of conditionals to ensure they are used correctly.
+  const bgColor = useColorModeValue('white', 'gray.800');
+  const textColor = useColorModeValue('gray.600', 'white');
+  const borderColor = useColorModeValue('gray.200', 'gray.900');
+  const buttonHoverBg = useColorModeValue('#F0F0F0', 'gray.700');
+
   return (
     <Box>
       <Flex
-        bg={useColorModeValue('white', 'gray.800')}
-        color={useColorModeValue('gray.600', 'white')}
+        bg={bgColor}
+        color={textColor}
         minH={'60px'}
         py={{ base: 2 }}
         px={{ base: 4 }}
         borderBottom={1}
         borderStyle={'solid'}
-        borderColor={useColorModeValue('gray.200', 'gray.900')}
+        borderColor={borderColor}
         align={'center'}
         justify={'space-between'}
       >
@@ -46,7 +52,7 @@ export default function Navbar() {
 
         {isDesktop ? (
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
-            <DesktopNav />
+            <DesktopNav buttonHoverBg={buttonHoverBg} />
           </Flex>
         ) : (
           <IconButton
@@ -62,14 +68,14 @@ export default function Navbar() {
       {/* Mobile menu */}
       {!isDesktop && (
         <Collapse in={isOpen} animateOpacity>
-          <MobileNav />
+          <MobileNav buttonHoverBg={buttonHoverBg} />
         </Collapse>
       )}
     </Box>
   );
 }
 
-const DesktopNav = () => {
+const DesktopNav = ({ buttonHoverBg }) => {
   return (
     <Stack direction={'row'} spacing={8} alignItems="center">
       <NavItem label="About" href="https://gcsedoctor.co.uk/#about-me" />
@@ -80,6 +86,7 @@ const DesktopNav = () => {
         href="https://gcsedoctor.co.uk/revision"
         isButton
         isDesktop
+        buttonHoverBg={buttonHoverBg}
       />
       <Button
         as={'a'}
@@ -98,7 +105,7 @@ const DesktopNav = () => {
   );
 };
 
-const MobileNav = () => {
+const MobileNav = ({ buttonHoverBg }) => {
   return (
     <Flex
       direction="column"
@@ -118,20 +125,26 @@ const MobileNav = () => {
 
       {/* Second line with the centered button */}
       <Flex mt={3} justify="center" w="100%">
-        <NavItem label="📚 Free Revision Guide" href="https://gcsedoctor.co.uk/revision" isButton isMobile />
+        <NavItem
+          label="📚 Free Revision Guide"
+          href="https://gcsedoctor.co.uk/revision"
+          isButton
+          isMobile
+          buttonHoverBg={buttonHoverBg}
+        />
       </Flex>
     </Flex>
   );
 };
 
-const NavItem = ({ label, href, isButton, isDesktop, isMobile }) => {
+const NavItem = ({ label, href, isButton, isDesktop, isMobile, buttonHoverBg }) => {
   return (
     <Link
       href={href}
       px={4} // Increase padding for better visual spacing
       py={2}
       rounded={'md'}
-      bg={isButton ? (isDesktop ? 'white' : 'white') : 'transparent'}
+      bg={isButton ? 'white' : 'transparent'}
       color={isButton ? '#37A169' : useColorModeValue('gray.600', 'white')}
       border={isButton ? '2px solid #37A169' : 'none'}
       fontWeight={600}
@@ -139,7 +152,7 @@ const NavItem = ({ label, href, isButton, isDesktop, isMobile }) => {
       textAlign="center"
       _hover={{
         textDecoration: 'none',
-        bg: isButton ? '#F0F0F0' : useColorModeValue('gray.100', 'gray.700'),
+        bg: isButton ? buttonHoverBg : useColorModeValue('gray.100', 'gray.700'),
       }}
       target={isMobile && isButton ? '_blank' : undefined}
       rel={isMobile && isButton ? 'noopener noreferrer' : undefined}
