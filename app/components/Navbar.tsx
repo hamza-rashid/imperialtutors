@@ -8,7 +8,6 @@ import {
   Stack,
   Link,
   Image,
-  useColorModeValue,
   useBreakpointValue,
   useDisclosure,
   Collapse,
@@ -19,11 +18,11 @@ export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
   const isDesktop = useBreakpointValue({ base: false, md: true });
 
-  // Always call hooks at the top level, not conditionally
-  const bgColor = useColorModeValue('white', 'gray.800');
-  const textColor = useColorModeValue('gray.600', 'white');
-  const borderColor = useColorModeValue('gray.200', 'gray.900');
-  const buttonHoverBg = useColorModeValue('#F0F0F0', 'gray.700');
+  // Define static colors instead of using useColorModeValue
+  const bgColor = 'white';
+  const textColor = 'gray.600';
+  const borderColor = 'gray.200';
+  const buttonHoverBg = '#F0F0F0';
 
   return (
     <Box>
@@ -110,7 +109,7 @@ const MobileNav = ({ buttonHoverBg }) => {
     <Flex
       direction="column"
       align="center"
-      bg={useColorModeValue('white', 'gray.800')}
+      bg="white"
       p={4}
       pt={2}
       pb={2}
@@ -145,14 +144,14 @@ const NavItem = ({ label, href, isButton, isDesktop, isMobile, buttonHoverBg }) 
       py={2}
       rounded={'md'}
       bg={isButton ? 'white' : 'transparent'}
-      color={isButton ? '#37A169' : useColorModeValue('gray.600', 'white')}
+      color={isButton ? '#37A169' : 'gray.600'}
       border={isButton ? '2px solid #37A169' : 'none'}
       fontWeight={600}
       whiteSpace={'nowrap'}
       textAlign="center"
       _hover={{
         textDecoration: 'none',
-        bg: isButton ? buttonHoverBg : useColorModeValue('gray.100', 'gray.700'),
+        bg: isButton ? buttonHoverBg : 'gray.100',
       }}
       target={isMobile && isButton ? '_blank' : undefined}
       rel={isMobile && isButton ? 'noopener noreferrer' : undefined}
