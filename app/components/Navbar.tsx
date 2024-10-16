@@ -19,7 +19,7 @@ export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
   const isDesktop = useBreakpointValue({ base: false, md: true });
 
-  // Always call hooks outside of conditionals to ensure they are used correctly.
+  // Always call hooks at the top level, not conditionally
   const bgColor = useColorModeValue('white', 'gray.800');
   const textColor = useColorModeValue('gray.600', 'white');
   const borderColor = useColorModeValue('gray.200', 'gray.900');
@@ -112,8 +112,8 @@ const MobileNav = ({ buttonHoverBg }) => {
       align="center"
       bg={useColorModeValue('white', 'gray.800')}
       p={4}
-      pt={2} // Reduced padding-top to decrease space above
-      pb={2} // Reduced padding-bottom to decrease space below
+      pt={2}
+      pb={2}
       display={{ md: 'none' }}
     >
       {/* First line with links */}
@@ -141,14 +141,14 @@ const NavItem = ({ label, href, isButton, isDesktop, isMobile, buttonHoverBg }) 
   return (
     <Link
       href={href}
-      px={4} // Increase padding for better visual spacing
+      px={4}
       py={2}
       rounded={'md'}
       bg={isButton ? 'white' : 'transparent'}
       color={isButton ? '#37A169' : useColorModeValue('gray.600', 'white')}
       border={isButton ? '2px solid #37A169' : 'none'}
       fontWeight={600}
-      whiteSpace={'nowrap'} // Prevent text wrapping
+      whiteSpace={'nowrap'}
       textAlign="center"
       _hover={{
         textDecoration: 'none',
