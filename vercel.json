@@ -4,11 +4,6 @@
       "source": "/revision",
       "destination": "https://revision.gcsedoctor.co.uk",
       "permanent": true
-    },
-    {
-      "source": "/reviews",
-      "destination": "https://gcsedoctor.co.uk/#testimonials",
-      "permanent": true
     }
   ]
 }
