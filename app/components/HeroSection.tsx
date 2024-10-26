@@ -32,17 +32,41 @@ const NextLesson = () => {
 
     return remainingDays;
 };
-
 export default function CallToActionWithVideo() {
     const remainingDays = NextLesson();
     return (
         <Container maxW={'7xl'}>
-            <Stack
-                align={'center'}
-                spacing={{ base: 8, md: 10 }}
-                py={{ base: 20, md: 28 }}
-                direction={{ base: 'column', md: 'row' }}>
-                <Stack flex={1} spacing={{ base: 5, md: 10 }}>
+<Stack
+    align={'center'}
+    spacing={{ base: 4, md: 8 }} // Reduced spacing for mobile
+    py={{ base: 16, md: 28 }} // Adjust padding for mobile if needed
+    direction={{ base: 'column', md: 'row' }}>
+
+                <Flex
+                    flex={1}
+                    justify={'center'}
+                    align={'center'}
+                    position={'relative'}
+                    w={'full'}
+                    order={{ base: -1, md: 1 }}>
+                    <Box
+                        position={'relative'}
+                        height={'full'}
+                        rounded={'2xl'}
+                        boxShadow={'2xl'}
+                        width={'full'}
+                        overflow={'hidden'}>
+                        <Image
+                            alt={'Affordable GCSE Science Tuition'}
+                            fit={'cover'}
+                            align={'center'}
+                            w={'100%'}
+                            h={'100%'}
+                            src={'/images/lesson.svg'}
+                        />
+                    </Box>
+                </Flex>
+                <Stack flex={1} spacing={{ base: 5, md: 10 }} textAlign={{ base: 'center', md: 'left' }}> 
                     <Heading
                         lineHeight={1.1}
                         fontWeight={600}
@@ -60,15 +84,15 @@ export default function CallToActionWithVideo() {
                                 bg: 'green.500',
                                 zIndex: -1,
                             }}>
-                            GCSE & A-Level Tuition
+                            Private GCSE Tuition
                         </Text>
                         <br />
                         <Text as={'span'} color={'green.500'}>
-                            with Qualified Doctors!
+                            with Elite Educators!
                         </Text>
                     </Heading>
-                    <Text color={'gray.600'} fontSize={'xl'}>
-                        Personalised Online Group Classes in <Text as="span" fontWeight="bold">Science, Computer Science & Maths for Year 7 to 13 by top London & Oxbridge Graduates.</Text> Affordable Rates, Small Class Sizes, and Medical School Mentorship.
+                    <Text color={'black.500'} fontSize={'md'} textAlign={{ base: 'center', md: 'left' }} lineHeight='1.8'>
+                        Since 2017, our private tutors have taught over <Text as="span" fontWeight="bold">4,000 hours of online classes</Text> helping GCSE students excel in STEM subjects. Our tutors, who come from <Text as="span" fontWeight="bold">top UK universities</Text>, bring both expertise and a passion for teaching to every small group class.
                     </Text>
                     <Stack
                         spacing={{ base: 4, sm: 6 }}
@@ -103,37 +127,12 @@ export default function CallToActionWithVideo() {
                                     w={71}
                                     marginTop={{ base: -2, sm: -10 }}
                                     marginBottom={{ base: 5, sm: 'none' }}
-                                    transform={{ base: 'rotate(-90deg)', sm: 'none' }} 
+                                    transform={{ base: 'rotate(-90deg)', sm: 'none' }}
                                 />
                             </Box>
                         </Stack>
                     </Stack>
                 </Stack>
-                <Flex
-                    flex={1}
-                    justify={'center'}
-                    align={'center'}
-                    position={'relative'}
-                    w={'full'}>
-                    <Box
-                        position={'relative'}
-                        height={'full'}
-                        rounded={'2xl'}
-                        boxShadow={'2xl'}
-                        width={'full'}
-                        overflow={'hidden'}>
-                        <Image
-                            alt={'Affordable GCSE Science Tuition'}
-                            fit={'cover'}
-                            align={'center'}
-                            w={'100%'}
-                            h={'100%'}
-                            src={
-                                '/images/lesson.svg'
-                            }
-                        />
-                    </Box>
-                </Flex>
             </Stack>
             <Stack align={'center'} mb={6}>
                 <Heading mt={6} as="h3" size="lg" textAlign="center">Elite Educators from Leading Universities</Heading>

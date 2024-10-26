@@ -11,8 +11,9 @@ import {
   useBreakpointValue,
   useDisclosure,
   Collapse,
+  Divider,
 } from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import { HamburgerIcon, CloseIcon, PhoneIcon, EmailIcon } from '@chakra-ui/icons';
 
 interface NavItemProps {
   label: string;
@@ -33,7 +34,7 @@ interface MobileNavProps {
 
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
-  const isDesktop = useBreakpointValue({ base: false, md: true });
+  const isDesktop = useBreakpointValue({ base: false, md: true }, { ssr: false });
 
   // Define static colors instead of using useColorModeValue
   const bgColor = 'white';
@@ -42,82 +43,98 @@ export default function Navbar() {
   const buttonHoverBg = '#F0F0F0';
 
   return (
-    <Box>
-      <Flex
-        bg={bgColor}
-        color={textColor}
-        minH={'60px'}
-        py={{ base: 2 }}
-        px={{ base: 4 }}
-        borderBottom={1}
-        borderStyle={'solid'}
-        borderColor={borderColor}
-        align={'center'}
-        justify={'space-between'}
-      >
-        <Flex justify={{ base: 'center', md: 'left' }} flex={{ base: 1 }}>
-          <a href="/">
-            <Image
-              src="images/logo.svg"
-              h="50px"
-              objectFit="contain"
-              alt="Logo"
+    <>
+      {/* Contact Number Bar */}
+      <Box w="full" bg="#37A169" position="sticky" top="0" zIndex="1000" color="white" py={{ base: 0.5, md: 2.5 }} textAlign="center" fontSize="xs">
+  {isDesktop ? (
+    <>
+      <Link href="https://wa.me/447404969774" color="white" target="_blank" rel="noopener noreferrer">Contact Us: +44 (0)7404 969 774</Link> | <Link href="mailto:info@gcsedoctor.co.uk" color="white" _hover={{ textDecoration: 'underline' }}>info@gcsedoctor.co.uk</Link>
+    </>
+  ) : (
+    <Flex align="center" justify="space-between" px={2}>
+      <Flex align="center">
+        <Link href="https://wa.me/447404969774" color="white" target="_blank" rel="noopener noreferrer" mx={2} borderRightWidth={1} borderColor="gray.300" pr={2}>
+          <IconButton aria-label="WhatsApp" icon={<PhoneIcon boxSize={5} />} variant="ghost" _hover={{ bg: 'transparent' }} _active={{ bg: 'transparent' }} _focus={{ boxShadow: 'none' }} color="white" fontSize="lg"/>
+        </Link>
+        <Link href="mailto:info@gcsedoctor.co.uk" color="white" target="_blank" rel="noopener noreferrer" mx={2} borderRightWidth={1} borderColor="gray.300" pr={2}>
+          <IconButton aria-label="Email" icon={<EmailIcon boxSize={5} />} variant="ghost" _hover={{ bg: 'transparent' }} _active={{ bg: 'transparent' }} _focus={{ boxShadow: 'none' }} color="white" fontSize="lg"/>
+        </Link>
+      </Flex>
+      <Button as={'a'} fontSize={'xs'} fontWeight={400} color={'white'} bg={'green.500'} px={3} py={1} borderLeftWidth={1} borderRightWidth={1} borderColor="gray.300" borderRadius={0} ml={4} href='/bookings' textTransform="uppercase">
+        Sign Up
+      </Button>
+    </Flex>
+  )}
+</Box>
+
+      {/* Main Navbar */}
+      <Box>
+        <Flex
+          bg={bgColor}
+          color={textColor}
+          minH={'60px'}
+          py={{ base: 2 }}
+          px={{ base: 4 }}
+          borderBottom={1}
+          borderStyle={'solid'}
+          borderColor={borderColor}
+          align={'center'}
+          justify={'space-between'}
+        >
+          <Flex justify={{ base: 'center', md: 'left' }} flex={{ base: 1 }}>
+            <a href="/">
+              <Image
+                src="/images/logo.svg"
+                h="50px"
+                objectFit="contain"
+                alt="Logo"
+              />
+            </a>
+          </Flex>
+
+          {isDesktop ? (
+            <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
+              <DesktopNav buttonHoverBg={buttonHoverBg} />
+            </Flex>
+          ) : (
+            <IconButton
+              onClick={onToggle}
+              icon={isOpen ? <CloseIcon w={5} h={5} /> : <HamburgerIcon w={5} h={5} />}
+              variant={'ghost'}
+              aria-label={'Toggle Navigation'}
+              display={{ md: 'none' }}
             />
-          </a>
+          )}
         </Flex>
 
-        {isDesktop ? (
-          <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
-            <DesktopNav buttonHoverBg={buttonHoverBg} />
-          </Flex>
-        ) : (
-          <IconButton
-            onClick={onToggle}
-            icon={isOpen ? <CloseIcon w={5} h={5} /> : <HamburgerIcon w={5} h={5} />}
-            variant={'ghost'}
-            aria-label={'Toggle Navigation'}
-            display={{ md: 'none' }}
-          />
+        {/* Mobile menu */}
+        {!isDesktop && (
+          <Collapse in={isOpen} animateOpacity>
+            <MobileNav buttonHoverBg={buttonHoverBg} />
+          </Collapse>
         )}
-      </Flex>
-
-      {/* Mobile menu */}
-      {!isDesktop && (
-        <Collapse in={isOpen} animateOpacity>
-          <MobileNav buttonHoverBg={buttonHoverBg} />
-        </Collapse>
-      )}
-    </Box>
+      </Box>
+    </>
   );
 }
 
 const DesktopNav = ({ buttonHoverBg }: DesktopNavProps) => {
   return (
-    <Stack         fontSize={'sm'}
-    direction={'row'} spacing={6} alignItems="center">
-      <NavItem label="About" href="https://gcsedoctor.co.uk/#about-me" />
-      <NavItem label="Reviews" href="https://gcsedoctor.co.uk/#testimonials" />
-      <NavItem label="Fees" href="https://gcsedoctor.co.uk/#pricing" />
+    <Stack fontSize={'sm'} direction={'row'} spacing={1.2} alignItems="center">
+      <NavItem label="Tutors" href="/tutors" />
+      
+      <NavItem label="Reviews" href="/reviews" />
+      
+      <NavItem label="About" href="/about" />
+      
+      <Box as='span' mr={4}><NavItem label="Fees" href="https://www.gcsedoctor.co.uk/#pricing" /></Box>
+      
       <NavItem
-        label="📚 Free Revision Blueprint"
-        href="https://gcsedoctor.co.uk/revision"
-        isButton
-        isDesktop
-        buttonHoverBg={buttonHoverBg}
+        label="📚 Free Revision Blueprint" href="https://gcsedoctor.co.uk/revision" isButton buttonHoverBg={buttonHoverBg} 
       />
-      <Button
-        as={'a'}
-        fontSize={'sm'}
-        fontWeight={600}
-        color={'white'}
-        bg={'green.500'}
-        href={'https://gcsedoctor.co.uk/bookings'}
-        _hover={{
-          bg: 'green.600',
-        }}
-      >
-        Sign Up
-      </Button>
+      
+      <Button as={'a'} fontSize={'sm'} fontWeight={600} color={'white'} bg={'green.500'} px={4} py={2} ml={6} href='/bookings'>
+        Sign Up</Button>
     </Stack>
   );
 };
@@ -128,28 +145,24 @@ const MobileNav = ({ buttonHoverBg }: MobileNavProps) => {
       direction="column"
       align="center"
       bg="white"
-      p={4}
-      pt={2}
-      pb={2}
+      p={3}
+      pt={1}
+      pb={1}
       display={{ md: 'none' }}
     >
-      {/* First line with links */}
-      <Stack direction={'row'} spacing={4} align="center" justify="center" w="100%" mb={3}>
-        <NavItem label="About" href="https://gcsedoctor.co.uk/#about-me" />
-        <NavItem label="Reviews" href="https://gcsedoctor.co.uk/#testimonials" />
-        <NavItem label="Fees" href="https://gcsedoctor.co.uk/#pricing" />
-      </Stack>
-
-      {/* Second line with the centered button */}
-      <Flex mt={3} justify="center" w="100%">
+      <Stack direction={'column'} spacing={1.5} align="flex-start" w="100%" divider={<Divider borderColor='gray.500' />}>
+        <NavItem label="Tutors" href="/tutors" />
+        
+        <NavItem label="Reviews" href="/reviews" />
+        
+        <NavItem label="About" href="/about" />
+        
+        <NavItem label="Fees" href="https://www.gcsedoctor.co.uk/#pricing" />
+        
         <NavItem
-          label="📚 Free Revision Blueprint"
-          href="https://gcsedoctor.co.uk/revision"
-          isButton
-          isMobile
-          buttonHoverBg={buttonHoverBg}
+          label="Free Revision Blueprint" href="https://gcsedoctor.co.uk/revision" isMobile
         />
-      </Flex>
+      </Stack>
     </Flex>
   );
 };
@@ -160,7 +173,7 @@ const NavItem = ({ label, href, isButton, isDesktop, isMobile, buttonHoverBg }: 
       href={href}
       px={4}
       py={2}
-      rounded={'md'}
+      borderRadius={4}
       bg={isButton ? 'white' : 'transparent'}
       color={isButton ? '#37A169' : 'gray.600'}
       border={isButton ? '2px solid #37A169' : 'none'}

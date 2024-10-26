@@ -64,10 +64,10 @@ export default function Footer() {
             objectFit="contain"
           />
           <Stack direction={'row'} spacing={6}>
-            <Box as="a" href={'https://gcsedoctor.co.uk/#about-me'}>
+            <Box as="a" href={'/about'}>
               About
             </Box>
-            <Box as="a" href={'#testimonials'}>
+            <Box as="a" href={'/reviews'}>
               Reviews
             </Box>
             <Box as="a" href={'https://gcsedoctor.co.uk/#pricing'}>

@@ -56,9 +56,9 @@ import {
               p={2}
               alignSelf={'flex-start'}
               rounded={'md'}>
-              How it works
+              Our strategy
             </Text>
-            <Heading>Join today for Tailored GCSE & A-Level Success!</Heading>
+            <Heading>Join today for Tailored GCSE Success!</Heading>
             <br />  
             <Stack
               spacing={4}
@@ -68,24 +68,37 @@ import {
                 />
               }>
               <Feature
-                icon={<Icon as={IoCallOutline} color={'green.500'} w={5} h={5} />}
+                icon={<Icon as={IoCallOutline} color={'green.500'} w={7} h={5} />}
                 iconBg={useColorModeValue('green.100', 'green.900')}
-                text={<span><strong>Quick Start:</strong> Sign up and get a call from us within 48 hours for your initial consultation.</span>}
-              />
+                text={
+                  <Text fontSize="md" fontWeight="normal" color={useColorModeValue('gray.700', 'gray.300')} lineHeight='1.8'>
+                    <strong>Quick Start:</strong> <a href="/bookings"><Text as="u" fontWeight="semibold" color="blue.500">Sign up</Text></a> for a consultation within 48 hours to match you with the right tutor and study group.
+                  </Text>
+                }
+                
+                
+                   
+                />
               <Feature
                 icon={
-                <Icon as={MdOutlineSchool} color={'green.500'} w={5} h={5} />
+                <Icon as={MdOutlineSchool} color={'green.500'} w={7} h={5} />
                 }
                 iconBg={useColorModeValue('green.100', 'green.900')}
-                text={<span><strong>Effective Learning:</strong> Engage in 1-hour weekly group sessions per subject, and extra time for exam technique during exam periods.</span>}
-              />
+                text={
+                  <Text fontSize="md" fontWeight="normal" color={useColorModeValue('gray.700', 'gray.300')} lineHeight='1.8'>
+                    <strong>Effective Learning:</strong> Weekly one-hour group sessions, even during half-term, with extra exam technique guidance during revision periods.
+                  </Text>
+                }              />
               <Feature
                 icon={
-                  <Icon as={MdOutlineQuiz} color={'green.500'} w={5} h={5} />
+                  <Icon as={MdOutlineQuiz} color={'green.500'} w={7} h={5} />
                 }
                 iconBg={useColorModeValue('green.100', 'green.900')}
-                text={<span><strong>Ongoing Support:</strong> Receive weekly homework and dedicated time in sessions to review any challenges.</span>}
-              />
+                text={
+                  <Text fontSize="md" fontWeight="normal" color={useColorModeValue('gray.700', 'gray.300')} lineHeight='1.8'>
+                    <strong>Ongoing Support:</strong> Stay connected through a dedicated WhatsApp group. Weekly homework reinforces learning, with challenges reviewed in lessons.
+                  </Text>
+                }                 />
             </Stack>
           </Stack>
           <Flex>

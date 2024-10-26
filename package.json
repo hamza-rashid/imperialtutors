@@ -15,6 +15,7 @@
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@fontsource/manrope": "^4.5.13",
+    "@fontsource/merriweather": "^5.1.0",
     "@typeform/embed": "^4.9.0",
     "@typeform/embed-react": "^3.16.0",
     "@types/node": "20.1.4",
