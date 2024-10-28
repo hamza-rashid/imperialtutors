@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up Widget</title>
+</head>
+<body>
+  <div id="widget-container"></div>
+  <script>
+    (function() {
+      var script = document.createElement('script');
+      script.src = "https://app.tutorbird.com/Widget/v4/Widget.ashx?settings=eyJTY2hvb2xJRCI6InNjaF9obENKWiIsIldlYnNpdGVJRCI6Indic196SmhKSyIsIldlYnNpdGVCbG9ja0lEIjoid2JiXzVkSnJKRyJ9";
+      script.async = true;
+      document.getElementById('widget-container').appendChild(script);
+    })();
+  </script>
+</body>
+</html>
