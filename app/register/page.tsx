@@ -1,10 +1,25 @@
 "use client";
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 export default function SignUpPage() {
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsSmallScreen(window.innerWidth < 768);
+    };
+
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+
+    return () => {
+      window.removeEventListener('resize', checkScreenSize);
+    };
+  }, []);
+
   useEffect(() => {
     if (!document.getElementById('tutorbird-iframe')) {
       const iframeDoc = `<!DOCTYPE html>
@@ -61,7 +76,7 @@ export default function SignUpPage() {
   return (
     <>
       <Navbar />
-      <h1 style={{ textAlign: 'center', fontSize: window.innerWidth < 768 ? '1.8rem' : '2.5rem', padding: '10px', fontWeight: 'bold' }}>Registration Details</h1>
+      <h1 style={{ textAlign: 'center', fontSize: isSmallScreen ? '1.8rem' : '2.5rem', padding: '10px', fontWeight: 'bold' }}>Registration Details</h1>
       <div style={{ textAlign: 'center', padding: '20px', color: '#333', maxWidth: '800px', margin: '0 auto' }}>
         <p>
           Parents, <strong>please register for the trial lesson</strong> by entering your child's details below. We will then assign them to their trial lesson of choice for the upcoming session. <strong>You will receive a Zoom link</strong> for this lesson and a reminder the day before.
