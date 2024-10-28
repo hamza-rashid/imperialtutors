@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 
 export default function SignUpPage() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [iframeLoaded, setIframeLoaded] = useState(false);
 
   useEffect(() => {
     const checkScreenSize = () => {
@@ -35,6 +36,7 @@ export default function SignUpPage() {
       iframe.style.transition = 'width 0.3s ease-in-out';
       iframe.onload = () => {
         console.log('Iframe successfully loaded');
+        setTimeout(() => setIframeLoaded(true), 1500); // Add slight delay to ensure seamless transition
       };
       iframe.onerror = () => {
         console.error('Failed to load the iframe');
@@ -63,13 +65,24 @@ export default function SignUpPage() {
           Parents, <strong>please register for the trial lesson</strong> by entering your child's details below. We will then assign them to their trial lesson of choice for the upcoming session. <strong>You will receive a Zoom link</strong> for this lesson and a reminder the day before.
         </p>
       </div>
-      <div id="iframe-container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh', position: 'relative' }}>
+      <div id="iframe-container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start', minHeight: '100vh', position: 'relative', paddingTop: '10px' }}>
+        {!iframeLoaded && (
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'absolute', top: '10%' }}>
+            <iframe
+              src="https://lottie.host/embed/adf6a5a8-00d3-42ab-8910-0cf7e5e93c08/n7ORx93qMx.json"
+              style={{ width: '300px', height: '300px', border: 'none' }}
+              title="Loading Animation"
+              frameBorder="0"
+              allowFullScreen
+            ></iframe>
+          </div>
+        )}
       </div>
       <Footer />
       <style jsx>{`
         .registration-heading {
           text-align: center;
-          padding: 10px;
+          padding: 5px;
           font-weight: bold;
           font-size: 2.5rem;
         }
