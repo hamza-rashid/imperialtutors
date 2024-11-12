@@ -42,12 +42,12 @@ export default function Navbar() {
   return (
     <>
       {/* Contact Number Bar */}
-      <Box w="full" bg="#37A169" position="sticky" top="0" zIndex="1000" color="white" py={{ base: 0.5, md: 1.5 }} textAlign="center" fontSize="xs">
-        <Flex display={{ base: 'none', md: 'flex' }} justify="center">
+      <Box w="full" bg="#37A169" position="sticky" top="0" zIndex="1000" color="white" py={{ base: 0.5, md: 0.8 }} textAlign="center" fontSize="xs" lineHeight={{ base: 'normal', md: '1.5' }} display={{ base: 'block', md: 'flex' }} alignItems="center">
+        <Flex display={{ base: 'none', md: 'flex' }} justify="center" align="center" flex={1}>
           <Link href="https://wa.me/447404969774" color="white" target="_blank" rel="noopener noreferrer">Contact Us: +44 (0)7404 969 774</Link> <Box as="span" mx={1}>|</Box> <Link href="mailto:info@gcsedoctor.co.uk" color="white" _hover={{ textDecoration: 'underline' }}>info@gcsedoctor.co.uk</Link>
         </Flex>
-        <Flex display={{ base: 'flex', md: 'none' }} align="center" justify="space-between" px={2}>
-          <Flex align="center">
+        <Flex display='flex' align="center" justify="space-between" px={2}>
+          <Flex align="center" display={{ base: 'flex', md: 'none' }}>
             <Link href="https://wa.me/447404969774" color="white" target="_blank" rel="noopener noreferrer" mx={2} borderRightWidth={1} borderColor="gray.300" pr={2}>
               <IconButton aria-label="WhatsApp" icon={<PhoneIcon boxSize={5} />} variant="ghost" _hover={{ bg: 'transparent' }} _active={{ bg: 'transparent' }} _focus={{ boxShadow: 'none' }} color="white" fontSize="lg"/>
             </Link>
@@ -55,8 +55,8 @@ export default function Navbar() {
               <IconButton aria-label="Email" icon={<EmailIcon boxSize={5} />} variant="ghost" _hover={{ bg: 'transparent' }} _active={{ bg: 'transparent' }} _focus={{ boxShadow: 'none' }} color="white" fontSize="lg"/>
             </Link>
           </Flex>
-          <Button as={'a'} fontSize={'xs'} fontWeight={400} color={'white'} bg={'green.500'} px={3} py={1} borderLeftWidth={1} borderRightWidth={1} borderColor="gray.300" borderRadius={0} ml={4} href='/bookings' textTransform="uppercase">
-            Sign Up
+          <Button as={'a'} fontSize={{ base: 'xs', md: 'xs' }} fontWeight={400} color={'white'} bg={'green.500'} px={3} py={{ base: 0.5, md: 0.1 }} lineHeight={{ base: 'normal', md: '2.5' }} height={{ base: '40px', md: 'auto' }} borderLeftWidth={1} borderRightWidth={1} borderColor="gray.300" borderRadius={0} mr={{ base: 0, md: 100 }} href='/log-in' textTransform="uppercase">
+            Student Login
           </Button>
         </Flex>
       </Box>
