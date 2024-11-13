@@ -1,0 +1,36 @@
+[
+    {
+      "id": 1,
+      "title": "GCSE: Chemistry",
+      "description": "By Academic Tutors who are all medical students from the top Russell Group Universities ...",
+      "duration": "60 minutes",
+      "price": "£20",
+      "packagePrice": "£190",
+      "imagePath": "/images/chemistry_photo.png",
+      "isFullyBooked": false
+
+    },
+    {
+      "id": 2,
+      "title": "GCSE: Physics",
+      "description": "By experienced tutors with lab experience ...",
+      "duration": "60 minutes",
+      "price": "£20",
+      "packagePrice": "£190",
+      "imagePath": "/images/physics_photo.png",
+      "isFullyBooked": false
+
+    },
+    {
+        "id": 3,
+        "title": "GCSE: Biology",
+        "description": "By experienced tutors with lab experience ...",
+        "duration": "60 minutes",
+        "price": "£20",
+        "packagePrice": "£190",
+        "imagePath": "/images/biology_photo.png",
+        "isFullyBooked": true
+
+      }
+  ]
+  
