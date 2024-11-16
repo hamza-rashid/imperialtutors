@@ -117,7 +117,7 @@ const DesktopNav = ({ buttonHoverBg }: DesktopNavProps) => {
       <NavItem label="About" href="https://blog.gcsedoctor.co.uk/about/" />
       <Box as='span' mr={4}><NavItem label="Fees" href="https://www.gcsedoctor.co.uk/#pricing" /></Box>
       <NavItem label="📚 Articles" href="https://blog.gcsedoctor.co.uk" isButton buttonHoverBg={buttonHoverBg} />
-      <Button as={'a'} fontSize={'sm'} fontWeight={600} color={'white'} bg={'green.500'} px={4} py={2} ml={6} href='/bookings'>Sign Up</Button>
+      <Button as={'a'} fontSize={'sm'} fontWeight={600} color={'white'} bg={'green.500'} px={4} py={2} ml={6} href='https://bookings.gcsedoctor.co.uk'>Sign Up</Button>
     </Stack>
   );
 };

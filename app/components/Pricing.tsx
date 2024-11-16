@@ -73,7 +73,7 @@ export default function Pricing() {
               <strong>Regular homework assignments</strong> to track progress
             </ListItem>
           </List>
-          <Button as={"a"} href="https://gcsedoctor.co.uk/bookings"
+          <Button as={"a"} href="https://bookings.gcsedoctor.co.uk"
             mt={10}
             w={'full'}
             bg={'green.400'}
@@ -140,7 +140,7 @@ export default function Pricing() {
             </ListItem>
           </List>
 
-          <Button as={"a"} href="https://gcsedoctor.co.uk/bookings"
+          <Button as={"a"} href="https://bookings.gcsedoctor.co.uk"
             mt={10}
             w={'full'}
             bg={'green.400'}
