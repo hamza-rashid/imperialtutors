@@ -5,11 +5,5 @@
       "destination": "https://revision.gcsedoctor.co.uk",
       "permanent": true
     }
-  ],
-  "rewrites": [
-    {
-      "source": "/blog/:path*",
-      "destination": "https://blog.gcsedoctor.co.uk/:path*"
-    }
   ]
 }
