@@ -5,11 +5,11 @@ const nextConfig = {
       return [     
         {
           source: "/blog/:path*/",
-          destination: "https://gcse-doctor.ghost.io/blog/:path*/",
+          destination: "https://gcse-doctor.ghost.io/:path*/",
         },
         {
           source: "/articles/:path*",
-          destination: "https://gcse-doctor.ghost.io/blog/:path*",
+          destination: "https://gcse-doctor.ghost.io/:path*",
         }    
       ];
     },
@@ -17,7 +17,7 @@ const nextConfig = {
       return [
         {
           source: "/blog/:path*",
-          headers: [{ key: "x-forwarded-host", value: "gcsedoctor.co.uk"}],
+          headers: [{ key: "x-forwarded-host", value: "gcsedoctor.co.uk/blog"}],
         }
       ];
     }
