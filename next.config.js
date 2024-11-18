@@ -5,11 +5,11 @@ const nextConfig = {
       return [     
         {
           source: "/blog/:path*/",
-          destination: "https://articles.ghost.io/blog/:path*/",
+          destination: "https://gcse-doctor.ghost.io/blog/:path*/",
         },
         {
           source: "/blog/:path*",
-          destination: "https://articles.ghost.io/blog/:path*",
+          destination: "https://gcse-doctor.ghost.io/blog/:path*",
         }    
       ];
     },
