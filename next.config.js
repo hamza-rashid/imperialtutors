@@ -4,20 +4,20 @@ const nextConfig = {
     async rewrites() {
       return [     
         {
-          source: "/articles/:path*/",
-          destination: "https://gcse-doctor.ghost.io/articles/:path*/",
+          source: "/blog/:path*/",
+          destination: "https://gcse-doctor.ghost.io/blog/:path*/",
         },
         {
           source: "/articles/:path*",
-          destination: "https://gcse-doctor.ghost.io/articles/:path*",
+          destination: "https://gcse-doctor.ghost.io/blog/:path*",
         }    
       ];
     },
     async headers() {
       return [
         {
-          source: "/articles/:path*",
-          headers: [{ key: "x-forwarded-host", value: "articles.gcsedoctor.co.uk"}],
+          source: "/blog/:path*",
+          headers: [{ key: "x-forwarded-host", value: "gcsedoctor.co.uk"}],
         }
       ];
     }
