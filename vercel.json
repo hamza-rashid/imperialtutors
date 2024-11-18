@@ -9,12 +9,7 @@
   "rewrites": [
     {
       "source": "/blog/:path*",
-      "destination": "https://gcse-doctor.ghost.io/:path*",
-      "headers": {
-        "X-Forwarded-Host": "gcsedoctor.co.uk",
-        "X-Forwarded-Proto": "https",
-        "X-Forwarded-For": "{{clientIP}}"
-      }
+      "destination": "https://blog.gcsedoctor.co.uk/:path*"
     }
   ]
 }
