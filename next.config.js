@@ -8,7 +8,7 @@ const nextConfig = {
           destination: "https://gcse-doctor.ghost.io/:path*/",
         },
         {
-          source: "/articles/:path*",
+          source: "/blog/:path*",
           destination: "https://gcse-doctor.ghost.io/:path*",
         }    
       ];
