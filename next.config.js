@@ -5,12 +5,12 @@ const nextConfig = {
       return [
         {
           source: "/blog/:path*/",
-          destination: "https://blog.gcsedoctor.co.uk/:path*/", // Replace with your Ghost subdomain
+          destination: "https://blog.gcsedoctor.co.uk/:path*/",
         },
         {
           source: "/blog/:path*",
-          destination: "https://blog.gcsedoctor.co.uk/:path*", // Replace with your Ghost subdomain
-        },
+          destination: "https://blog.gcsedoctor.co.uk/:path*",
+        }
       ];
     },
     async headers() {
@@ -18,9 +18,9 @@ const nextConfig = {
         {
           source: "/blog/:path*",
           headers: [
-            { key: "x-forwarded-host", value: "gcsedoctor.co.uk" }, // Replace with your custom domain
+            { key: "x-forwarded-host", value: "gcsedoctor.co.uk" },
           ],
-        },
+        }
       ];
     },
   };
