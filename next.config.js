@@ -17,7 +17,7 @@ const nextConfig = {
       return [
         {
           source: "/blog/:path*",
-          headers: [{ key: "x-forwarded-host", value: "gcsedoctor.co.uk/blog"}],
+          headers: [{ key: "x-forwarded-host", value: "gcsedoctor.co.uk"}],
         }
       ];
     }
