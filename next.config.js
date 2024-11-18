@@ -4,19 +4,19 @@ const nextConfig = {
     async rewrites() {
       return [
         {
-          source: "/blog/:path*/",
-          destination: "https://blog.gcsedoctor.co.uk/:path*/",
+          source: "/articles/:path*/",
+          destination: "https://articles.gcsedoctor.co.uk/:path*/",
         },
         {
-          source: "/blog/:path*",
-          destination: "https://blog.gcsedoctor.co.uk/:path*",
+          source: "/articles/:path*",
+          destination: "https://articles.gcsedoctor.co.uk/:path*",
         }
       ];
     },
     async headers() {
       return [
         {
-          source: "/blog/:path*",
+          source: "/articles/:path*",
           headers: [
             { key: "x-forwarded-host", value: "gcsedoctor.co.uk" },
           ],
