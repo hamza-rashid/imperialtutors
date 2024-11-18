@@ -114,9 +114,9 @@ const DesktopNav = ({ buttonHoverBg }: DesktopNavProps) => {
     <Stack fontSize={'sm'} direction={'row'} spacing={1.2} alignItems="center">
       <NavItem label="Tutors" href="/tutors" />
       <NavItem label="Reviews" href="/reviews" />
-      <NavItem label="About" href="https://blog.gcsedoctor.co.uk/about/" />
+      <NavItem label="About" href="https://articles.gcsedoctor.co.uk/about/" />
       <Box as='span' mr={4}><NavItem label="Fees" href="https://www.gcsedoctor.co.uk/#pricing" /></Box>
-      <NavItem label="📚 Articles" href="https://blog.gcsedoctor.co.uk" isButton buttonHoverBg={buttonHoverBg} />
+      <NavItem label="📚 Articles" href="https://articles.gcsedoctor.co.uk" isButton buttonHoverBg={buttonHoverBg} />
       <Button as={'a'} fontSize={'sm'} fontWeight={600} color={'white'} bg={'green.500'} px={4} py={2} ml={6} href='https://lessons.gcsedoctor.co.uk'>Sign Up</Button>
     </Stack>
   );
@@ -127,9 +127,9 @@ const MobileNav = ({ buttonHoverBg }: MobileNavProps) => {
     <Stack direction="column" align="flex-start" bg="white" p={3} pt={1} pb={1} spacing={1.5} w="100%" divider={<Divider borderColor='gray.500' />}>
       <NavItem label="Tutors" href="/tutors" />
       <NavItem label="Reviews" href="/reviews" />
-      <NavItem label="About" href="https://blog.gcsedoctor.co.uk/about/" />
+      <NavItem label="About" href="https://articles.gcsedoctor.co.uk/about/" />
       <NavItem label="Fees" href="https://www.gcsedoctor.co.uk/#pricing" />
-      <NavItem label="Articles" href="https://blog.gcsedoctor.co.uk" isMobile />
+      <NavItem label="Articles" href="https://articles.gcsedoctor.co.uk" isMobile />
     </Stack>
   );
 };
