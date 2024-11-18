@@ -2,7 +2,7 @@
 const nextConfig = {
     trailingSlash: true,
     async rewrites() {
-      return [     
+      return [
         {
           source: "/articles/:path*/",
           destination: "https://articles.gcsedoctor.co.uk/:path*/",
@@ -10,18 +10,20 @@ const nextConfig = {
         {
           source: "/articles/:path*",
           destination: "https://articles.gcsedoctor.co.uk/:path*",
-        }    
+        },
       ];
     },
     async headers() {
       return [
         {
           source: "/articles/:path*",
-          headers: [{ key: "x-forwarded-host", value: "gcsedoctor.co.uk" }],
-        }
+          headers: [
+            { key: "x-forwarded-host", value: "gcsedoctor.co.uk" },
+          ],
+        },
       ];
-    }
-  }
+    },
+  };
   
   module.exports = nextConfig;
   
