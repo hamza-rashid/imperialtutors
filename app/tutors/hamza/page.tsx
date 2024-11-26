@@ -20,13 +20,13 @@ const AboutPage = () => {
                 Dr Hamza Rashid
               </Heading>
               <Text as="h2" fontSize="lg" fontWeight="bold" mb={4} color={'green.600'}>
-                FOUNDER AND ELITE EDUCATOR
+                FOUNDER AND PROFESSIONAL EDUCATOR
               </Text>
               <Text mb={6} fontSize="md" lineHeight='1.8'>
                 Hamza holds 2 degrees from Imperial College London, and has over 7 years of experience in tutoring GCSE and A-Level students. He is an expert in the Sciences, and is known for his patient, methodical teaching style that helps students build a solid understanding of complex concepts. Since starting GCSE Doctor in 2017, Hamza has successfully taught over 2,000 hours and supported over 40 families in achieving their academic goals.
               </Text>
               <Heading as="h3" size="xs" mb={4}>
-                Hamza is an elite educator. This means Hamza:
+                Hamza is a professional educator. This means Hamza:
               </Heading>
               <Stack spacing={3} mb={6} fontSize="xs" pl={6}>
                 <Text>✔ Achieved Top grades at GCSE/A-Level, attended a top university and has extensive tutoring experience</Text>

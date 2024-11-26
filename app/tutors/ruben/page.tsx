@@ -20,13 +20,13 @@ const AboutPage = () => {
                 Ruben Shergill
               </Heading>
               <Text as="h2" fontSize="lg" fontWeight="bold" mb={4} color={'green.600'}>
-                ELITE EDUCATOR
+                PROFESSIONAL EDUCATOR
               </Text>
               <Text mb={6} fontSize="md" lineHeight='1.8'>
                 Ruben is a final year student at the University of Manchester, studying Mathematics and Computer Science. He has a strong academic background, having achieved 4 A*s in Biology, Chemistry, Physics, and Mathematics at A-Level. Ruben is passionate about technology, startups, and consulting, and he brings this enthusiasm into his teaching, helping students to understand complex subjects in a practical and engaging way.
               </Text>
               <Heading as="h3" size="xs" mb={4}>
-                Ruben is an elite educator. This means Ruben:
+                Ruben is a professional educator. This means Ruben:
               </Heading>
               <Stack spacing={3} mb={6} fontSize="xs" pl={6}>
                 <Text>✔ Achieved Top grades at GCSE/A-Level, attended a top university and has extensive tutoring experience</Text>
