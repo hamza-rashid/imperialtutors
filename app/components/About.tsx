@@ -62,14 +62,14 @@ function ProductHamza() {
             </Box>
             <Stack pt={10} align={'center'}>
               <Text color={'gray.500'} fontSize={'sm'} textTransform={'uppercase'}>
-                Founder & Elite Educator
+                Founder & Professional Educator
               </Text>
               <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={600}>
                 Dr Hamza Rashid
               </Heading>
               <Stack direction={'column'} align={'center'}>
                 <Text fontWeight={400} fontSize={'xl'}>
-                  MBBS, BSc (1st Class Hons.)
+                  MBBS, BSc (1st Class)
                 </Text>
                 <Text fontWeight={600} fontSize={'xl'}>
                   Imperial College London
@@ -131,14 +131,14 @@ function ProductMaryam() {
             </Box>
             <Stack pt={10} align={'center'}>
               <Text color={'gray.500'} fontSize={'sm'} textTransform={'uppercase'}>
-                Co-Founder & Elite Educator
+                Founder & Professional Educator
               </Text>
               <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={600}>
                 Dr Maryam Amer
               </Heading>
               <Stack direction={'column'} align={'center'}>
                 <Text fontWeight={400} fontSize={'xl'}>
-                  MBBS, BSc (1st Class Hons.)
+                  MBBS, BA
                 </Text>
                 <Text fontWeight={600} fontSize={'xl'}>
                   University of Oxford
@@ -160,8 +160,8 @@ export default function BasicStatistics() {
         <chakra.h1 textAlign={'center'} fontSize={'4xl'} py={2} fontWeight={'bold'}>Meet our Team</chakra.h1>
         <Box maxW="4xl" mx="auto" textAlign={'center'} mt={4}> {/* Increased maxW to make the description wider */}
           <Text fontSize={'md'} color={'black.500'} lineHeight='1.8' >
-            <Link href="/tutors" passHref>At GCSE Doctor, we take pride in our team of elite educators, all of whom are graduates or current students of <Text as="span" fontWeight="bold">top UK universities such as Oxford, Cambridge, and London </Text>universities.
-            Our tutors are dedicated professionals, fully DBS-checked, and passionate about guiding students to achieve their academic potential. Learn more about our <Text as='u' color='blue.500'> <Text as="span" fontWeight="semibold">full team of educators here.</Text></Text></Link>
+            <Link href="/tutors" passHref>At GCSE Doctor, we take pride in our team of professional educators, all of whom are graduates of <Text as="span" fontWeight="bold">top UK universities such as Oxford, Cambridge, London </Text>universities and many more!
+            Our tutors are dedicated professionals, with extensive real-world experience, they bring profound expertise and a genuine passion for teaching to every small group class. Learn more about our <Text as='u' color='blue.500'> <Text as="span" fontWeight="semibold">full team of educators here.</Text></Text></Link>
           </Text>
         </Box>
         {/* Add margin between the description and the stacks */}

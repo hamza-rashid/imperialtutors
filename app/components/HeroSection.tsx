@@ -77,9 +77,9 @@ export default function CallToActionWithVideo() {
                             _after={{
                                 content: "''",
                                 width: 'full',
-                                height: '20%',
+                                height: '17%',
                                 position: 'absolute',
-                                bottom: 1,
+                                bottom: 0,
                                 left: 0,
                                 bg: 'green.500',
                                 zIndex: -1,
@@ -88,11 +88,12 @@ export default function CallToActionWithVideo() {
                         </Text>
                         <br />
                         <Text as={'span'} color={'green.500'}>
-                            with Elite Educators!
+                            with Professional Tutors!
                         </Text>
                     </Heading>
                     <Text color={'black.500'} fontSize={'md'} textAlign={{ base: 'center', md: 'left' }} lineHeight='1.8'>
-                        Since 2017, our private tutors have taught over <Text as="span" fontWeight="bold">4,000 hours of online classes</Text> helping GCSE students excel in STEM subjects. Our tutors, who come from <Text as="span" fontWeight="bold">top UK universities</Text>, bring both expertise and a passion for teaching to every small group class.
+                        Since 2017, our dedicated private tutors have delivered over <Text as="span" fontWeight="bold">4,000 hours of online classes</Text>, empowering GCSE students to excel in STEM subjects. Our exceptional team comprises not only <Text as="span" fontWeight="bold">certified teachers</Text> but also accomplished industry professionals - doctors and scientists from <Text as="span" fontWeight="bold">top UK universities</Text>. 
+
                     </Text>
                     <Stack
                         spacing={{ base: 4, sm: 6 }}
@@ -135,7 +136,7 @@ export default function CallToActionWithVideo() {
                 </Stack>
             </Stack>
             <Stack align={'center'} mb={6}>
-                <Heading mt={6} as="h3" size="lg" textAlign="center">Elite Educators from Leading Universities</Heading>
+                <Heading mt={6} as="h3" size="lg" textAlign="center">Professional Educators from Leading Universities</Heading>
             </Stack>
             <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={6} alignItems="center" justifyItems="center" mt={6} mb={106}>
                 <Image src="/images/icl_logo.png" alt="Imperial College" width="200px" height="55px" />

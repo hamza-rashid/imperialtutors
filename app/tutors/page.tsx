@@ -9,7 +9,7 @@ import Footer from '../components/Footer';
 const tutors = [
   { name: "Hamza", image: "/images/hamza_profile.png", label: "Founder" },
   { name: "Maryam", image: "/images/maryam_profile.jpeg", label: "Co-Founder" },
-  { name: "Ruben", image: "/images/ruben_profile.jpeg", label: "Elite Educator" },
+  { name: "Ruben", image: "/images/ruben_profile.jpeg", label: "" },
 ];
 
 export default function TutorsPage() {
