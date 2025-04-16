@@ -72,7 +72,7 @@ import {
                 iconBg={useColorModeValue('green.100', 'green.900')}
                 text={
                   <Text fontSize="md" fontWeight="normal" color={useColorModeValue('gray.700', 'gray.300')} lineHeight='1.8'>
-                    <strong>Quick Start:</strong> <a href="/bookings"><Text as="u" fontWeight="semibold" color="blue.500">Sign up</Text></a> and get matched with the right tutor group within 24–48 hours. We’ll guide you through next steps immediately.
+                    <strong>Quick Start:</strong> <a href="https://f0bg5c5ixzh.typeform.com/to/Piqnx8xL"><Text as="u" fontWeight="semibold" color="blue.500">Sign up</Text></a> and get matched with the right tutor group within 24–48 hours. We’ll guide you through next steps immediately.
                   </Text>
                 }
                 
