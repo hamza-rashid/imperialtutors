@@ -1,89 +1,96 @@
 "use client";
 
-import { useEffect, useRef, useState } from 'react';
-import {
-  Box,
-  Skeleton,
-  SkeletonCircle,
-  SkeletonText,
-  useBreakpointValue,
-} from '@chakra-ui/react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import { Box, Heading, Text, Stack, Button, useBreakpointValue, Image, Divider } from "@chakra-ui/react";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import Link from "next/link";
 
-export default function Testimonials() {
-  const [widgetLoaded, setWidgetLoaded] = useState(false);
-  const widgetRef = useRef<HTMLDivElement>(null);
-
-  // Define padding values based on the screen size
-  const padding = useBreakpointValue({ base: 4, md: 0 });
-
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://static.elfsight.com/platform/platform.js';
-    script.defer = true;
-
-    script.onload = () => {
-      setWidgetLoaded(true);
-    };
-
-    document.body.appendChild(script);
-
-    return () => {
-      if (widgetRef.current) {
-        widgetRef.current.innerHTML = ''; // Clear the inner HTML of the container
-      }
-      document.body.removeChild(script); // Cleanup script when component unmounts
-    };
-  }, []);
+export default function AcceleratorPage() {
+  const padding = useBreakpointValue({ base: 4, md: 12 });
 
   return (
-    <Box width="100vw" overflowX="hidden"> {/* Main container with full viewport width */}
-      <Box width="100%"> {/* Full-width Navbar */}
+    <Box width="100vw" overflowX="hidden" bg="gray.50">
+      {/* Navbar */}
+      <Box width="100%">
         <Navbar />
       </Box>
 
-      {/* Spacer Box between Navbar and main content */}
       <Box mt={8} />
 
-      {!widgetLoaded && (
-        // Placeholder content while widget is loading
-        <Box 
-          width={{ base: '100%', md: '80%' }}
-          mx="auto"
-          p={padding}
-          mt={10} // Add margin at the top
-          display="grid"
-          gridTemplateColumns={{ base: '1fr', md: '1fr 1fr', lg: '1fr 1fr 1fr' }}
-          gap={4} // Space between skeleton boxes
-        >
-          {[...Array(6)].map((_, index) => (
-            <Box
-              key={index}
-              padding="6"
-              boxShadow="lg"
-              bg="white"
-              borderRadius="md"
-            >
-              <SkeletonCircle size="16" />
-              <SkeletonText mt="6" noOfLines={6} spacing="4" />
-            </Box>
-          ))}
+      {/* Hero Section */}
+      <Box bg="green.500" color="white" py={16} px={padding} textAlign="center">
+        <Heading as="h1" size="2xl" mb={4}>GCSE Science Accelerator</Heading>
+        <Text fontSize="xl">For Year 10 students taking Triple Science — Structured support. Lasting results.</Text>
+        <Box mt={6}>
+          <Link href="/bookings" passHref>
+            <Button size="lg" colorScheme="whiteAlpha">
+              Book Your Child’s Place
+            </Button>
+          </Link>
         </Box>
-      )}
+      </Box>
 
-      <Box 
-        ref={widgetRef} 
-        width={{ base: '90%', md: '80%' }} // 90% width on smaller screens, 80% on larger screens
-        mx="auto" 
-        className="elfsight-app-e7dd32eb-f0c7-4871-a82a-2bcfbb7b1bd8" 
-        data-elfsight-app-lazy 
-      />
+      {/* What It Is */}
+      <Box maxW="6xl" mx="auto" px={padding} py={12}>
+        <Stack spacing={6}>
+          <Heading as="h2" size="xl" textAlign="center">📘 What It Is</Heading>
+          <Text fontSize="lg" textAlign="center">
+            The <strong>GCSE Science Accelerator</strong> is a premium group class designed to help Year 10 students stay on track with Triple Science: Biology, Chemistry & Physics.
+            Perfect for students who want strong grades and less last-minute stress.
+          </Text>
+        </Stack>
+      </Box>
 
-      {/* Spacer Box between main content and Footer */}
+      <Divider my={8} />
+
+      {/* Features Section */}
+      <Box bg="white" py={12} px={padding}>
+        <Stack spacing={6} maxW="6xl" mx="auto">
+          <Heading as="h2" size="xl" textAlign="center">✅ What’s Included</Heading>
+          <Stack spacing={3} fontSize="md">
+            <Text>✔️ 3hr weekly group lessons (Bio, Chem & Physics)</Text>
+            <Text>✔️ Pre- and post-topic assessments to track progress</Text>
+            <Text>✔️ Anki-based flashcards that help key info stick</Text>
+            <Text>✔️ Weekly past paper practice with mark schemes</Text>
+            <Text>✔️ Access to our Exam Technique Mastery video course</Text>
+            <Text>✔️ Weekly office hours + WhatsApp support</Text>
+          </Stack>
+        </Stack>
+      </Box>
+
+      <Divider my={8} />
+
+      {/* Tutor Section */}
+      <Box maxW="6xl" mx="auto" px={padding} py={12}>
+        <Stack spacing={6} textAlign="center">
+          <Heading as="h2" size="xl">🧑‍🏫 Meet Dr. Hamza & the GCSE Doctor Team</Heading>
+          <Text fontSize="lg">
+            Over 7 years of experience. 4,000+ hours of tutoring delivered. Backed by expert educators from top UK universities.
+          </Text>
+        </Stack>
+      </Box>
+
+      <Divider my={8} />
+
+      {/* Urgency & CTA */}
+      <Box bg="yellow.50" py={12} px={padding}>
+        <Stack spacing={6} maxW="6xl" mx="auto" textAlign="center">
+          <Heading as="h2" size="lg">🟡 Only 5 Spots Left for This Academic Year</Heading>
+          <Text fontSize="lg">
+            Class sizes are small for a reason — we prioritise attention, engagement, and individual progress.
+          </Text>
+          <Link href="/bookings" passHref>
+            <Button size="lg" colorScheme="green">
+              Reserve a Spot Now
+            </Button>
+          </Link>
+        </Stack>
+      </Box>
+
       <Box mt={8} />
 
-      <Box width="100%"> {/* Full-width Footer */}
+      {/* Footer */}
+      <Box width="100%">
         <Footer />
       </Box>
     </Box>
