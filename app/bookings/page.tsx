@@ -28,15 +28,12 @@ const BookingPage = () => {
       
       <Navbar />
 
-      {/* Fixed container for the Typeform embed */}
+      {/* Scrollable container that adapts to keyboard and allows interaction */}
       <div style={{
-        position: 'fixed',
-        top: '90px', // adjust to your Navbar height
-        left: 0,
-        right: 0,
-        bottom: 0,
-        overflow: 'auto',
-        zIndex: 10,
+        marginTop: '90px', // adjusts for navbar height
+        height: 'calc(100dvh - 90px)', // dynamic height
+        overflowY: 'auto',
+        WebkitOverflowScrolling: 'touch',
       }}>
         <Widget 
           id="Piqnx8xL" 
