@@ -30,10 +30,10 @@ const BookingPage = () => {
       {/* Updated Widget component with inlineOnMobile prop set to true */}
       <Navbar />
       <Widget 
-        id="Piqnx8xL" 
-        style={{ width: '100%', height: '100vh' }} 
-        inlineOnMobile={true} 
-      />
+  id="Piqnx8xL" 
+  style={{ width: '100%', height: 'calc(100vh - 4rem)' }} 
+  inlineOnMobile={true} 
+/>
     </>
   );
 };
