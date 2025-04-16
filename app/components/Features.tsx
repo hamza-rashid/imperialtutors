@@ -58,7 +58,7 @@ import {
               rounded={'md'}>
               Our strategy
             </Text>
-            <Heading>Join today for Tailored GCSE Success!</Heading>
+            <Heading>Join the GCSE Science Accelerator today!</Heading>
             <br />  
             <Stack
               spacing={4}
@@ -72,12 +72,10 @@ import {
                 iconBg={useColorModeValue('green.100', 'green.900')}
                 text={
                   <Text fontSize="md" fontWeight="normal" color={useColorModeValue('gray.700', 'gray.300')} lineHeight='1.8'>
-                    <strong>Quick Start:</strong> <a href="/bookings"><Text as="u" fontWeight="semibold" color="blue.500">Sign up</Text></a> for a consultation within 48 hours to match you with the right tutor and study group.
+                    <strong>Quick Start:</strong> <a href="/bookings"><Text as="u" fontWeight="semibold" color="blue.500">Sign up</Text></a> and get matched with the right tutor group within 24–48 hours. We’ll guide you through next steps immediately.
                   </Text>
                 }
                 
-                
-                   
                 />
               <Feature
                 icon={
@@ -86,7 +84,7 @@ import {
                 iconBg={useColorModeValue('green.100', 'green.900')}
                 text={
                   <Text fontSize="md" fontWeight="normal" color={useColorModeValue('gray.700', 'gray.300')} lineHeight='1.8'>
-                    <strong>Effective Learning:</strong> Weekly one-hour group sessions, even during half-term, with extra exam technique guidance during revision periods.
+                    <strong>Weekly Structure:</strong> 3 hours of Triple Science lessons every week — with focused teaching in Biology, Chemistry & Physics, plus weekly assessments and past paper drills.
                   </Text>
                 }              />
               <Feature
@@ -96,7 +94,7 @@ import {
                 iconBg={useColorModeValue('green.100', 'green.900')}
                 text={
                   <Text fontSize="md" fontWeight="normal" color={useColorModeValue('gray.700', 'gray.300')} lineHeight='1.8'>
-                    <strong>Ongoing Support:</strong> Stay connected through a dedicated WhatsApp group. Weekly homework reinforces learning, with challenges reviewed in lessons.
+                    <strong>Accountability & Support:</strong> Students get Anki flashcards, challenge-based homework, and access to a WhatsApp group and office hours for questions and motivation.
                   </Text>
                 }                 />
             </Stack>
