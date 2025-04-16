@@ -31,7 +31,7 @@ const BookingPage = () => {
       <Navbar />
       <Widget 
   id="Piqnx8xL" 
-  style={{ width: '100%', height: 'calc(100vh - 90px)' }} 
+  style={{ width: '100%', height: 'calc(90vh)' }} 
   inlineOnMobile={true} 
 />
     </>
