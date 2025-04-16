@@ -5,7 +5,6 @@ import { Widget } from '@typeform/embed-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
-
 const BookingPage = () => {
   return (
     <>
@@ -28,7 +27,13 @@ const BookingPage = () => {
           `,
         }}
       />
-      <Widget id="Piqnx8xL" style={{ width: '100%', height: '100vh' }} />
+      {/* Updated Widget component with inlineOnMobile prop set to true */}
+      <Navbar />
+      <Widget 
+        id="Piqnx8xL" 
+        style={{ width: '100%', height: '100vh' }} 
+        inlineOnMobile={true} 
+      />
     </>
   );
 };
