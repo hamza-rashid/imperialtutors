@@ -45,11 +45,11 @@ export default function Pricing() {
             px={3}
             color={'green.500'}
             rounded={'full'}>
-            Group Classes
+            Triple Science
           </Text>
           <Stack direction={'row'} align={'center'} justify={'center'}>
             <Text fontSize={'3xl'}>£</Text>
-            <Text fontSize={'6xl'} fontWeight={800}>20</Text>
+            <Text fontSize={'6xl'} fontWeight={800}>18</Text>
             <Text>/hour</Text>
           </Stack>
         </Stack>
@@ -58,7 +58,7 @@ export default function Pricing() {
           <List spacing={3}>
             <ListItem>
               <ListIcon as={CheckIcon} color="green.400" />
-              <strong>1 hour</strong> of focused group tuition per subject
+              <strong>1 hour</strong> of focused group tuition per science
             </ListItem>
             <ListItem>
               <ListIcon as={CheckIcon} color="green.400" />
@@ -70,7 +70,7 @@ export default function Pricing() {
             </ListItem>
             <ListItem>
               <ListIcon as={CheckIcon} color="green.400" />
-              <strong>Regular homework assignments</strong> to track progress
+              <strong>Regular exam paper assessment</strong> with progress tracking
             </ListItem>
           </List>
           <Button as={"a"} href="https://f0bg5c5ixzh.typeform.com/to/Piqnx8xL"

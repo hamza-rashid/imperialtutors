@@ -84,7 +84,7 @@ export default function CallToActionWithVideo() {
                                 bg: 'green.500',
                                 zIndex: -1,
                             }}>
-                            Private GCSE Tuition
+                            Expert GCSE Tuition
                         </Text>
                         <br />
                         <Text as={'span'} color={'green.500'}>
@@ -92,7 +92,8 @@ export default function CallToActionWithVideo() {
                         </Text>
                     </Heading>
                     <Text color={'black.500'} fontSize={'md'} textAlign={{ base: 'center', md: 'left' }} lineHeight='1.8'>
-                        Since 2017, our dedicated private tutors have delivered over <Text as="span" fontWeight="bold">4,000 hours of online classes</Text>, empowering GCSE students to excel in STEM subjects. Our exceptional team comprises not only <Text as="span" fontWeight="bold">certified teachers</Text> but also accomplished industry professionals - doctors and scientists from <Text as="span" fontWeight="bold">top UK universities</Text>. 
+                    Taught by doctors, scientists, and certified teachers from <Text as="span" fontWeight="bold">top UK universities</Text>. We’ve delivered <Text as="span" fontWeight="bold">4,000+ hours</Text> of online tuition since 2017 — helping students excel in Biology, Chemistry, and Physics through <Text as="span" fontWeight="bold">focused small-group lessons</Text> that work.
+
 
                     </Text>
                     <Stack
@@ -120,7 +121,7 @@ export default function CallToActionWithVideo() {
                             </Stack>
                             <Box textAlign={{ base: 'center', sm: 'unset' }}>
                                 <Text fontSize={'lg'} transform={'rotate(10deg)'} marginBottom={{ base: 7, sm: 'none' }}>
-                                    <Text as="span" fontWeight="bold">£20</Text> per hour
+                                    <Text as="span" fontWeight="bold">£18</Text> per hour
                                 </Text>
                                 <Icon
                                     as={Arrow}
