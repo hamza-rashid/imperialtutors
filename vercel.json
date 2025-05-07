@@ -14,7 +14,11 @@
       "source": "/links",
       "destination": "https://linktr.ee/gcsedoctor",
       "permanent": true
-    }
+    },
+    {"source": "/whatsapp",
+    "destination": "https://chat.whatsapp.com/CMlLxfnmGL3IVbnwu4rSlK",
+    "permanent": true
+  }
   ],
     "rewrites": [
       {
