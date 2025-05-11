@@ -18,7 +18,11 @@
     {"source": "/community",
     "destination": "https://chat.whatsapp.com/CMlLxfnmGL3IVbnwu4rSlK",
     "permanent": true
-  }
+  },
+  {"source": "/secure-your-place",
+  "destination": "https://f0bg5c5ixzh.typeform.com/to/r39O7nFR",
+  "permanent": true
+}
   ],
     "rewrites": [
       {
