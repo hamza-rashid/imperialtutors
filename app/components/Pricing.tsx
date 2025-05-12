@@ -73,7 +73,7 @@ export default function Pricing() {
               <strong>Weekly exam-technique homework</strong> with topic trackers and revision booklets
             </ListItem>
           </List>
-          <Button as={"a"} href="https://f0bg5c5ixzh.typeform.com/to/Piqnx8xL"
+          <Button as={"a"} href="https://gcsedoctor.co.uk/secure-your-place"
             mt={10}
             w={'full'}
             bg={'green.400'}
@@ -140,7 +140,7 @@ export default function Pricing() {
             </ListItem>
           </List>
 
-          <Button as={"a"} href="https://f0bg5c5ixzh.typeform.com/to/Piqnx8xL"
+          <Button as={"a"} href="https://f0bg5c5ixzh.typeform.com/to/WBhpebuF"
             mt={10}
             w={'full'}
             bg={'green.400'}

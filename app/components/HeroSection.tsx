@@ -101,7 +101,7 @@ export default function CallToActionWithVideo() {
                         direction={{ base: 'column', sm: 'row' }}>
                         <Stack direction={{ base: 'column-reverse', sm: 'row' }}>
                             <Stack direction={'column'} textAlign="center">
-                                <Button as={"a"} href="https://f0bg5c5ixzh.typeform.com/to/Piqnx8xL"
+                                <Button as={"a"} href="https://gcsedoctor.co.uk/secure-your-place"
                                     rounded={'full'}
                                     size={'lg'}
                                     fontWeight={'normal'}
