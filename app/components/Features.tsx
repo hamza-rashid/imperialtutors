@@ -58,7 +58,7 @@ import {
               rounded={'md'}>
               Our strategy
             </Text>
-            <Heading>Join the GCSE Science Accelerator today!</Heading>
+            <Heading>🚀 Get GCSE Science Support — the Smart Way</Heading>
             <br />  
             <Stack
               spacing={4}
@@ -72,7 +72,7 @@ import {
                 iconBg={useColorModeValue('green.100', 'green.900')}
                 text={
                   <Text fontSize="md" fontWeight="normal" color={useColorModeValue('gray.700', 'gray.300')} lineHeight='1.8'>
-                    <strong>Quick Start:</strong> <a href="https://f0bg5c5ixzh.typeform.com/to/Piqnx8xL"><Text as="u" fontWeight="semibold" color="blue.500">Sign up</Text></a> and get matched with the right tutor group within 24–48 hours. We’ll guide you through next steps immediately.
+                    <strong>Join the Waitlist:</strong> <a href="https://gcsedoctor.co.uk/secure-your-place"><Text as="u" fontWeight="semibold" color="blue.500">Sign up</Text>Sign up</a> now and we’ll match your child to the right small group. When a space opens, someone from our team will be in touch. No upfront commitment — just priority access when the time is right.
                   </Text>
                 }
                 
@@ -84,7 +84,7 @@ import {
                 iconBg={useColorModeValue('green.100', 'green.900')}
                 text={
                   <Text fontSize="md" fontWeight="normal" color={useColorModeValue('gray.700', 'gray.300')} lineHeight='1.8'>
-                    <strong>Weekly Structure:</strong> 3 hours of Triple Science lessons every week — with focused teaching in Biology, Chemistry & Physics, plus weekly assessments and past paper drills.
+                    <strong>Weekly Structure:</strong> 1 hour/week of expert-led lessons in your chosen subject (Biology, Chemistry or Physics), with focused past paper drills, flashcards, and our extended response workbook to build exam technique.
                   </Text>
                 }              />
               <Feature
@@ -94,7 +94,7 @@ import {
                 iconBg={useColorModeValue('green.100', 'green.900')}
                 text={
                   <Text fontSize="md" fontWeight="normal" color={useColorModeValue('gray.700', 'gray.300')} lineHeight='1.8'>
-                    <strong>Accountability & Support:</strong> Students get Anki flashcards, challenge-based homework, and access to a WhatsApp group and office hours for questions and motivation.
+                    <strong>Ongoing Support:</strong> Students get structured homework, access to our WhatsApp group for motivation and reminders, plus high-quality flashcards to keep revision consistent.
                   </Text>
                 }                 />
             </Stack>
