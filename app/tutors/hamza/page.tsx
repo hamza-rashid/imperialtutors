@@ -43,8 +43,6 @@ const AboutPage = () => {
               <Stack direction='row' spacing={2} wrap='wrap' mb={4}>
                   <Box as='span' bg='gray.200' px={2} py={1} borderRadius='md'>GCSE Biology</Box>
                   <Box as='span' bg='gray.200' px={2} py={1} borderRadius='md'>GCSE Chemistry</Box>
-                  <Box as='span' bg='gray.200' px={2} py={1} borderRadius='md'>GCSE Physics</Box>
-                  <Box as='span' bg='gray.200' px={2} py={1} borderRadius='md'>GCSE Mathematics</Box>
                   <Box as='span' bg='gray.200' px={2} py={1} borderRadius='md'>A-Level Biology</Box>
                   <Box as='span' bg='gray.200' px={2} py={1} borderRadius='md'>A-Level Chemistry</Box>
                   <Box as='span' bg='gray.200' px={2} py={1} borderRadius='md'>UCAT Support</Box>
