@@ -49,7 +49,7 @@ export default function Pricing() {
           </Text>
           <Stack direction={'row'} align={'center'} justify={'center'}>
             <Text fontSize={'3xl'}>£</Text>
-            <Text fontSize={'6xl'} fontWeight={800}>18</Text>
+            <Text fontSize={'6xl'} fontWeight={800}>20</Text>
             <Text>/hour</Text>
           </Stack>
         </Stack>
@@ -62,7 +62,7 @@ export default function Pricing() {
             </ListItem>
             <ListItem>
               <ListIcon as={CheckIcon} color="green.400" />
-              <strong>Small group size</strong>: Limited to 5 students
+              <strong>Small group size</strong>: Limited to just 4 students
             </ListItem>
             <ListItem>
               <ListIcon as={CheckIcon} color="green.400" />
@@ -70,7 +70,7 @@ export default function Pricing() {
             </ListItem>
             <ListItem>
               <ListIcon as={CheckIcon} color="green.400" />
-              <strong>Regular exam paper assessment</strong> with progress tracking
+              <strong>Weekly exam homework</strong> with topic trackers and revision booklets
             </ListItem>
           </List>
           <Button as={"a"} href="https://f0bg5c5ixzh.typeform.com/to/Piqnx8xL"
@@ -115,7 +115,7 @@ export default function Pricing() {
           </Text>
           <Stack direction={'row'} align={'center'} justify={'center'}>
             <Text fontSize={'3xl'}>£</Text>
-            <Text fontSize={'6xl'} fontWeight={800}>60</Text>
+            <Text fontSize={'6xl'} fontWeight={800}>50</Text>
             <Text>/hour</Text>
           </Stack>
         </Stack>

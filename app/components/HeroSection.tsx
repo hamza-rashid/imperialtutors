@@ -121,7 +121,7 @@ export default function CallToActionWithVideo() {
                             </Stack>
                             <Box textAlign={{ base: 'center', sm: 'unset' }}>
                                 <Text fontSize={'lg'} transform={'rotate(10deg)'} marginBottom={{ base: 7, sm: 'none' }}>
-                                    <Text as="span" fontWeight="bold">£18</Text> per hour
+                                    <Text as="span" fontWeight="bold">£20</Text> per hour
                                 </Text>
                                 <Icon
                                     as={Arrow}
