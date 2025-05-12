@@ -70,7 +70,7 @@ export default function Pricing() {
             </ListItem>
             <ListItem>
               <ListIcon as={CheckIcon} color="green.400" />
-              <strong>Weekly exam-technique homework</strong> with topic trackers and revision booklets
+              <strong>Weekly homework</strong> with topic trackers and revision booklets
             </ListItem>
           </List>
           <Button as={"a"} href="https://gcsedoctor.co.uk/secure-your-place"
