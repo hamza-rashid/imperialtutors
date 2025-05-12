@@ -43,6 +43,7 @@ const AboutPage = () => {
               <Stack direction='row' spacing={2} wrap='wrap' mb={4}>
                   <Box as='span' bg='gray.200' px={2} py={1} borderRadius='md'>GCSE Mathematics</Box>
                   <Box as='span' bg='gray.200' px={2} py={1} borderRadius='md'>GCSE Computer Science</Box>
+                  <Box as='span' bg='gray.200' px={2} py={1} borderRadius='md'>GCSE Physics</Box>
                   <Box as='span' bg='gray.200' px={2} py={1} borderRadius='md'>A-Level Mathematics</Box>
                   <Box as='span' bg='gray.200' px={2} py={1} borderRadius='md'>A-Level Computer Science</Box>
               </Stack>
