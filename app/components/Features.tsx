@@ -72,7 +72,7 @@ import {
                 iconBg={useColorModeValue('green.100', 'green.900')}
                 text={
                   <Text fontSize="md" fontWeight="normal" color={useColorModeValue('gray.700', 'gray.300')} lineHeight='1.8'>
-                    <strong>Join the Waitlist:</strong> <a href="https://gcsedoctor.co.uk/secure-your-place"><Text as="u" fontWeight="semibold" color="blue.500">Sign up</Text>Sign up</a> now and we’ll match your child to the right small group. When a space opens, someone from our team will be in touch. No upfront commitment — just priority access when the time is right.
+                    <strong>Join the Waitlist:</strong> <a href="https://gcsedoctor.co.uk/secure-your-place"><Text as="u" fontWeight="semibold" color="blue.500">Sign up</Text></a> Sign up to secure a spot in the right tutor group. We’ll be in touch as soon as a space opens — no pressure, just priority access.
                   </Text>
                 }
                 
@@ -84,7 +84,7 @@ import {
                 iconBg={useColorModeValue('green.100', 'green.900')}
                 text={
                   <Text fontSize="md" fontWeight="normal" color={useColorModeValue('gray.700', 'gray.300')} lineHeight='1.8'>
-                    <strong>Weekly Structure:</strong> 1 hour/week of expert-led lessons in your chosen subject (Biology, Chemistry or Physics), with focused past paper drills, flashcards, and our extended response workbook to build exam technique.
+                    <strong>Weekly Structure:</strong> 1 hour/week of expert-led lessons (Biology, Chemistry or Physics), plus past paper drills, flashcards, and our extended response booklet for exam technique.
                   </Text>
                 }              />
               <Feature
@@ -94,7 +94,7 @@ import {
                 iconBg={useColorModeValue('green.100', 'green.900')}
                 text={
                   <Text fontSize="md" fontWeight="normal" color={useColorModeValue('gray.700', 'gray.300')} lineHeight='1.8'>
-                    <strong>Ongoing Support:</strong> Students get structured homework, access to our WhatsApp group for motivation and reminders, plus high-quality flashcards to keep revision consistent.
+                    <strong>Ongoing Support:</strong> Includes homework, flashcards, and a dedicated WhatsApp group for reminders, tips, and motivation.
                   </Text>
                 }                 />
             </Stack>
