@@ -70,7 +70,7 @@ export default function Pricing() {
             </ListItem>
             <ListItem>
               <ListIcon as={CheckIcon} color="green.400" />
-              <strong>Weekly exam homework</strong> with topic trackers and revision booklets
+              <strong>Weekly exam-technique homework</strong> with topic trackers and revision booklets
             </ListItem>
           </List>
           <Button as={"a"} href="https://f0bg5c5ixzh.typeform.com/to/Piqnx8xL"
