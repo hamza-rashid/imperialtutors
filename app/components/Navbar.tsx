@@ -55,9 +55,6 @@ export default function Navbar() {
               <IconButton aria-label="Email" icon={<EmailIcon boxSize={5} />} variant="ghost" _hover={{ bg: 'transparent' }} _active={{ bg: 'transparent' }} _focus={{ boxShadow: 'none' }} color="white" fontSize="lg"/>
             </Link>
           </Flex>
-          <Button as={'a'} fontSize={{ base: 'xs', md: 'xs' }} fontWeight={400} color={'white'} bg={'green.500'} px={3} py={{ base: 0.5, md: 0.1 }} lineHeight={{ base: 'normal', md: '2.5' }} height={{ base: '40px', md: 'auto' }} borderLeftWidth={1} borderRightWidth={1} borderColor="gray.300" borderRadius={0} mr={{ base: 0, md: 100 }} href='/log-in' textTransform="uppercase">
-            Student Login
-          </Button>
         </Flex>
       </Box>
 
