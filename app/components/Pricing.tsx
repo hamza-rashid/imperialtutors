@@ -115,7 +115,7 @@ export default function Pricing() {
           </Text>
           <Stack direction={'row'} align={'center'} justify={'center'}>
             <Text fontSize={'3xl'}>£</Text>
-            <Text fontSize={'6xl'} fontWeight={800}>50</Text>
+            <Text fontSize={'6xl'} fontWeight={800}>45</Text>
             <Text>/hour</Text>
           </Stack>
         </Stack>
