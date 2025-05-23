@@ -23,7 +23,7 @@ const AboutPage = () => {
                 PROFESSIONAL EDUCATOR
               </Text>
               <Text mb={6} fontSize="md" lineHeight='1.8'>
-              Patricia is a final-year medical student who completed an intercalated BSc in Oncology at University College London (UCL), where she graduated with First Class Honours. At UCL, she conducted research at the prestigious Swanton Lab within the UCL Cancer Institute, gaining advanced skills in histology, statistics, and cancer biology. Patricia is passionate about education and has more than 5 years of experience teaching GCSE & A-Level Biology and Chemistry lessons, helping students master complex topics with clarity and confidence.</Text>
+              Patricia is a final-year medical student who completed an intercalated BSc in Oncology at University College London (UCL), where she graduated with First Class Honours. At UCL, she conducted research at the prestigious Swanton Lab within the UCL Cancer Institute, gaining advanced skills in histology, statistics, and cancer biology. Patricia is passionate about education and has more than 5 years of experience teaching GCSE & A-Level Biology and Chemistry, helping students master complex topics with clarity and confidence.</Text>
               <Heading as="h3" size="xs" mb={4}>
               Patricia is a professional educator. This means Patricia:</Heading>
               <Stack spacing={3} mb={6} fontSize="xs" pl={6}>
