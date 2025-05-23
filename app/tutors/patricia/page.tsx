@@ -17,7 +17,7 @@ const AboutPage = () => {
           >
             <Box>
               <Heading as="h1" size="xl" mb={4}>
-                Ruben Shergill
+                Patricia Lapitan
               </Heading>
               <Text as="h2" fontSize="lg" fontWeight="bold" mb={4} color={'green.600'}>
                 PROFESSIONAL EDUCATOR
