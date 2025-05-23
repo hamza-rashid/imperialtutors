@@ -17,7 +17,7 @@ const AboutPage = () => {
           >
             <Box>
               <Heading as="h1" size="xl" mb={4}>
-                Dr Maryam Amer
+                Dr. Maryam Amer
               </Heading>
               <Text as="h2" fontSize="lg" fontWeight="bold" mb={4} color={'green.600'}>
                 CO-FOUNDER AND PROFESSIONAL EDUCATOR

@@ -10,7 +10,7 @@ const tutors = [
   { name: "Hamza", image: "/images/hamza_profile3.png", label: "Founder" },
   { name: "Maryam", image: "/images/maryam_profile.jpeg", label: "Co-Founder" },
   { name: "Ruben", image: "/images/ruben_profile.jpeg", label: "" },
-  { name: "Patricia", image: "/images/ruben_profile.jpeg", label: "" },
+  { name: "Patricia", image: "/images/patricia_profile.jpeg", label: "" },
 
 ];
 

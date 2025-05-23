@@ -47,7 +47,7 @@ const AboutPage = () => {
             </Box>
             <Box flexShrink={0} mb={{ base: 8, md: 0 }}>
               <Image
-                src='/images/ruben_profile.jpeg'
+                src='/images/patricia_profile.jpeg'
                 alt="Ruben - Professional GCSE Doctor Tutor"
                 width={300}
                 height={300}

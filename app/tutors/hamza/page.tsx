@@ -17,7 +17,7 @@ const AboutPage = () => {
           >
             <Box>
               <Heading as="h1" size="xl" mb={4}>
-                Dr Hamza Rashid
+                Dr. Hamza Rashid
               </Heading>
               <Text as="h2" fontSize="lg" fontWeight="bold" mb={4} color={'green.600'}>
                 FOUNDER AND PROFESSIONAL EDUCATOR
