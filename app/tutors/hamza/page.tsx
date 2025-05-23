@@ -52,7 +52,7 @@ const AboutPage = () => {
             </Box>
             <Box flexShrink={0} mb={{ base: 8, md: 0 }}>
               <Image
-                src='/images/hamza_profile.png'
+                src='/images/hamza_profile3.png'
                 alt="Hamza - Professional GCSE Doctor Tutor"
                 width={300}
                 height={300}
