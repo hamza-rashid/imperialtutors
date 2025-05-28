@@ -89,13 +89,13 @@ export default function BookingPage() {
                 </VStack>
 
                 <Text fontSize={{ base: 'sm', md: 'sm' }} color="gray.700">
-                  Our program is designed for students studying <strong>GCSE Higher Tier</strong>, covering both <strong>Combined Science</strong> and <strong>Triple Science</strong>. Here’s what’s included:
+                  Our program is designed for students studying GCSE Biology<strong> Higher Tier</strong>, covering both <strong>Combined Science</strong> and <strong>Triple Science</strong>. Here’s what’s included:
                 </Text>
 
                 <List spacing={4} fontSize={{ base: 'sm', md: 'sm' }} textAlign="left" maxW="500px">
                   <ListItem display="flex" alignItems="center" gap={3}>
                     <Circle size="24px" bg="#37A169" color="white" fontWeight="bold" fontSize="sm">✓</Circle>
-                    <Text as="span"><strong>Weekly 1-hour live small-group lessons</strong></Text>
+                    <Text as="span"><strong>Weekly 1-hour live small-group lessons</strong> with a professional educator</Text>
                   </ListItem>
                   <ListItem display="flex" alignItems="center" gap={3}>
                     <Circle size="24px" bg="#37A169" color="white" fontWeight="bold" fontSize="sm">✓</Circle>
