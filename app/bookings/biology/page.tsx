@@ -28,7 +28,7 @@ export default function BookingPage() {
       script.src =
         'https://app.tutorbird.com/Widget/v4/Widget.ashx?settings=eyJTY2hvb2xJRCI6InNjaF9obENKWiIsIldlYnNpdGVJRCI6Indic196SmhKSyIsIldlYnNpdGVCbG9ja0lEIjoid2JiX2c0NVpKRCJ9';
       script.async = true;
-      document.getElementById('tutorbird-widget-container')?.appendChild(script);
+      document.getElementById('tutorbird-widget')?.appendChild(script);
     }
   }, []);
 
@@ -74,7 +74,7 @@ export default function BookingPage() {
                 </Heading>
 
                 {/* Team for mobile */}
-                <VStack spacing={2} textAlign="left" mt={4} align="start" display={{ base: 'flex', md: 'none' }}>
+                <VStack spacing={2} textAlign="left" mt={2} mb={3} align="start" display={{ base: 'flex', md: 'none' }}>
                   <Text fontSize="md" fontWeight="bold">Team</Text>
                   <Stack direction="column" spacing={2} align="start">
                     <HStack>
@@ -89,23 +89,34 @@ export default function BookingPage() {
                 </VStack>
 
                 <Text fontSize={{ base: 'sm', md: 'sm' }} color="gray.700">
-                  Our program helps students build knowledge, confidence, and exam technique for top grades. Here’s what’s included:
+                  Our program is designed for students studying <strong>GCSE Higher Tier</strong>, covering both <strong>Combined Science</strong> and <strong>Triple Science</strong>. Here’s what’s included:
                 </Text>
 
                 <List spacing={4} fontSize={{ base: 'sm', md: 'sm' }} textAlign="left" maxW="500px">
-                  {[
-                    'Weekly 1-hour live small-group lesson',
-                    'Active Recall Biology Workbook & resources',
-                    'Weekly homework tasks with feedback',
-                    'Mentorship group chat for questions & support',
-                    'Termly parent-student feedback calls',
-                    'Optional holiday crash courses for exam prep',
-                  ].map((item, index) => (
-                    <ListItem key={index} display="flex" alignItems="center" gap={3}>
-                      <Circle size="24px" bg="#37A169" color="white" fontWeight="bold" fontSize="sm">✓</Circle>
-                      {item}
-                    </ListItem>
-                  ))}
+                  <ListItem display="flex" alignItems="center" gap={3}>
+                    <Circle size="24px" bg="#37A169" color="white" fontWeight="bold" fontSize="sm">✓</Circle>
+                    <Text as="span"><strong>Weekly 1-hour live small-group lessons</strong></Text>
+                  </ListItem>
+                  <ListItem display="flex" alignItems="center" gap={3}>
+                    <Circle size="24px" bg="#37A169" color="white" fontWeight="bold" fontSize="sm">✓</Circle>
+                    <Text as="span"><strong>Active Recall Biology Workbook</strong> & resources</Text>
+                  </ListItem>
+                  <ListItem display="flex" alignItems="center" gap={3}>
+                    <Circle size="24px" bg="#37A169" color="white" fontWeight="bold" fontSize="sm">✓</Circle>
+                    <Text as="span"><strong>Weekly homework tasks with </strong>Model Answers</Text>
+                  </ListItem>
+                  <ListItem display="flex" alignItems="center" gap={3}>
+                    <Circle size="24px" bg="#37A169" color="white" fontWeight="bold" fontSize="sm">✓</Circle>
+                    <Text as="span"><strong>Mentorship group chat</strong> for questions & support</Text>
+                  </ListItem>
+                  <ListItem display="flex" alignItems="center" gap={3}>
+                    <Circle size="24px" bg="#37A169" color="white" fontWeight="bold" fontSize="sm">✓</Circle>
+                    <Text as="span"><strong>Termly parent-student feedback calls</strong> (progress updates)</Text>
+                  </ListItem>
+                  <ListItem display="flex" alignItems="center" gap={3}>
+                    <Circle size="24px" bg="#37A169" color="white" fontWeight="bold" fontSize="sm">✓</Circle>
+                    <Text as="span"><strong>Optional holiday crash courses</strong> for exam prep</Text>
+                  </ListItem>
                 </List>
 
                 <Stack direction={{ base: 'column', sm: 'row' }} spacing={4} mt={6}>
@@ -141,12 +152,35 @@ export default function BookingPage() {
               ))}
             </List>
           </Box>
-
-          <Box id="tutorbird-widget-container" w="100%" maxW="800px" p={0} m={0} />
         </Flex>
+
+        {/* FULL WIDTH TutorBird Widget - No Flex or Box */}
+        <div id="tutorbird-widget" style={{ width: '100%', marginBottom: '60px' }} />
 
         <Footer />
       </Box>
+
+      {/* Global CSS overrides */}
+      <style jsx global>{`
+        html,
+        body {
+          margin: 0 !important;
+          padding: 0 !important;
+          background-color: #37A169 !important;
+        }
+
+        #__next {
+          background-color: #37A169 !important;
+        }
+
+        iframe {
+          display: block;
+          width: 100% !important;
+          max-width: 100% !important;
+          border: none !important;
+          box-sizing: border-box;
+        }
+      `}</style>
     </>
   );
 }
