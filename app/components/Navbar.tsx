@@ -42,7 +42,7 @@ export default function Navbar() {
   return (
     <>
       {/* Contact Number Bar */}
-      <Box w="full" bg="#37A169" position="sticky" top="0" zIndex="1000" color="white" py={{ base: 0.5, md: 0.8 }} textAlign="center" fontSize="xs" lineHeight={{ base: 'normal', md: '1.5' }} display={{ base: 'block', md: 'flex' }} alignItems="center">
+      <Box w="full" bg="#37A169" position="sticky" top="0" zIndex="1000" color="white" py={{ base: 0.5, md: 2 }} textAlign="center" fontSize="xs" lineHeight={{ base: 'normal', md: '1.5' }} display={{ base: 'block', md: 'flex' }} alignItems="center">
         <Flex display={{ base: 'none', md: 'flex' }} justify="center" align="center" flex={1}>
           <Link href="https://wa.me/447404969774" color="white" target="_blank" rel="noopener noreferrer">Contact Us: +44 (0)7404 969 774</Link> <Box as="span" mx={1}>|</Box> <Link href="mailto:info@gcsedoctor.co.uk" color="white" _hover={{ textDecoration: 'underline' }}>info@gcsedoctor.co.uk</Link>
         </Flex>
