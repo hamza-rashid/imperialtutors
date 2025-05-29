@@ -17,6 +17,7 @@ import {
   ListItem,
   Circle,
 } from '@chakra-ui/react';
+import { DownloadIcon } from '@chakra-ui/icons';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
@@ -52,6 +53,7 @@ export default function BookingPage() {
                 />
 
                 {/* Team for desktop */}
+                
                 <VStack spacing={2} textAlign="left" mt={4} align="start" display={{ base: 'none', md: 'flex' }}>
                   <Text fontSize="md" fontWeight="bold">Team</Text>
                   <Stack direction="column" spacing={2} align="start">
@@ -74,6 +76,7 @@ export default function BookingPage() {
                 </Heading>
 
                 {/* Team for mobile */}
+                <Box bg="#f9f9f9" borderRadius="md" p={4} mt={4} boxShadow="md">
                 <VStack spacing={2} textAlign="left" mt={2} mb={3} align="start" display={{ base: 'flex', md: 'none' }}>
                   <Text fontSize="md" fontWeight="bold">Team</Text>
                   <Stack direction="column" spacing={2} align="start">
@@ -87,10 +90,12 @@ export default function BookingPage() {
                     </HStack>
                   </Stack>
                 </VStack>
+                </Box>
 
                 <Text fontSize={{ base: 'sm', md: 'sm' }} color="gray.700">
-                  Our program is designed for students studying GCSE Biology<strong> Higher Tier</strong>, covering both <strong>Combined Science</strong> and <strong>Triple Science</strong>. Here’s what’s included:
+                This program is for students aiming for top grades in <strong>GCSE Biology Higher Tier</strong> – whether you're doing <strong>Combined Science</strong> or <strong>Triple Science</strong>:
                 </Text>
+                
 
                 <List spacing={4} fontSize={{ base: 'sm', md: 'sm' }} textAlign="left" maxW="500px">
                   <ListItem display="flex" alignItems="center" gap={3}>
@@ -119,34 +124,51 @@ export default function BookingPage() {
                   </ListItem>
                 </List>
 
-                <Stack direction={{ base: 'column', sm: 'row' }} spacing={4} mt={6}>
-                  <Link href="/curriculums/Year10BiologyAQA.pdf" isExternal>
-                    <Button variant="outline" borderColor="#37A169" color="#37A169" _hover={{ bg: '#37A169', color: 'white' }}>
-                      Year 10 Curriculum (AQA)
-                    </Button>
-                  </Link>
-                  <Link href="/curriculums/Year11BiologyAQA.pdf" isExternal>
-                    <Button variant="outline" borderColor="#37A169" color="#37A169" _hover={{ bg: '#37A169', color: 'white' }}>
-                      Year 11 Curriculum (AQA)
-                    </Button>
-                  </Link>
-                  <Link href="/course-info/biology-course-faqs.pdf" isExternal>
-                    <Button variant="outline" borderColor="#37A169" color="#37A169" _hover={{ bg: '#37A169', color: 'white' }}>
+                <Box bg="#f9f9f9" borderRadius="md" p={4} mt={4} boxShadow="md">
+                <Text fontSize="sm" color="gray.600" mt={0} fontStyle="italic">
+                  Have questions? Download the full curriclum and course details below.
+                </Text>
+                <Stack direction={{ base: 'column', sm: 'row' }} spacing={4} mt={4}>
+                <Link href="/course-info/biology-course-faqs.pdf" isExternal>
+                    <Button variant="outline" borderColor="#37A169" color="#37A169" _hover={{ bg: '#37A169', color: 'white' }} leftIcon={<DownloadIcon />} w={{ base: '100%', sm: 'auto' }}>
                       Course Guide & FAQs
                     </Button>
                   </Link>
+                  <Link href="/curriculums/Year10BiologyAQA.pdf" isExternal>
+                    <Button variant="outline" borderColor="#37A169" color="#37A169" _hover={{ bg: '#37A169', color: 'white' }} leftIcon={<DownloadIcon />} w={{ base: '100%', sm: 'auto' }}>
+                      Year 10 Curriculum
+                    </Button>
+                  </Link>
+                  <Link href="/curriculums/Year11BiologyAQA.pdf" isExternal>
+                    <Button variant="outline" borderColor="#37A169" color="#37A169" _hover={{ bg: '#37A169', color: 'white' }} leftIcon={<DownloadIcon />} w={{ base: '100%', sm: 'auto' }}>
+                      Year 11 Curriculum
+                    </Button>
+                  </Link>
                 </Stack>
+                </Box>
+
               </Flex>
             </Flex>
           </Box>
 
           {/* Booking Steps Summary */}
-          <Box textAlign="left" color="white" fontSize={{ base: 'md', md: 'lg' }} mt={2} maxW="600px" w="100%" px={{ base: 6, md: 24 }}>
-            <Text mb={4} fontWeight="bold">Booking in 3 Simple Steps 👇</Text>
+          <Box
+            textAlign="left"
+            color="white"
+            fontSize={{ base: 'md', md: 'lg' }}
+            mt={2}
+            maxW="600px"
+            w="100%"
+            px={{ base: 6, md: 24 }}
+            py={4}
+            border="1px dashed rgba(255, 255, 255, 0.7)" // 50% transparency
+            borderRadius="md"
+          >
+            <Text mb={4} fontWeight="bold">Book in 3 Simple Steps 👇</Text>
             <List spacing={4}>
-              {['Select your Biology class below', 'Confirm your details and secure your place', 'Start learning and receive your resources!'].map((item, index) => (
-                <ListItem key={index} display="flex" alignItems="center" gap={4}>
-                  <Circle size="28px" bg="white" color="#37A169" fontWeight="bold" fontSize="md" display="inline-flex" alignItems="center" justifyContent="center">{index + 1}</Circle>
+              {['Select your Biology class below', 'Confirm your details and secure your place with a payment', 'Receive your resources and class information!'].map((item, index) => (
+                <ListItem key={index} display="flex" alignItems="center" gap={3}>
+                  <Circle size="28px" bg="white" color="#37A169" fontWeight="bold" fontSize={{ base: 'sm', md: 'md' }} display="inline-flex" alignItems="center" justifyContent="center">{index + 1}</Circle>
                   <Text>{item}</Text>
                 </ListItem>
               ))}
@@ -155,7 +177,7 @@ export default function BookingPage() {
         </Flex>
 
         {/* FULL WIDTH TutorBird Widget - No Flex or Box */}
-        <div id="tutorbird-widget" style={{ width: '100%', marginBottom: '60px' }} />
+        <div id="tutorbird-widget" style={{ width: '100%', marginBottom: '80px' }} />
 
         <Footer />
       </Box>
