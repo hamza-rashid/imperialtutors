@@ -2,7 +2,7 @@
 
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
-import { Box, Container, Heading, Text, Stack } from '@chakra-ui/react';
+import { Box, Container, Heading, Text, Stack, Link } from '@chakra-ui/react';
 import Image from 'next/image';
 
 const AboutPage = () => {
@@ -11,6 +11,10 @@ const AboutPage = () => {
       <Navbar />
       <Box bg="#F7F7F7" py={10}>
         <Container maxW={'6xl'}>
+            {/* Breadcrumbs */}
+            <Text fontSize="sm" color="gray.600" mb={4}>
+            <Link href="/" textDecoration="underline">Home</Link> {'>'} <Link href="/tutors" textDecoration="underline">Tutors</Link> {'>'} Ruben
+          </Text>
           <Stack direction={{ base: 'column-reverse', md: 'row' }}
             spacing={8}
             alignItems={{ base: 'center', md: 'flex-start' }}

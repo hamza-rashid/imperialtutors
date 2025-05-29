@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { Heading, chakra } from '@chakra-ui/react';
+import { Heading, chakra, Box, Link, Text } from '@chakra-ui/react';
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Navbar from '../components/Navbar';
@@ -11,7 +11,6 @@ const tutors = [
   { name: "Maryam", image: "/images/maryam_profile.jpeg", label: "Co-Founder" },
   { name: "Ruben", image: "/images/ruben_profile.jpeg", label: "" },
   { name: "Patricia", image: "/images/patricia_profile.png", label: "" },
-
 ];
 
 export default function TutorsPage() {
@@ -20,7 +19,18 @@ export default function TutorsPage() {
   return (
     <>
       <Navbar />
-      <chakra.h1 textAlign={'center'} fontSize={'4xl'} mt={10} mb={-10} fontWeight={'bold'}>Meet our Team</chakra.h1>
+
+      {/* Breadcrumbs */}
+      <Box maxW="1200px" mx="auto" px={{ base: 4, md: 6 }} mt={6} mb={4}>
+        <Text fontSize="sm" color="gray.600">
+          <Link href="/" textDecoration="underline">Home</Link> {'>'} Tutors
+        </Text>
+      </Box>
+
+      <chakra.h1 textAlign={'center'} fontSize={'4xl'} mt={10} mb={-10} fontWeight={'bold'}>
+        Meet our Team
+      </chakra.h1>
+
       <div
         style={{
           display: "grid",
@@ -79,7 +89,7 @@ export default function TutorsPage() {
                 padding: "3px 0",
                 fontWeight: "semibold",
                 marginBottom: "20px",
-                fontSize:"14px",
+                fontSize: "14px",
               }}
             >
               {tutor.name.toUpperCase()}
@@ -87,6 +97,7 @@ export default function TutorsPage() {
           </div>
         ))}
       </div>
+
       <div
         style={{
           width: "100%",
@@ -95,6 +106,7 @@ export default function TutorsPage() {
           marginTop: "50px",
         }}
       ></div>
+
       <Footer />
     </>
   );
