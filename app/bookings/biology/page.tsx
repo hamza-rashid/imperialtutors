@@ -77,33 +77,33 @@ export default function BookingPage() {
     }
   }, []);
 
-  const sections = ['Course Content', 'Course Timetable', 'Meet the Tutors', 'Reviews'];
+  const sections = ['Course Content', 'Curriculum Overview', 'Meet the Tutors', 'Reviews'];
 
   const renderMobileContent = () => {
     if (selected === 'Course Content') {
       return (
         <>
-          <Heading as="h2" fontSize="lg" mb={4}>Course Description</Heading>
-          <Text mb={4} fontSize="sm" color="#1a202c">
+          <Heading as="h2" fontSize={{ base: 'xl', md: 'lg' }} mb={4}>Course Description</Heading>
+          <Text mb={4} fontSize="md" color="#1a202c">
             Our online Biology GCSE Easter crash courses have been carefully designed to prepare Year 11 students for their final exams.
           </Text>
-          <Text mb={4} fontSize="sm" color="#1a202c">
+          <Text mb={4} fontSize="md" color="#1a202c">
             Courses cover key areas, fill gaps, and improve understanding. Our teachers also coach exam technique to maximise marks.
           </Text>
           <Divider borderColor="gray.200" mt={8} mb={8} />
-          <Heading as="h3" fontSize="md" mb={4}>Suitable for:</Heading>
+          <Heading as="h3" fontSize="xl" mb={4}>Suitable for:</Heading>
           <VStack align="start" spacing={3} mb={6}>
             {suitability.map((item, i) => (
               <HStack key={i} spacing={3}>
                 {ticksAndCrosses[item.type]}
-                <Text fontSize="sm">{item.text}</Text>
+                <Text fontSize="md">{item.text}</Text>
               </HStack>
             ))}
           </VStack>
         </>
       );
     }
-    if (selected === 'Course Timetable') {
+    if (selected === 'Curriculum Overview') {
       return (
         <VStack align="start" spacing={4} w="100%">
           <Button leftIcon={<DownloadIcon />} as="a" href="/pdfs/aqa-separate.pdf" download bg="#37a169" color="white" _hover={{ bg: '#2e855d' }} w="100%">
@@ -118,8 +118,8 @@ export default function BookingPage() {
     if (selected === 'Meet the Tutors') {
       return (
         <>
-          <Heading as="h3" fontSize="md" mb={4}>Our Tutors</Heading>
-          <Text fontSize="sm" color="gray.700" mb={6}>
+          <Heading as="h3" fontSize="xl" mb={4}>Our Tutors</Heading>
+          <Text fontSize="md" color="gray.700" mb={6}>
             Hand-picked for academic excellence and inspiring teaching.
           </Text>
         </>
@@ -144,7 +144,7 @@ export default function BookingPage() {
             <Link href="/" textDecoration="underline">Home</Link> {'>'} <Link href="/bookings" textDecoration="underline">GCSE Classes</Link> {'>'} Biology
           </Text>
 
-          <Heading as="h1" fontSize={{ base: '2xl', sm: '3xl', md: '5xl' }} fontWeight="bold" mb={{ base: 6, md: 10 }} color="#1a202c">
+          <Heading as="h1" fontSize={{ base: '3xl', sm: '3xl', md: '5xl' }} fontWeight="bold" mb={{ base: 12, md: 10 }} color="#1a202c">
             Biology GCSE Easter Revision Course – Online
           </Heading>
 
@@ -162,7 +162,7 @@ export default function BookingPage() {
                                 w="100%"
                                 py={3}
                                 fontWeight="bold"
-                                fontSize="lg" // Larger font size for 'Course Information'
+                                fontSize="xl" // Larger font size for 'Course Information'
                                 pl={0} // Left alignment
                                 _hover={{ bg: 'transparent' }}
                             >
@@ -178,27 +178,31 @@ export default function BookingPage() {
 
                             <AccordionPanel p={0} w="100%">
                             <VStack spacing={0} align="stretch" w="100%">
-                                {sections.map((item, index) => (
-                                <Box
-                                    key={item}
+                              {sections.map((item, index) => (
+                                <Box key={item}>
+                                  <Flex
+                                    align="center"
                                     onClick={() => setSelected(item)}
-                                    bg={selected === item ? 'gray.50' : 'transparent'}
+                                    bg={selected === item ? '#f0f0f0' : 'transparent'} // Stronger but subtle shade
                                     borderRight={selected === item ? '2px solid #37a169' : 'none'}
                                     py={3}
                                     px={4}
                                     fontWeight="bold"
                                     cursor="pointer"
-                                    _hover={{ bg: 'gray.50' }}
-                                >
+                                    _hover={{
+                                      bg: selected === item ? '#f0f0f0' : '#f7f7f7', // Keep a subtle hover effect only if not selected
+                                    }}                                    
+                                    mt={index === 0 ? 6 : 0}  // Adds extra spacing only for the first item
+                                  >
                                     {item}
-                                    {/* Divider under each item */}
-                                    {index < sections.length && (
-                                    <Box borderBottom="1px solid" borderColor="gray.200" mt={3} />
-                                    )}
-
+                                  </Flex>
+                                  {index < sections.length - 1 && (
+                                    <Divider borderColor="gray.200" />
+                                  )}
                                 </Box>
-                                ))}
+                              ))}
                             </VStack>
+
                             </AccordionPanel>
                         </>
                         )}
@@ -211,14 +215,14 @@ export default function BookingPage() {
                 <Tabs variant="unstyled" isLazy>
                   <TabList mb={6} gap={8} borderBottom="1px solid #E2E8F0">
                     {sections.map((tab) => (
-                      <Tab key={tab} _selected={{ fontWeight: 'bold', borderBottom: '2px solid #37a169' }} pb={2} fontSize="md">
+                      <Tab key={tab} whiteSpace="nowrap" _selected={{ fontWeight: 'bold', borderBottom: '2px solid #37a169' }} pb={2} fontSize="md">
                         {tab}
                       </Tab>
                     ))}
                   </TabList>
                   <TabPanels>
                     <TabPanel>
-                      <Heading as="h2" fontSize="lg" mb={4}>Course Description</Heading>
+                      <Heading as="h2"   fontSize="xl" mb={4}>Course Description</Heading>
                       <Text mb={4} fontSize="md" color="#1a202c">
                         Our online Biology GCSE Easter crash courses have been carefully designed to prepare Year 11 students for their final exams.
                       </Text>
@@ -247,7 +251,7 @@ export default function BookingPage() {
                       </VStack>
                     </TabPanel>
                     <TabPanel>
-                      <Heading as="h3" fontSize="md" mb={4}>Our Tutors</Heading>
+                      <Heading as="h3" fontSize="xl" mb={4}>Our Tutors</Heading>
                       <Text fontSize="md" color="gray.700" mb={6}>
                         Hand-picked for academic excellence and inspiring teaching.
                       </Text>
@@ -273,7 +277,7 @@ export default function BookingPage() {
               zIndex="1"
             >              
             <Text fontSize={{ base: '2xl', md: '3xl' }} fontWeight="bold" mb={4}>
-                £20 <Text as="span" fontSize="sm" fontWeight="normal">/ per lesson</Text>
+                £20 <Text as="span" fontSize="md" fontWeight="normal">/ per lesson</Text>
               </Text>
               <Button
                 bg="#37a169"
@@ -291,7 +295,7 @@ export default function BookingPage() {
                 Book Now
                 </Button>
                 <Divider my={6} />
-              <VStack align="start" spacing={4} fontSize="sm">
+              <VStack align="start" spacing={4} fontSize="md">
                 <HStack>
                   <Image src="/images/tier.svg" alt="Tier" boxSize="20px" />
                   <Text><strong>Tier:</strong> Higher</Text>
@@ -307,6 +311,8 @@ export default function BookingPage() {
                   <Text><strong>Exam Boards:</strong> AQA, Edexcel</Text>
                 </HStack>
                 <Divider borderColor="gray.200" />
+                <Text fontWeight="400" fontSize="xl" color="black" mt={4} textAlign="center" mx="auto" maxW="90%">
+                See exactly what your child will get in the program — <strong>download the full course guide below:</strong></Text>
                 <Button
                 leftIcon={<DownloadIcon />}
                 variant="outline"
@@ -345,15 +351,19 @@ export default function BookingPage() {
 >
   <Heading
     as="h2"
-    fontSize={{ base: 'xl', md: '2xl', lg: '2xl' }}
+    fontSize={{ base: '2xl', md: '2xl', lg: '2xl' }}
     fontWeight="bold"
     mb={3}
     mt={{ base: 3, md: -5}}
+    px={{ base: 15}}
     lineHeight="short"
+    textAlign={{ base: "left", md: "center"}}
   >
     Ready to secure your child’s place?
   </Heading>
-  <Text fontSize={{ base: 'sm', md: 'md' }} lineHeight="relaxed" color="white" maxW="700px" mx="auto" mb={{ base: 10, md: 5}}
+  <Text fontSize={{ base: 'md', md: 'md' }} lineHeight="relaxed" color="white" maxW="700px" mx="auto" mb={{ base: 10, md: 5}} px={{ base: 15, md: 75}} textAlign={{ base: "left", md: "center"}}
+
+
 >
   Book your GCSE Biology group class below in just a few clicks. Choose your class, confirm details, and you’re all set—resources, feedback, and expert teaching are all included.
 </Text>
