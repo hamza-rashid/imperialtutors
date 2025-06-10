@@ -72,11 +72,10 @@ import {
                 iconBg={useColorModeValue('green.100', 'green.900')}
                 text={
                   <Text fontSize="md" fontWeight="normal" color={useColorModeValue('gray.700', 'gray.300')} lineHeight='1.8'>
-                    <strong>Join the Waitlist:</strong> <a href="https://gcsedoctor.co.uk/secure-your-place"><Text as="u" fontWeight="semibold" color="blue.500">Sign up</Text></a> to secure a spot in the right tutor group. We’ll be in touch as soon as a space opens — no pressure, just priority access.
+                    <strong>Join the Waitlist:</strong> <a href="/bookings"><Text as="u" fontWeight="semibold" color="blue.500">Sign up</Text></a> to secure a spot in the right tutor group. We'll be in touch as soon as a space opens — no pressure, just priority access.
                   </Text>
                 }
-                
-                />
+              />
               <Feature
                 icon={
                 <Icon as={MdOutlineSchool} color={'green.500'} w={7} h={5} />

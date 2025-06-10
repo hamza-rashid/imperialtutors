@@ -53,78 +53,20 @@ const suitability = [
   { text: 'Students predicted a grade 4 or below', type: 'cross' as const },
 ];
 
-export default function ChemistryBookingPage() {
+export default function PhysicsBookingPage() {
   const isMobile = useBreakpointValue({ base: true, md: false });
   const [selected, setSelected] = useState('Course Content');
 
   useEffect(() => {
-    // Load TutorBird script for Chemistry
+    // Load TutorBird script for Physics
     if (!document.getElementById('tutorbird-embed-script')) {
       const script = document.createElement('script');
       script.id = 'tutorbird-embed-script';
-      script.src = 'https://app.tutorbird.com/Widget/v4/Widget.ashx?settings=eyJTY2hvb2xJRCI6InNjaF9obENKWiIsIldlYnNpdGVJRCI6Indic196SmhKSyIsIldlYnNpdGVCbG9ja0lEIjoid2JiXzVkSnJKRyJ9';
+      script.src = 'https://app.tutorbird.com/Widget/v4/Widget.ashx?settings=eyJTY2hvb2xJRCI6InNjaF9obENKWiIsIldlYnNpdGVJRCI6Indic196SmhKSyIsIldlYnNpdGVCbG9ja0lEIjoid2JiX3huZk1KcCJ9';
       script.async = true;
       document.getElementById('tutorbird-widget')?.appendChild(script);
     }
   }, []);
-
-  const sections = ['Course Content', 'Course Timetable', 'Meet the Tutors', 'Reviews'];
-
-  const renderMobileContent = () => {
-    if (selected === 'Course Content') {
-      return (
-        <>
-          <Heading as="h2" fontSize="lg" mb={4}>Course Description</Heading>
-          <Text mb={4} fontSize="sm" color="#1a202c">
-            Our online Biology GCSE Easter crash courses have been carefully designed to prepare Year 11 students for their final exams.
-          </Text>
-          <Text mb={4} fontSize="sm" color="#1a202c">
-            Courses cover key areas, fill gaps, and improve understanding. Our teachers also coach exam technique to maximise marks.
-          </Text>
-          <Divider borderColor="gray.200" mt={8} mb={8} />
-          <Heading as="h3" fontSize="md" mb={4}>Suitable for:</Heading>
-          <VStack align="start" spacing={3} mb={6}>
-            {suitability.map((item, i) => (
-              <HStack key={i} spacing={3}>
-                {ticksAndCrosses[item.type]}
-                <Text fontSize="sm">{item.text}</Text>
-              </HStack>
-            ))}
-          </VStack>
-        </>
-      );
-    }
-    if (selected === 'Course Timetable') {
-      return (
-        <VStack align="start" spacing={4} w="100%">
-          <Button leftIcon={<DownloadIcon />} as="a" href="/pdfs/aqa-separate.pdf" download bg="#37a169" color="white" _hover={{ bg: '#2e855d' }} w="100%">
-            Year 10 Curriculum
-          </Button>
-          <Button leftIcon={<DownloadIcon />} as="a" href="/pdfs/aqa-combined.pdf" download bg="#37a169" color="white" _hover={{ bg: '#2e855d' }} w="100%">
-            Year 11 Curriculum
-          </Button>
-        </VStack>
-      );
-    }
-    if (selected === 'Meet the Tutors') {
-      return (
-        <>
-          <Heading as="h3" fontSize="md" mb={4}>Our Tutors</Heading>
-          <Text fontSize="sm" color="gray.700" mb={6}>
-            Hand-picked for academic excellence and inspiring teaching.
-          </Text>
-        </>
-      );
-    }
-    if (selected === 'Reviews') {
-        return (
-          <>
-            <div className="elfsight-app-f110ac15-8c07-4399-9202-ae018fe3c80f" />
-          </>
-        );
-      }
-      return null;
-    };
 
   return (
     <>
@@ -132,15 +74,15 @@ export default function ChemistryBookingPage() {
       <Box as="main" bg="#f7f7f7" py={{ base: 8, md: 12 }} minH="80vh">
         <Box maxW="1200px" mx="auto" px={{ base: 4, md: 6 }}>
           <Text fontSize="sm" color="gray.600" mb={{ base: 4, md: 6 }}>
-            <Link href="/" textDecoration="underline">Home</Link> {'>'} <Link href="/bookings" textDecoration="underline">GCSE Classes</Link> {'>'} Chemistry
+            <Link href="/" textDecoration="underline">Home</Link> {'>'} <Link href="/bookings" textDecoration="underline">GCSE Classes</Link> {'>'} Physics
           </Text>
           <Box maxW="700px" mx="auto">
             <Box bg="white" borderRadius="2xl" boxShadow="2xl" px={{ base: 4, md: 12 }} py={{ base: 8, md: 12 }} textAlign="center" mb={10}>
               <Heading as="h1" fontSize={{ base: '2xl', md: '4xl' }} fontWeight="extrabold" color="#1a202c" mb={4} letterSpacing="-1px">
-                Chemistry GCSE Group Classes – Coming Soon
+                Physics GCSE Group Classes – Coming Soon
               </Heading>
               <Text fontSize={{ base: 'md', md: 'xl' }} color="gray.700" maxW="500px" mx="auto" mb={6}>
-                Our Chemistry group program launches soon! Register your interest below and be the first to know when bookings open. Expect the same elite teaching, small groups, and proven results as our Biology program.
+                Our Physics group program launches soon! Register your interest below and be the first to know when bookings open. Expect the same elite teaching, small groups, and proven results as our Biology program.
               </Text>
               <VStack spacing={4}>
                 <Button
@@ -191,7 +133,7 @@ export default function ChemistryBookingPage() {
                   Want to be notified?
                 </Heading>
                 <Text fontSize={{ base: 'md', md: 'md' }} lineHeight="relaxed" color="white" maxW="600px" mx="auto" mb={{ base: 10, md: 5}} px={{ base: 15, md: 75}} textAlign={{ base: "left", md: "center"}}>
-                  Enter your details below and we'll let you know as soon as Chemistry bookings are live.
+                  Enter your details below and we'll let you know as soon as Physics bookings are live.
                 </Text>
               </Box>
               <div id="tutorbird-widget" style={{ width: '100%' }} />
@@ -202,4 +144,4 @@ export default function ChemistryBookingPage() {
       <Footer />
     </>
   );
-}
+} 

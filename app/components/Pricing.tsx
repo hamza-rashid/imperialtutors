@@ -73,7 +73,7 @@ export default function Pricing() {
               <strong>Weekly homework</strong> with topic trackers and revision booklets
             </ListItem>
           </List>
-          <Button as={"a"} href="https://gcsedoctor.co.uk/secure-your-place"
+          <Button as={"a"} href="/bookings"
             mt={10}
             w={'full'}
             bg={'green.400'}

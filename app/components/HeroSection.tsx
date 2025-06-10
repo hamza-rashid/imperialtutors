@@ -92,7 +92,7 @@ export default function CallToActionWithVideo() {
                         </Text>
                     </Heading>
                     <Text color={'black.500'} fontSize={'md'} textAlign={{ base: 'center', md: 'left' }} lineHeight='1.8'>
-                    Taught by doctors, scientists, and certified teachers from <Text as="span" fontWeight="bold">top UK universities</Text>. We’ve delivered <Text as="span" fontWeight="bold">4,000+ hours</Text> of online tuition since 2017 — helping students excel in Biology, Chemistry, and Physics through <Text as="span" fontWeight="bold">focused small-group lessons</Text> that work.
+                    Taught by doctors, scientists, and certified teachers from <Text as="span" fontWeight="bold">top UK universities</Text>. We've delivered <Text as="span" fontWeight="bold">4,000+ hours</Text> of online tuition since 2017 — helping students excel in Biology, Chemistry, and Physics through <Text as="span" fontWeight="bold">focused small-group lessons</Text> that work.
 
 
                     </Text>
@@ -101,7 +101,7 @@ export default function CallToActionWithVideo() {
                         direction={{ base: 'column', sm: 'row' }}>
                         <Stack direction={{ base: 'column-reverse', sm: 'row' }}>
                             <Stack direction={'column'} textAlign="center">
-                                <Button as={"a"} href="https://gcsedoctor.co.uk/secure-your-place"
+                                <Button as={"a"} href="/bookings"
                                     rounded={'full'}
                                     size={'lg'}
                                     fontWeight={'normal'}

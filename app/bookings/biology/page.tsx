@@ -89,7 +89,7 @@ export default function BookingPage() {
           Our weekly GCSE Biology classes are designed to take your child from confusion to confidence, with a focus on Higher Tier content for both AQA and Edexcel. We cover everything students need for success in Paper 1 and Paper 2 — from tricky topics like cell biology and infection & response, to high-mark areas like photosynthesis, respiration, and required practicals.
           </Text>
           <Text mb={4} fontSize="md" color="#1a202c">
-          Lessons are taught in small groups (max 5 students), with a structured approach that blends clear explanations, active recall, and exam technique coaching. Your child won’t just memorise facts — they’ll learn how to think like an examiner and write answers that score full marks.
+          Lessons are taught in small groups (max 5 students), with a structured approach that blends clear explanations, active recall, and exam technique coaching. Your child won't just memorise facts — they'll learn how to think like an examiner and write answers that score full marks.
           </Text>
           <Text mb={4} fontSize="md" color="#1a202c">
           We support students throughout the week with guided homework, model answers, and access to our Biology Mentorship Group Chat, so they never feel stuck or left behind. Parents are kept in the loop with regular feedback calls and progress reviews.
@@ -119,10 +119,10 @@ export default function BookingPage() {
           <Text mb={4} fontSize="md" color="#1a202c">
           It includes both AQA and Edexcel class plans, with content fully aligned to Triple Science. For Combined students, we clearly flag which topics apply to them.
           </Text>
-          <Button leftIcon={<DownloadIcon />} as="a" href="/pdfs/aqa-separate.pdf" download bg="#37a169" color="white" _hover={{ bg: '#2e855d' }} w="100%">
+          <Button leftIcon={<DownloadIcon />} as="a" href="/biology-year-10-aqa-and-edexcel-curriculums.pdf" target="_blank" rel="noopener noreferrer" bg="#37a169" color="white" _hover={{ bg: '#2e855d' }} w="100%">
             Year 10 Curriculum
           </Button>
-          <Button leftIcon={<DownloadIcon />} as="a" href="/pdfs/aqa-combined.pdf" download bg="#37a169" color="white" _hover={{ bg: '#2e855d' }} w="100%">
+          <Button leftIcon={<DownloadIcon />} as="a" href="/biology-year-11-aqa-and-edexcel-curriculums.pdf" target="_blank" rel="noopener noreferrer" bg="#37a169" color="white" _hover={{ bg: '#2e855d' }} w="100%">
             Year 11 Curriculum
           </Button>
         </VStack>
@@ -177,7 +177,7 @@ export default function BookingPage() {
             <Box textAlign={{ base: 'center', md: 'left' }}>
               <Text fontWeight="bold" fontSize="lg" mb={2}>Dr Maryam A.</Text>
               <Text fontSize="md" color="gray.700">
-                Maryam is a medical doctor and experienced educator who graduated from Oxford with a degree in Medicine and an additional degree in Women’s Health. Over the past 6 years, she has delivered more than 750 hours of tutoring across GCSE and A-Level, helping students overcome self-doubt and master complex scientific topics with confidence.
+                Maryam is a medical doctor and experienced educator who graduated from Oxford with a degree in Medicine and an additional degree in Women's Health. Over the past 6 years, she has delivered more than 750 hours of tutoring across GCSE and A-Level, helping students overcome self-doubt and master complex scientific topics with confidence.
               </Text>
               <Text fontSize="md" color="gray.700" mt={2}>
                 With a clear, encouraging teaching style, Maryam is known for building strong relationships with her students while pushing them to achieve their best. She leads on resource creation at GCSE Doctor and works closely with families to ensure long-term progress, consistency, and clarity — every step of the way.
@@ -290,7 +290,7 @@ export default function BookingPage() {
                       Our weekly GCSE Biology classes are designed to take your child from confusion to confidence, with a focus on Higher Tier content for both AQA and Edexcel. We cover everything students need for success in Paper 1 and Paper 2 — from tricky topics like cell biology and infection & response, to high-mark areas like photosynthesis, respiration, and required practicals.
                       </Text>
                       <Text mb={4} fontSize="md" color="#1a202c">
-                      Lessons are taught in small groups (max 5 students), with a structured approach that blends clear explanations, active recall, and exam technique coaching. Your child won’t just memorise facts — they’ll learn how to think like an examiner and write answers that score full marks.
+                      Lessons are taught in small groups (max 5 students), with a structured approach that blends clear explanations, active recall, and exam technique coaching. Your child won't just memorise facts — they'll learn how to think like an examiner and write answers that score full marks.
                       </Text>
                       <Text mb={4} fontSize="md" color="#1a202c">
                       We support students throughout the week with guided homework, model answers, and access to our Biology Mentorship Group Chat, so they never feel stuck or left behind. Parents are kept in the loop with regular feedback calls and progress reviews.
@@ -314,10 +314,10 @@ export default function BookingPage() {
                       <Text fontSize="md" mb={4} color="#1a202c">
                       Download the full PDF curriculum for students starting Year 10 or 11 this September. It includes both AQA and Edexcel class plans, with content fully aligned to Triple Science. For Combined students, we clearly flag which topics apply to them.
                       </Text>
-                        <Button leftIcon={<DownloadIcon />} as="a" href="/pdfs/aqa-separate.pdf" download bg="#37a169" color="white" _hover={{ bg: '#2e855d' }} w="100%">
+                        <Button leftIcon={<DownloadIcon />} as="a" href="/biology-year-10-aqa-and-edexcel-curriculums.pdf" target="_blank" rel="noopener noreferrer" bg="#37a169" color="white" _hover={{ bg: '#2e855d' }} w="100%">
                           Year 10 Curriculum
                         </Button>
-                        <Button leftIcon={<DownloadIcon />} as="a" href="/pdfs/aqa-combined.pdf" download bg="#37a169" color="white" _hover={{ bg: '#2e855d' }} w="100%">
+                        <Button leftIcon={<DownloadIcon />} as="a" href="/biology-year-11-aqa-and-edexcel-curriculums.pdf" target="_blank" rel="noopener noreferrer" bg="#37a169" color="white" _hover={{ bg: '#2e855d' }} w="100%">
                           Year 11 Curriculum
                         </Button>
                       </VStack>
@@ -356,7 +356,7 @@ export default function BookingPage() {
                       <Box flex="1">
                         <Text fontWeight="bold" fontSize="lg" mb={2}>Dr Maryam A.</Text>
                         <Text fontSize="md" color="gray.700">
-                          Maryam is a medical doctor and experienced educator who graduated from Oxford with a degree in Medicine and an additional degree in Women’s Health. Over the past 6 years, she has delivered more than 750 hours of tutoring across GCSE and A-Level, helping students overcome self-doubt and master complex scientific topics with confidence.
+                          Maryam is a medical doctor and experienced educator who graduated from Oxford with a degree in Medicine and an additional degree in Women's Health. Over the past 6 years, she has delivered more than 750 hours of tutoring across GCSE and A-Level, helping students overcome self-doubt and master complex scientific topics with confidence.
                         </Text>
                         <Text fontSize="md" color="gray.700" mt={2}>
                           With a clear, encouraging teaching style, Maryam is known for building strong relationships with her students while pushing them to achieve their best. She leads on resource creation at GCSE Doctor and works closely with families to ensure long-term progress, consistency, and clarity — every step of the way.
@@ -482,13 +482,13 @@ export default function BookingPage() {
     lineHeight="short"
     textAlign={{ base: "left", md: "center"}}
   >
-    Ready to secure your child’s place?
+    Ready to secure your child's place?
   </Heading>
   <Text fontSize={{ base: 'md', md: 'md' }} lineHeight="relaxed" color="white" maxW="700px" mx="auto" mb={{ base: 10, md: 5}} px={{ base: 15, md: 75}} textAlign={{ base: "left", md: "center"}}
 
 
 >
-  Book your GCSE Biology group class below in just a few clicks. Choose your class, confirm details, and you’re all set—resources, feedback, and expert teaching are all included.
+  Book your GCSE Biology group class below in just a few clicks. Choose your class, confirm details, and you're all set—resources, feedback, and expert teaching are all included.
 </Text>
 
 </Box>
