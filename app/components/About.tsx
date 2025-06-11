@@ -156,19 +156,64 @@ function ProductMaryam() {
 
 export default function BasicStatistics() {
     return (
-      <Box maxW="7xl" mx={'auto'} pt={8} px={{ base: 2, sm: 12, md: 17 }}>
-        <chakra.h1 textAlign={'center'} fontSize={'4xl'} py={2} fontWeight={'bold'}>Meet our Team</chakra.h1>
-        <Box maxW="4xl" mx="auto" textAlign={'center'} mt={4}> {/* Increased maxW to make the description wider */}
-          <Text fontSize={'md'} color={'black.500'} lineHeight='1.8' >
-            <Link href="/tutors" passHref>At GCSE Doctor, we take pride in our team of professional educators, all of whom are graduates of <Text as="span" fontWeight="bold">top UK universities such as Oxford, Cambridge, London </Text>universities and many more!
-            Our tutors are dedicated professionals, with extensive real-world experience, they bring profound expertise and a genuine passion for teaching to every small group class. Learn more about our <Text as='u' color='blue.500'> <Text as="span" fontWeight="semibold">full team of educators here.</Text></Text></Link>
+      <Box maxW="7xl" mx={'auto'} pt={16} pb={16} px={{ base: 2, sm: 12, md: 17 }} bg="transparent">
+        <chakra.h1 textAlign={'center'} fontSize={'4xl'} py={2} fontWeight={'bold'}>
+          Meet our Team
+        </chakra.h1>
+        <Box display="flex" justifyContent="center" alignItems="center" mb={6}>
+          <Box w="80px" h="6px" bg="#37a169" borderRadius="full" />
+        </Box>
+        <Box maxW="4xl" mx="auto" textAlign={'center'} mt={4} mb={12}>
+          <Text fontSize={'lg'} color={'gray.700'} lineHeight='1.8' >
+            <Link href="/tutors" passHref>
+              Our tutors are graduates of <Text as="span" fontWeight="bold">top UK universities</Text> and bring real expertise and a passion for teaching to every small group class. <Text as='u' color='blue.500'> <Text as="span" fontWeight="semibold">Meet the full team here.</Text></Text>
+            </Link>
           </Text>
         </Box>
-        {/* Add margin between the description and the stacks */}
-        <Box mt={8} />
-        <Stack direction={{ base: 'column', md: 'row' }} spacing={{ base: 4, md: 70 }} justify='center'>
-          <ProductHamza />
-          <ProductMaryam />
+        <Stack direction={{ base: 'column', md: 'row' }} spacing={{ base: 8, md: 24 }} justify='center' align='center'>
+          <Box display="flex" flexDirection="column" alignItems="center">
+            <Image
+              src="/images/hamza_profile3.png"
+              alt="Dr Hamza Rashid"
+              height={320}
+              width={260}
+              objectFit="cover"
+              objectPosition="30% 50%"
+              border="4px solid #37a169"
+              borderRadius="none"
+              mb={4}
+            />
+            <Text color={'gray.500'} fontSize={'sm'} textTransform={'uppercase'}>
+              Founder & Professional Educator
+            </Text>
+            <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={600} mt={2} mb={1}>
+              Dr Hamza Rashid
+            </Heading>
+            <Text fontWeight={400} fontSize={'xl'}>MBBS, BSc (1st Class)</Text>
+            <Text fontWeight={600} fontSize={'xl'}>Imperial College London</Text>
+            <Text mt={2} fontSize={'md'} color={'gray.700'}>2000+ hours tutoring experience</Text>
+          </Box>
+          <Box display="flex" flexDirection="column" alignItems="center">
+            <Image
+              src="/images/maryam_profile.jpeg"
+              alt="Dr Maryam Amer"
+              height={320}
+              width={260}
+              objectFit="cover"
+              border="4px solid #37a169"
+              borderRadius="none"
+              mb={4}
+            />
+            <Text color={'gray.500'} fontSize={'sm'} textTransform={'uppercase'}>
+              Founder & Professional Educator
+            </Text>
+            <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={600} mt={2} mb={1}>
+              Dr Maryam Amer
+            </Heading>
+            <Text fontWeight={400} fontSize={'xl'}>MBBS, BA</Text>
+            <Text fontWeight={600} fontSize={'xl'}>University of Oxford</Text>
+            <Text mt={2} fontSize={'md'} color={'gray.700'}>750+ hours tutoring experience</Text>
+          </Box>
         </Stack>
       </Box>
     );

@@ -43,7 +43,12 @@ export default function Testimonials() {
       direction={'column'}
       width={'full'}
       overflow={'hidden'}
-      px={padding} // Add responsive padding here
+      px={padding}
+      bg="transparent"
+      boxShadow="none"
+      borderRadius="none"
+      m={0}
+      p={0}
     >
       {!widgetLoaded && (
         // Placeholder content while widget is loading

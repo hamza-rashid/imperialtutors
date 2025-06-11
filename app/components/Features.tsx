@@ -11,6 +11,7 @@ import {
     StackDivider,
     Icon,
     useColorModeValue,
+    Box,
   } from '@chakra-ui/react';
   import {
     MdOutlineSchool, 
@@ -44,71 +45,50 @@ import {
   
   export default function SplitWithImage() {
     return (
-      <Container maxW={'5xl'} py={12}>
-        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-          <Stack spacing={4}>
-            <Text
-              textTransform={'uppercase'}
-              color={'green.600'}
-              fontWeight={600}
-              fontSize={'sm'}
-              bg={useColorModeValue('green.100', 'green.900')}
-              p={2}
-              alignSelf={'flex-start'}
-              rounded={'md'}>
-              Our strategy
-            </Text>
-            <Heading>🚀 Get GCSE Science Support — the Smart Way</Heading>
-            <br />  
-            <Stack
-              spacing={4}
-              divider={
-                <StackDivider
-                  borderColor={useColorModeValue('gray.100', 'gray.700')}
-                />
-              }>
-              <Feature
-                icon={<Icon as={IoCallOutline} color={'green.500'} w={7} h={5} />}
-                iconBg={useColorModeValue('green.100', 'green.900')}
-                text={
-                  <Text fontSize="md" fontWeight="normal" color={useColorModeValue('gray.700', 'gray.300')} lineHeight='1.8'>
-                    <strong>Join the Waitlist:</strong> <a href="/bookings"><Text as="u" fontWeight="semibold" color="blue.500">Sign up</Text></a> to secure a spot in the right tutor group. We'll be in touch as soon as a space opens — no pressure, just priority access.
-                  </Text>
-                }
-              />
-              <Feature
-                icon={
-                <Icon as={MdOutlineSchool} color={'green.500'} w={7} h={5} />
-                }
-                iconBg={useColorModeValue('green.100', 'green.900')}
-                text={
-                  <Text fontSize="md" fontWeight="normal" color={useColorModeValue('gray.700', 'gray.300')} lineHeight='1.8'>
-                    <strong>Weekly Structure:</strong> 1 hour/week of expert-led lessons (Biology, Chemistry or Physics), plus past paper drills, flashcards, and our extended response booklet for exam technique.
-                  </Text>
-                }              />
-              <Feature
-                icon={
-                  <Icon as={MdOutlineQuiz} color={'green.500'} w={7} h={5} />
-                }
-                iconBg={useColorModeValue('green.100', 'green.900')}
-                text={
-                  <Text fontSize="md" fontWeight="normal" color={useColorModeValue('gray.700', 'gray.300')} lineHeight='1.8'>
-                    <strong>Ongoing Support:</strong> Includes homework, flashcards, and a dedicated WhatsApp group for reminders, tips, and motivation.
-                  </Text>
-                }                 />
+      <Box id="how-it-works" as="section" bg="#37a169" py={{ base: 16, md: 24 }} w="100vw" position="relative" left="50%" right="50%" ml="-50vw" mr="-50vw" zIndex={0}>
+        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={20} alignItems="center" maxW="7xl" mx="auto" px={{ base: 4, md: 8 }}>
+          <Stack spacing={10} color="white" maxW={{ base: '100%', md: '600px' }}>
+            <Heading as="h2" fontSize={{ base: '2xl', md: '4xl' }} fontWeight="bold" mb={2} color="white">
+              How It Works
+            </Heading>
+            <Stack spacing={10}>
+              <Stack direction="row" align="flex-start" spacing={5}>
+                <Box as="span" bg="white" color="#37a169" borderRadius="50%" w={14} h={14} minW={14} minH={14} maxW={14} maxH={14} display="flex" alignItems="center" justifyContent="center" fontSize="2xl" fontWeight="bold" boxShadow="md">1</Box>
+                <Box>
+                  <Text fontWeight="bold" fontSize="lg" color="white">Book Your Place</Text>
+                  <Text color="whiteAlpha.900">Secure your spot in a small, focused group led by an expert tutor.</Text>
+                </Box>
+              </Stack>
+              <Stack direction="row" align="flex-start" spacing={5}>
+                <Box as="span" bg="white" color="#37a169" borderRadius="50%" w={14} h={14} minW={14} minH={14} maxW={14} maxH={14} display="flex" alignItems="center" justifyContent="center" fontSize="2xl" fontWeight="bold" boxShadow="md">2</Box>
+                <Box>
+                  <Text fontWeight="bold" fontSize="lg" color="white">Join Weekly Live Lessons</Text>
+                  <Text color="whiteAlpha.900">Learn with world-class tutors, proven strategies, and interactive resources.</Text>
+                </Box>
+              </Stack>
+              <Stack direction="row" align="flex-start" spacing={5}>
+                <Box as="span" bg="white" color="#37a169" borderRadius="50%" w={14} h={14} minW={14} minH={14} maxW={14} maxH={14} display="flex" alignItems="center" justifyContent="center" fontSize="2xl" fontWeight="bold" boxShadow="md">3</Box>
+                <Box>
+                  <Text fontWeight="bold" fontSize="lg" color="white">Get Results</Text>
+                  <Text color="whiteAlpha.900">Achieve your target grades with ongoing support, feedback, and motivation.</Text>
+                </Box>
+              </Stack>
             </Stack>
           </Stack>
-          <Flex>
+          <Box position="relative" w="100%" display="flex" alignItems="center" justifyContent="center">
             <Image
-              rounded={'md'}
-              alt={'free paper marking'}
-              src={
-                '/images/feedback.png'
-              }
-              objectFit={'cover'}
+              src="/images/lesson screenshot 5.png"
+              alt="Live lesson screenshot"
+              w="100%"
+              maxH={{ base: '220px', md: '400px', lg: '480px' }}
+              objectFit="contain"
+              border="4px solid white"
+              boxShadow="2xl"
             />
-          </Flex>
+            {/* Gradient overlay for text contrast on desktop */}
+            <Box display={{ base: 'none', md: 'block' }} position="absolute" left={0} top={0} bottom={0} w="60px" h="100%" zIndex={2} pointerEvents="none" style={{background: 'linear-gradient(90deg, rgba(55,161,105,0.7) 0%, rgba(55,161,105,0.0) 100%)'}} />
+          </Box>
         </SimpleGrid>
-      </Container>
+      </Box>
     );
   }

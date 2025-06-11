@@ -445,6 +445,10 @@ export default function BookingPage() {
                 mt={4}
                 _hover={{ bg: 'gray.50', borderColor: '#2e855d', color: '#2e855d' }}
                 sx={{ backgroundColor: 'white !important' }}
+                as="a"
+                href="/gcse-biology-course-guide.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 >
                 Course Guide & FAQs
                 </Button>

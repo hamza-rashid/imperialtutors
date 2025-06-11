@@ -34,117 +34,77 @@ const NextLesson = () => {
 };
 export default function CallToActionWithVideo() {
     const remainingDays = NextLesson();
+    useEffect(() => {
+        if (!document.getElementById('elfsight-platform-script')) {
+            const script = document.createElement('script');
+            script.id = 'elfsight-platform-script';
+            script.src = 'https://static.elfsight.com/platform/platform.js';
+            script.async = true;
+            document.body.appendChild(script);
+        }
+    }, []);
     return (
-        <Container maxW={'7xl'}>
-<Stack
-    align={'center'}
-    spacing={{ base: 4, md: 8 }} // Reduced spacing for mobile
-    py={{ base: 16, md: 28 }} // Adjust padding for mobile if needed
-    direction={{ base: 'column', md: 'row' }}>
-
-                <Flex
-                    flex={1}
-                    justify={'center'}
-                    align={'center'}
-                    position={'relative'}
-                    w={'full'}
-                    order={{ base: -1, md: 1 }}>
-                    <Box
-                        position={'relative'}
-                        height={'full'}
-                        rounded={'2xl'}
-                        boxShadow={'2xl'}
-                        width={'full'}
-                        overflow={'hidden'}>
-                        <Image
-                            alt={'Affordable GCSE Science Tuition'}
-                            fit={'cover'}
-                            align={'center'}
-                            w={'100%'}
-                            h={'100%'}
-                            src={'/images/lesson.svg'}
-                        />
-                    </Box>
-                </Flex>
-                <Stack flex={1} spacing={{ base: 5, md: 10 }} textAlign={{ base: 'center', md: 'left' }}> 
-                    <Heading
-                        lineHeight={1.1}
-                        fontWeight={600}
-                        fontSize={{ base: '3xl', sm: '4xl', lg: '5xl' }}>
-                        <Text
-                            as={'span'}
-                            position={'relative'}
-                            _after={{
-                                content: "''",
-                                width: 'full',
-                                height: '17%',
-                                position: 'absolute',
-                                bottom: 0,
-                                left: 0,
-                                bg: 'green.500',
-                                zIndex: -1,
-                            }}>
-                            Expert GCSE Tuition
-                        </Text>
-                        <br />
-                        <Text as={'span'} color={'green.500'}>
-                            with Professional Tutors!
-                        </Text>
+        <Container maxW={'7xl'} py={{ base: 12, md: 24 }}>
+            <Flex direction={{ base: 'column-reverse', md: 'row' }} align="center" justify="center" minH={{ base: '60vh', md: '70vh' }}>
+                <Box flex={1} display="flex" flexDirection="column" alignItems={{ base: 'center', md: 'flex-start' }} justifyContent="center" zIndex={2}>
+                    <Heading as="h1" fontSize={{ base: '3xl', sm: '4xl', md: '5xl', lg: '6xl' }} fontWeight="extrabold" color="#1a202c" mb={4} lineHeight="1.1" letterSpacing="-1px" textAlign={{ base: 'center', md: 'left' }}>
+                        GCSE Science Tuition <br />
+                        <Text as="span" color="#37a169">That Delivers Results</Text>
                     </Heading>
-                    <Text color={'black.500'} fontSize={'md'} textAlign={{ base: 'center', md: 'left' }} lineHeight='1.8'>
-                    Taught by doctors, scientists, and certified teachers from <Text as="span" fontWeight="bold">top UK universities</Text>. We've delivered <Text as="span" fontWeight="bold">4,000+ hours</Text> of online tuition since 2017 — helping students excel in Biology, Chemistry, and Physics through <Text as="span" fontWeight="bold">focused small-group lessons</Text> that work.
-
-
+                    <Text fontSize={{ base: 'lg', md: '2xl' }} color="gray.700" mb={6} maxW="lg" textAlign={{ base: 'center', md: 'left' }}>
+                        Small groups. World-class tutors. Proven exam strategies.
+                        Join 100+ ambitious students who've transformed their grades with GCSE Doctor.
                     </Text>
-                    <Stack
-                        spacing={{ base: 4, sm: 6 }}
-                        direction={{ base: 'column', sm: 'row' }}>
-                        <Stack direction={{ base: 'column-reverse', sm: 'row' }}>
-                            <Stack direction={'column'} textAlign="center">
-                                <Button as={"a"} href="/bookings"
-                                    rounded={'full'}
-                                    size={'lg'}
-                                    fontWeight={'normal'}
-                                    px={6}
-                                    colorScheme={'green'}
-                                    bg={'green.500'}
-                                    _hover={{ bg: 'green.600' }}>
-                                    Sign Up
-                                </Button>
-                                <Text fontSize={'lg'}>
-                                    <Highlight query={remainingDays === 7 ? 'Next Lesson today! Join now.' : `Next Lesson in ${remainingDays} day${remainingDays !== 1 ? 's' : ''}! Sign up now.`} styles={{ px: '2', rounded: '2', bg: 'rgba(224, 90, 82, 0.4)' }}>
-                                        {remainingDays === 7
-                                            ? 'Next Lesson today! Join now.'
-                                            : `Next Lesson in ${remainingDays} day${remainingDays !== 1 ? 's' : ''}! Sign up now.`}
-                                    </Highlight>
-                                </Text>
-                            </Stack>
-                            <Box textAlign={{ base: 'center', sm: 'unset' }}>
-                                <Text fontSize={'lg'} transform={'rotate(10deg)'} marginBottom={{ base: 7, sm: 'none' }}>
-                                    <Text as="span" fontWeight="bold">£20</Text> per hour
-                                </Text>
-                                <Icon
-                                    as={Arrow}
-                                    color={useColorModeValue('gray.800', 'gray.300')}
-                                    w={71}
-                                    marginTop={{ base: -2, sm: -10 }}
-                                    marginBottom={{ base: 5, sm: 'none' }}
-                                    transform={{ base: 'rotate(-90deg)', sm: 'none' }}
-                                />
-                            </Box>
-                        </Stack>
+                    {/* Elfsight Google Reviews Badge */}
+                    <Box mb={8} w="100%" display="flex" justifyContent={{ base: 'center', md: 'flex-start' }}>
+                        <div className="elfsight-app-d1978448-1896-4951-9a43-f46b4a978a71" data-elfsight-app-lazy></div>
+                    </Box>
+                    <Stack direction={{ base: 'column', sm: 'row' }} spacing={4} mb={6} w={{ base: '100%', sm: 'auto' }} justify={{ base: 'center', md: 'flex-start' }}>
+                        <Button as="a" href="/bookings" size="lg" colorScheme="green" bg="#37a169" _hover={{ bg: '#2e855d' }} fontWeight="bold" borderRadius="xl" px={8} py={6} boxShadow="xl">
+                            Book a Place
+                        </Button>
+                        <Button as="a" href="#how-it-works" size="lg" variant="outline" color="#37a169" borderColor="#37a169" _hover={{ bg: 'gray.50', borderColor: '#2e855d', color: '#2e855d' }} borderRadius="xl" px={8} py={6}>
+                            How it Works
+                        </Button>
                     </Stack>
-                </Stack>
-            </Stack>
-            <Stack align={'center'} mb={6}>
-                <Heading mt={6} as="h3" size="lg" textAlign="center">Professional Educators from Leading Universities</Heading>
-            </Stack>
-            <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={6} alignItems="center" justifyItems="center" mt={6} mb={106}>
-                <Image src="/images/icl_logo.png" alt="Imperial College" width="200px" height="55px" />
-                <Image src="/images/ucl_logo.png" alt="UCL" width="200px" height="55px" />
-                <Image src="/images/cambridge_logo.png" alt="Cambridge" width="200px" height="70px" />
-                <Image src="/images/oxford_logo.png" alt="Oxford" width="200px" height="55px" />
-            </SimpleGrid>
+                </Box>
+                <Box flex={1} display="flex" alignItems="center" justifyContent="center" mt={{ base: 10, md: 0 }}>
+                    <Image
+                        src="/images/hero image science.png"
+                        alt="GCSE Science Hero"
+                        w={{ base: '100%', md: '80%' }}
+                        maxW={{ base: '320px', md: '340px', lg: '400px' }}
+                        objectFit="contain"
+                        borderRadius="2xl"
+                        boxShadow="none"
+                    />
+                </Box>
+            </Flex>
+            <Box mt={12} mb={4} px={{ base: 2, md: 8 }}>
+                <Box
+                    bg="transparent"
+                    borderRadius="none"
+                    boxShadow="none"
+                    py={{ base: 6, md: 10 }}
+                    px={{ base: 4, md: 12 }}
+                    textAlign="center"
+                    maxW="100%"
+                    mx="auto"
+                >
+                    <Heading as="h2" fontSize={{ base: '2xl', md: '3xl' }} fontWeight="bold" mb={2} color="#1a202c">
+                        Elite Educators from Top UK Universities
+                    </Heading>
+                    <Text fontSize={{ base: 'md', md: 'lg' }} color="gray.700" mb={6}>
+                        Learn from tutors who have studied at the UK's most prestigious universities. Our team brings real expertise and a passion for helping students achieve their best.
+                    </Text>
+                    <Flex justify="center" align="center" gap={{ base: 8, md: 16 }} wrap="wrap" mt={2}>
+                        <Image src="/images/cambridge_logo.png" alt="Cambridge" maxH="64px" maxW="180px" objectFit="contain" />
+                        <Image src="/images/oxford_logo.png" alt="Oxford" maxH="64px" maxW="180px" objectFit="contain" />
+                        <Image src="/images/ucl_logo.png" alt="UCL" maxH="64px" maxW="180px" objectFit="contain" />
+                        <Image src="/images/icl_logo.png" alt="Imperial College London" maxH="64px" maxW="180px" objectFit="contain" />
+                    </Flex>
+                </Box>
+            </Box>
         </Container>
     );
 }
