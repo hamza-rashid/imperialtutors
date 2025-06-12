@@ -486,13 +486,13 @@ export default function BookingPage() {
     lineHeight="short"
     textAlign={{ base: "left", md: "center"}}
   >
-    Ready to secure your child's place?
-  </Heading>
+  Secure your child’s GCSE Biology place
+</Heading>
   <Text fontSize={{ base: 'md', md: 'md' }} lineHeight="relaxed" color="white" maxW="700px" mx="auto" mb={{ base: 10, md: 5}} px={{ base: 15, md: 75}} textAlign={{ base: "left", md: "center"}}
 
 
 >
-  Book your GCSE Biology group class below in just a few clicks. Choose your class, confirm details, and you're all set—resources, feedback, and expert teaching are all included.
+Choose a lesson slot and pay £20 to reserve the first session. This includes expert tutoring, feedback, and all resources. After the lesson, decide if you’d like to continue—if so, we’ll invoice monthly. If not, your card won’t be charged again.
 </Text>
 
 </Box>
