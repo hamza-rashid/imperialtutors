@@ -64,7 +64,7 @@ export default function Footer() {
             objectFit="contain"
           />
           <Stack direction={'row'} spacing={6}>
-            <Box as="a" href={'https://blog.gcsedoctor.co.uk/about/'}>
+            <Box as="a" href={'https://articles.gcsedoctor.co.uk/about/'}>
               About
             </Box>
             <Box as="a" href={'/reviews'}>
@@ -72,6 +72,9 @@ export default function Footer() {
             </Box>
             <Box as="a" href={'https://gcsedoctor.co.uk/#pricing'}>
               Fees
+            </Box>
+            <Box as="a" href={'https://articles.gcsedoctor.co.uk/terms-of-service/'}>
+              Terms
             </Box>
           </Stack>
         </Container>

@@ -492,16 +492,32 @@ export default function BookingPage() {
 
 
 >
-Choose a lesson slot and pay £20 to reserve the first session. This includes expert tutoring, feedback, and all resources. After the lesson, decide if you’d like to continue—if so, we’ll invoice monthly. If not, your card won’t be charged again.
+Choose a lesson slot and pay £20 to reserve the first session. This includes expert tutoring, feedback, and all resources. After the first lesson, decide if you’d like to continue—if so, we’ll invoice monthly. If not, your card won’t be charged again.
 </Text>
 
 </Box>
 
-  <div id="tutorbird-widget" style={{ width: '100%' }} />
-</Box>
+    <div id="tutorbird-widget" style={{ width: '100%' }} />
+    <Text
+    fontSize="sm"
+    color="white"
+    textAlign={{ base: "left", md: "center" }}
+    mt={4}
+  >
+    By booking, you agree to our{' '}
+    <Link href="https://articles.gcsedoctor.co.uk/payment-terms/" isExternal textDecoration="underline" color="white">
+      Terms of Payment
+    </Link>{' '}
+    and{' '}
+    <Link href="https://articles.gcsedoctor.co.uk/terms-of-service/" isExternal textDecoration="underline" color="white">
+      Terms of Service
+    </Link>.
+  </Text>
+  </Box>
 
 
       </Box>
+      
       <Footer />
     </>
   );
