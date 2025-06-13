@@ -64,7 +64,7 @@ export default function Pricing() {
               mb={2}
               mt={4}
             >
-              Triple Science
+              Group Classes
             </Text>
             <Stack direction={'row'} align={'baseline'} justify={'center'} mb={2} spacing={1}>
               <Text fontSize={'4xl'} fontWeight={900} color="#1a202c" lineHeight="1">£</Text>
@@ -80,7 +80,7 @@ export default function Pricing() {
               </ListItem>
               <ListItem fontSize="lg">
                 <ListIcon as={CheckIcon} color="#37a169" />
-                <b>Small group size</b>: Max 4 students
+                <b>Small group size</b>: Max 5 students
               </ListItem>
               <ListItem fontSize="lg">
                 <ListIcon as={CheckIcon} color="#37a169" />
