@@ -498,23 +498,32 @@ Choose a lesson slot and pay £20 to reserve the first session. This includes ex
 </Box>
 
     <div id="tutorbird-widget" style={{ width: '100%' }} />
-    <Text
-    fontSize="sm"
-    color="white"
-    textAlign={{ base: "left", md: "center" }}
-    mt={4}
-    maxW="700px" 
-    mx="auto"
-  >
-    By booking, you agree to our{' '}
-    <Link href="https://articles.gcsedoctor.co.uk/payment-terms/" isExternal textDecoration="underline" color="white">
-      Terms of Payment
-    </Link>{' '}
-    and{' '}
-    <Link href="https://articles.gcsedoctor.co.uk/terms-of-service/" isExternal textDecoration="underline" color="white">
-      Terms of Service
-    </Link>.
-  </Text>
+    <Box px={{ base: 4 }} textAlign="center">
+      <Box maxW="700px" mx="auto">
+        <Text fontSize="sm" color="white" mt={4}>
+          By booking, you agree to our{' '}
+          <Link
+            href="https://articles.gcsedoctor.co.uk/payment-terms/"
+            isExternal
+            textDecoration="underline"
+            color="white"
+          >
+            Terms of Payment
+          </Link>{' '}
+          and{' '}
+          <Link
+            href="https://articles.gcsedoctor.co.uk/terms-of-service/"
+            isExternal
+            textDecoration="underline"
+            color="white"
+          >
+            Terms of Service
+          </Link>.
+        </Text>
+      </Box>
+    </Box>
+
+
   </Box>
 
 
