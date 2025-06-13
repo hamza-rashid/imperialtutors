@@ -503,6 +503,8 @@ Choose a lesson slot and pay £20 to reserve the first session. This includes ex
     color="white"
     textAlign={{ base: "left", md: "center" }}
     mt={4}
+    maxW="700px" 
+    mx="auto"
   >
     By booking, you agree to our{' '}
     <Link href="https://articles.gcsedoctor.co.uk/payment-terms/" isExternal textDecoration="underline" color="white">
