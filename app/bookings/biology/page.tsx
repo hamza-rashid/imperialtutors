@@ -492,7 +492,7 @@ export default function BookingPage() {
 
 
 >
-Choose a lesson slot and pay £20 to reserve the first session. This includes expert tutoring, feedback, and all resources. After the first lesson, decide if you’d like to continue—if so, we’ll invoice monthly. If not, your card won’t be charged again.
+Choose a lesson slot and pay £20 to reserve the first session. This includes expert tutoring, feedback, and all resources. After the first lesson, decide if you’d like to continue—if so, we’ll invoice monthly. If not, you won’t be charged again.
 </Text>
 
 </Box>
