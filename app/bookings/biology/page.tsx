@@ -54,9 +54,311 @@ const suitability = [
   { text: 'Students looking for last-minute or catch-up-only tuition', type: 'cross' as const },
 ];
 
+const curriculum = {
+  'Year 10': {
+    AQA: [
+      {
+        phase: 'Core Principles',
+        color: '#37a169',
+        border: '#37a169',
+        rows: [
+          { date: '1 July 2025', topic: 'B1.1: Cell Structure' },
+          { date: '8 July', topic: 'B1.2–1.6: Microscopy + Cell Division' },
+          { date: '15 July', topic: 'B1.7: Transport in Cells' },
+          { date: '22 July', topic: 'B2.1–2.2: Tissues + Organs' },
+          { date: '29 July', topic: 'B2.3–2.4: The Heart + Blood Vessels' },
+          { date: '5 Aug', topic: 'B2.5–2.6: Blood + Health Issues' },
+          { date: '12 Aug', topic: 'B2.7–2.9: Cancer, Lifestyle, Disease' },
+          { date: '19 & 26 Aug', topic: 'Summer Break (Progress Reports)', isBreak: true },
+          { date: '2 Sep', topic: 'B2.10: Plant Organs & Transport' },
+          { date: '9 Sep', topic: 'B3.1–3.3: Pathogens + Bacteria + Viruses' },
+          { date: '16 Sep', topic: 'B3.4–3.5: Defence Systems + Vaccination' },
+          { date: '23 Sep', topic: 'B3.6–3.7: Antibiotics + Drug Development' },
+          { date: '30 Sep', topic: 'B3.8: Monoclonal Antibodies' },
+          { date: '7 Oct', topic: 'B3.9: Plant Diseases' },
+          { date: '14 Oct', topic: 'B4.1–4.2: Photosynthesis' },
+          { date: '21 Oct', topic: 'B4.3–4.4: Factors Affecting Photosynthesis' },
+          { date: '28 Oct', topic: 'Half-Term (No Lesson)', isBreak: true },
+          { date: '4 Nov', topic: 'B4.5–4.6: Respiration' },
+          { date: '11 Nov', topic: 'B4.7: Metabolism' },
+          { date: '18 Nov', topic: 'Recap + Required Practicals Review' },
+          { date: '25 Nov', topic: 'Low-Stakes Quiz + Diagnostic Test', isHighlight: true },
+          { date: '2 Dec', topic: 'DIRT + Gaps Retaught' },
+          { date: '9 Dec', topic: 'Paper 1 Mock Test', isHighlight: true },
+          { date: '16 & 23 Dec', topic: 'Christmas Break (Progress Reports)', isBreak: true },
+        ],
+      },
+      {
+        phase: 'Application',
+        color: 'linear-gradient(135deg, #059669 0%, #047857 100%)',
+        border: '#059669',
+        rows: [
+          { date: '30 Dec', topic: 'Cell Biology – Model Answers' },
+          { date: '6 Jan 2026', topic: 'Cell Biology – ERQs' },
+          { date: '13 Jan', topic: 'Organisation – Model Answers' },
+          { date: '20 Jan', topic: 'Organisation – ERQs' },
+          { date: '27 Jan', topic: 'Infection & Response – Model Answers' },
+          { date: '3 Feb', topic: 'Infection & Response – ERQs' },
+          { date: '10 Feb', topic: 'Bioenergetics – Graphs & Data Qs' },
+          { date: '17 Feb', topic: 'Half-Term (No Lesson)', isBreak: true },
+        ],
+      },
+      {
+        phase: 'Exam Focus',
+        color: 'linear-gradient(135deg, #dc2626 0%, #b91c1c 100%)',
+        border: '#dc2626',
+        rows: [
+          { date: '24 Feb 2026', topic: 'Required Practicals: Qs + MS walkthrough' },
+          { date: '3 Mar', topic: 'Interleaved Practice: Cell + Organisation' },
+          { date: '10 Mar', topic: 'Interleaved Practice: Infection + Bioenergetics' },
+          { date: '17 Mar', topic: 'Full Paper 1 Practice (Timed Conditions)', isHighlight: true },
+          { date: '24 Mar', topic: 'Paper 1 Marking + Reflection + Target Setting' },
+          { date: '31 Mar & 7 Apr', topic: 'Easter Break (Progress Reports)', isBreak: true },
+          { date: '14 Apr', topic: 'Targeted Revision: Low Scoring Areas' },
+          { date: '21 Apr', topic: 'Key Diagrams + Definitions Practice' },
+          { date: '28 Apr', topic: 'Required Practicals Recap + Flashcards' },
+          { date: '5 May', topic: 'Final Paper 1 Warm-Up Exam', isHighlight: true },
+          { date: '12 May', topic: 'No Lesson', isBreak: true },
+        ],
+      },
+    ],
+    Edexcel: [
+      {
+        phase: 'Core Principles',
+        color: '#37a169',
+        border: '#37a169',
+        rows: [
+          { date: '1 July 2025', topic: 'CB1: Cells & Microscopy' },
+          { date: '8 July', topic: 'CB1: Enzymes + Practical Skills' },
+          { date: '15 July', topic: 'CB2: Mitosis + Cell Cycle' },
+          { date: '22 July', topic: 'CB2: Growth in Animals & Plants' },
+          { date: '29 July', topic: 'CB5: Health, Disease, Pathogens' },
+          { date: '5 Aug', topic: 'CB5: Immune System + Body Defences' },
+          { date: '12 Aug', topic: 'CB5: Antibiotics + Drug Development' },
+          { date: '19 & 26 Aug', topic: 'Summer Break (Progress Reports)', isBreak: true },
+          { date: '2 Sep', topic: 'CB3: Genetics – DNA, Genes, Alleles' },
+          { date: '9 Sep', topic: 'CB3: Inheritance + Punnett Squares' },
+          { date: '16 Sep', topic: 'CB3: Genetic Variation & Mutations' },
+          { date: '23 Sep', topic: 'CB4: Natural Selection + Evolution' },
+          { date: '30 Sep', topic: 'CB4: Evidence + Classification' },
+          { date: '7 Oct', topic: 'CB5: Non-Communicable Disease' },
+          { date: '14 Oct', topic: 'Required Practicals Review' },
+          { date: '21 Oct', topic: 'Recap + MCQ + Flashcard Tasks' },
+          { date: '28 Oct', topic: 'Half-Term (No lesson)', isBreak: true },
+          { date: '4 Nov', topic: 'Low-Stakes Quiz + Diagnostic Test', isHighlight: true },
+          { date: '11 Nov', topic: 'DIRT + Gaps Retaught' },
+          { date: '18 Nov', topic: 'Paper 1 Mock Preparation' },
+          { date: '25 Nov', topic: 'Paper 1 Mock Test', isHighlight: true },
+          { date: '2 Dec', topic: 'CB1–CB2: Model Answers' },
+          { date: '9 Dec', topic: 'CB1–CB2: ERQs' },
+          { date: '16 & 23 Dec', topic: 'Christmas Break (Progress Reports)', isBreak: true },
+        ],
+      },
+      {
+        phase: 'Application',
+        color: 'linear-gradient(135deg, #059669 0%, #047857 100%)',
+        border: '#059669',
+        rows: [
+          { date: '30 Dec', topic: 'CB3 – Model Answers' },
+          { date: '6 Jan 2026', topic: 'CB3 – ERQs' },
+          { date: '13 Jan', topic: 'CB4 – Graphs & Data' },
+          { date: '20 Jan', topic: 'CB4 – 6-Markers' },
+          { date: '27 Jan', topic: 'CB5 – Flashcards + Diagrams' },
+          { date: '3 Feb', topic: 'Required Practicals Qs + MS walkthrough' },
+          { date: '10 Feb', topic: 'Interleaved Practice: CB1–CB2' },
+          { date: '17 Feb', topic: 'Half-Term (No lesson)', isBreak: true },
+        ],
+      },
+      {
+        phase: 'Exam Focus',
+        color: 'linear-gradient(135deg, #dc2626 0%, #b91c1c 100%)',
+        border: '#dc2626',
+        rows: [
+          { date: '24 Feb 2026', topic: 'Interleaved Practice: CB3–CB5' },
+          { date: '3 Mar', topic: 'Full Paper 1 Practice (Timed)', isHighlight: true },
+          { date: '10 Mar', topic: 'Marking + Reflection + Targets' },
+          { date: '17 Mar', topic: 'Targeted Revision: Low Scoring Areas' },
+          { date: '24 Mar', topic: 'Top 20 Edexcel Mark Scheme Phrases' },
+          { date: '31 Mar & 7 Apr', topic: 'Easter Break (Progress Reports)', isBreak: true },
+          { date: '14 Apr', topic: 'Key Diagrams + Definitions' },
+          { date: '21 Apr', topic: 'Final Practicals Recap + Flashcards' },
+          { date: '28 Apr', topic: 'Final Warm-Up Exam', isHighlight: true },
+          { date: '5 May', topic: 'Final DIRT + Hard topics' },
+          { date: '12 May', topic: 'No Lesson', isBreak: true },
+        ],
+      },
+    ],
+  },
+  'Year 11': {
+    AQA: [
+      {
+        phase: 'Core Principles',
+        color: '#37a169',
+        border: '#37a169',
+        rows: [
+          { date: '1 July 2025', topic: 'B5.1–5.2: Homeostasis & Nervous System' },
+          { date: '8 July', topic: 'B5.3–5.5: Synapses + Reflexes' },
+          { date: '15 July', topic: 'B5.6–5.8: Endocrine + Blood Glucose' },
+          { date: '22 July', topic: 'B5.9–5.10: Diabetes + Negative Feedback' },
+          { date: '29 July', topic: 'B6.1–6.3: Reproduction' },
+          { date: '5 Aug', topic: 'B6.4–6.6: DNA, Genome, Genetic Inheritance' },
+          { date: '12 Aug', topic: 'B6.7–6.9: Genetic Diagrams + Variation' },
+          { date: '19 & 26 Aug', topic: 'Summer Break (Progress Reports)', isBreak: true },
+          { date: '2 Sep', topic: 'B6.10–6.12: Evolution, Selective Breeding' },
+          { date: '9 Sep', topic: 'B6.13–6.14: GM + Cloning' },
+          { date: '16 Sep', topic: 'B7.1–7.2: Ecosystems, Adaptations' },
+          { date: '23 Sep', topic: 'B7.3–7.4: Interdependence, Abiotic Factors' },
+          { date: '30 Sep', topic: 'B7.5–7.7: Waste, Global Warming' },
+          { date: '7 Oct', topic: 'B7.8–7.9: Biodiversity + Deforestation' },
+          { date: '14 Oct', topic: 'Required Practicals Review' },
+          { date: '21 Oct', topic: 'Interleaved Paper 2 Review (Quickfire)' },
+          { date: '28 Oct', topic: 'Half-Term (No Lesson)', isBreak: true },
+          { date: '4 Nov', topic: 'Low-Stakes Quiz + Diagnostic', isHighlight: true },
+          { date: '11 Nov', topic: 'DIRT + Fill Gaps' },
+          { date: '18 Nov', topic: 'Paper 2 Mock Preparation' },
+          { date: '25 Nov', topic: 'Paper 2 Mock Test', isHighlight: true },
+          { date: '2 Dec', topic: 'B5–6: Model Answers' },
+          { date: '9 Dec', topic: 'B5–6: ERQs' },
+          { date: '16 & 23 Dec', topic: 'Christmas Break (Progress Reports)', isBreak: true },
+        ],
+      },
+      {
+        phase: 'Application',
+        color: 'linear-gradient(135deg, #059669 0%, #047857 100%)',
+        border: '#059669',
+        rows: [
+          { date: '30 Dec', topic: 'B7 – Graphs & Data Questions' },
+          { date: '6 Jan 2026', topic: 'B7 – 6 Markers' },
+          { date: '13 Jan', topic: 'Required Practicals + Flashcards' },
+          { date: '20 Jan', topic: 'Key Definitions + Diagrams' },
+          { date: '27 Jan', topic: 'Interleaved Practice B5–7' },
+          { date: '3 Feb', topic: 'Past Paper Qs by Theme' },
+          { date: '10 Feb', topic: 'Mastering Mark Schemes' },
+          { date: '17 Feb', topic: 'Half-Term (No Lesson)', isBreak: true },
+        ],
+      },
+      {
+        phase: 'Exam Focus',
+        color: 'linear-gradient(135deg, #dc2626 0%, #b91c1c 100%)',
+        border: '#dc2626',
+        rows: [
+          { date: '24 Feb 2026', topic: 'Timed Paper 2 Practice' },
+          { date: '3 Mar', topic: 'Marking + Feedback + DIRT' },
+          { date: '10 Mar', topic: 'Targeted Revision: Weakest Topics' },
+          { date: '17 Mar', topic: 'Flashcard Review + Verbal Recap' },
+          { date: '24 Mar', topic: 'Final Diagrams + Required Practicals' },
+          { date: '31 Mar & 7 Apr', topic: 'Easter Break (Progress Reports)', isBreak: true },
+          { date: '14 Apr', topic: 'Final Paper 2 Warm-Up', isHighlight: true },
+          { date: '21 Apr', topic: 'Last Exam Board Tricks & Commands' },
+          { date: '28 Apr', topic: 'No Lesson – Exam Season Begins', isBreak: true },
+        ],
+      },
+    ],
+    Edexcel: [
+      {
+        phase: 'Core Principles',
+        color: '#37a169',
+        border: '#37a169',
+        rows: [
+          { date: '1 July 2025', topic: 'CB6: Photosynthesis' },
+          { date: '8 July', topic: 'CB6: Structure + Factors' },
+          { date: '15 July', topic: 'CB7: Hormones + Menstrual Cycle' },
+          { date: '22 July', topic: 'CB7: Controlling Fertility + Hormones' },
+          { date: '29 July', topic: 'CB8: Circulatory System' },
+          { date: '5 Aug', topic: 'CB8: Blood + Heart Disease' },
+          { date: '12 Aug', topic: 'CB9: Respiration' },
+          { date: '19 & 26 Aug', topic: 'Summer Break (Progress Reports)', isBreak: true },
+          { date: '2 Sep', topic: 'CB9: Exercise + Metabolism' },
+          { date: '9 Sep', topic: 'CB10: Nervous System' },
+          { date: '16 Sep', topic: 'CB11: Homeostasis' },
+          { date: '23 Sep', topic: 'CB11: Diabetes + Temperature Control' },
+          { date: '30 Sep', topic: 'CB12: Reproduction' },
+          { date: '7 Oct', topic: 'CB13: Genetic Inheritance' },
+          { date: '14 Oct', topic: 'Required Practicals Review' },
+          { date: '21 Oct', topic: 'Interleaved Paper 2 Review (Quickfire)' },
+          { date: '28 Oct', topic: 'Half-Term (No lesson)', isBreak: true },
+          { date: '4 Nov', topic: 'Low-Stakes Quiz + Diagnostic Test', isHighlight: true },
+          { date: '11 Nov', topic: 'DIRT + Gaps Retaught' },
+          { date: '18 Nov', topic: 'Paper 2 Mock Preparation' },
+          { date: '25 Nov', topic: 'Paper 2 Mock Test', isHighlight: true },
+          { date: '2 Dec', topic: 'CB6–CB8: Model Answers' },
+          { date: '9 Dec', topic: 'CB9–CB10: ERQs' },
+          { date: '16 & 23 Dec', topic: 'Christmas Break (Progress Reports)', isBreak: true },
+        ],
+      },
+      {
+        phase: 'Application',
+        color: 'linear-gradient(135deg, #059669 0%, #047857 100%)',
+        border: '#059669',
+        rows: [
+          { date: '30 Dec', topic: 'CB11–13: Graphs & Data Qs' },
+          { date: '6 Jan 2026', topic: 'CB11–13: 6 Markers' },
+          { date: '13 Jan', topic: 'Required Practicals Qs' },
+          { date: '20 Jan', topic: 'Key Diagrams + Definitions' },
+          { date: '27 Jan', topic: 'Interleaved Review: CB6–CB13' },
+          { date: '3 Feb', topic: 'Past Paper by Theme' },
+          { date: '10 Feb', topic: 'Mark Scheme Practice' },
+          { date: '17 Feb', topic: 'Half-Term (No lesson)', isBreak: true },
+        ],
+      },
+      {
+        phase: 'Exam Focus',
+        color: 'linear-gradient(135deg, #dc2626 0%, #b91c1c 100%)',
+        border: '#dc2626',
+        rows: [
+          { date: '24 Feb 2026', topic: 'Full Paper 2 Timed Practice' },
+          { date: '3 Mar', topic: 'Marking + DIRT' },
+          { date: '10 Mar', topic: 'Targeted Revision' },
+          { date: '17 Mar', topic: 'Flashcards + Verbal Quizzing' },
+          { date: '24 Mar', topic: 'Final Exam Diagrams' },
+          { date: '31 Mar & 7 Apr', topic: 'Easter Break (Progress Reports)', isBreak: true },
+          { date: '14 Apr', topic: 'Final Paper 2 Warm-Up', isHighlight: true },
+          { date: '21 Apr', topic: 'Mark Scheme Phrases & Final Drill' },
+          { date: '28 Apr', topic: 'No Lesson – Exam Season Begins', isBreak: true },
+        ],
+      },
+    ],
+  },
+} as const;
+type YearKey = keyof typeof curriculum;
+type BoardKey = keyof typeof curriculum[YearKey];
+
+function PillToggle({ options, value, onChange, size = 'lg', mb = 4 }: { options: string[], value: number, onChange: (idx: number) => void, size?: 'md' | 'lg', mb?: number }) {
+  return (
+    <HStack spacing={2} mb={mb}>
+      {options.map((opt, idx) => (
+        <Button
+          key={opt}
+          onClick={() => onChange(idx)}
+          bg={value === idx ? '#d1fae5' : 'white'}
+          color={value === idx ? '#1a202c' : '#4B5563'}
+          fontWeight={value === idx ? 'bold' : 'normal'}
+          borderRadius="full"
+          boxShadow={value === idx ? 'md' : 'sm'}
+          border={value === idx ? '2px solid #37a169' : '1px solid #E5E7EB'}
+          px={size === 'lg' ? 6 : 4}
+          py={size === 'lg' ? 2 : 1}
+          fontSize={size === 'lg' ? 'lg' : 'md'}
+          transition="all 0.15s"
+          _hover={{ bg: value === idx ? '#bbf7d0' : '#f3f4f6' }}
+          _active={{ bg: '#bbf7d0' }}
+          _focus={{ boxShadow: 'outline' }}
+          minW={size === 'lg' ? '100px' : '80px'}
+        >
+          {opt}
+        </Button>
+      ))}
+    </HStack>
+  );
+}
+
 export default function BookingPage() {
   const isMobile = useBreakpointValue({ base: true, md: false });
   const [selected, setSelected] = useState('Course Content');
+  const [yearTab, setYearTab] = useState(0); // 0: Year 10, 1: Year 11
+  const [boardTab, setBoardTab] = useState<number>(0); // 0: AQA, 1: Edexcel
+  const yearKeys = Object.keys(curriculum) as YearKey[];
+  const boardKeys = ['AQA', 'Edexcel'];
 
   useEffect(() => {
     // Load TutorBird script
@@ -79,6 +381,121 @@ export default function BookingPage() {
   }, []);
 
   const sections = ['Course Content', 'Curriculum Overview', 'Meet the Tutors', 'Reviews'];
+
+  function renderCurriculumOverview() {
+    return (
+      <Box w="100%">
+        {/* Legend at the top */}
+        <Box bg="gray.50" p={4} borderRadius="lg" w="100%" mb={6}>
+          <Heading as="h5" fontSize="md" mb={3}>Curriculum Legend</Heading>
+          <VStack align="start" spacing={2}>
+            <HStack>
+              <Box w="4" h="4" bg="#37a169" borderRadius="sm" />
+              <Text fontSize="sm">Core Principles Phase</Text>
+            </HStack>
+            <HStack>
+              <Box w="4" h="4" bg="#059669" borderRadius="sm" />
+              <Text fontSize="sm">Application Phase</Text>
+            </HStack>
+            <HStack>
+              <Box w="4" h="4" bg="#dc2626" borderRadius="sm" />
+              <Text fontSize="sm">Exam Focus Phase</Text>
+            </HStack>
+            <HStack>
+              <Box w="4" h="4" bg="#fbbf24" borderRadius="sm" />
+              <Text fontSize="sm">Breaks & Holidays</Text>
+            </HStack>
+            <HStack>
+              <Box w="4" h="4" bg="linear-gradient(120deg, #b5d9c0 0%, #d1fae5 100%)" borderRadius="sm" />
+              <Text fontSize="sm">Key Assessment Points</Text>
+            </HStack>
+          </VStack>
+        </Box>
+        {/* Year toggle */}
+        <PillToggle
+          options={yearKeys}
+          value={yearTab}
+          onChange={idx => {
+            setYearTab(idx);
+            setBoardTab(0); // Always default to AQA/first board on year change
+          }}
+          size="lg"
+          mb={3}
+        />
+        {/* Board toggle */}
+        <PillToggle
+          options={boardKeys}
+          value={boardTab}
+          onChange={setBoardTab}
+          size="md"
+          mb={5}
+        />
+        <Box>
+          <VStack align="start" spacing={6} w="100%">
+            <Heading as="h3" fontSize="xl" mb={4}>{yearKeys[yearTab]} {boardKeys[boardTab]} Biology Mastery Curriculum</Heading>
+            <Text fontSize="md" color="#1a202c" mb={6}>
+              Our comprehensive curriculum is designed to take students from confusion to confidence, with a structured approach that covers all essential topics for {boardKeys[boardTab]} in {yearKeys[yearTab]}.
+            </Text>
+            {curriculum[yearKeys[yearTab]][boardKeys[boardTab] as BoardKey].map((phase: any, idx: number) => (
+              <Box
+                key={phase.phase}
+                w="100%"
+                bg="white"
+                borderRadius="lg"
+                overflow="hidden"
+                boxShadow="lg"
+                border="1px solid"
+                borderColor="gray.200"
+                mt={idx === 0 ? 0 : 8}
+              >
+                <Box bg={phase.color} color="white" p={4} fontWeight="bold" fontSize="lg">{phase.phase}</Box>
+                <VStack spacing={0} align="stretch">
+                  {phase.rows.map((item: any, i: number) => (
+                    <Flex
+                      key={i}
+                      bg={('isBreak' in item && item.isBreak) ? '#fef3c7' : 'white'}
+                      _hover={{ bg: ('isBreak' in item && item.isBreak) ? '#fde68a' : '#f7fafc' }}
+                      borderBottom="1px solid"
+                      borderColor="gray.200"
+                      transition="all 0.2s"
+                    >
+                      <Box
+                        w="120px"
+                        p={3}
+                        bg={('isBreak' in item && item.isBreak) ? '#fbbf24' : '#b5d9c0'}
+                        color={('isBreak' in item && item.isBreak) ? '#92400e' : '#1f2937'}
+                        fontWeight="bold"
+                        fontSize="sm"
+                        borderRight="2px solid"
+                        borderColor={phase.border}
+                      >
+                        {item.date}
+                      </Box>
+                      <Box
+                        flex="1"
+                        p={3}
+                        color={('isBreak' in item && item.isBreak) ? '#92400e' : '#1e293b'}
+                        fontSize="sm"
+                        lineHeight="1.4"
+                      >
+                        {('isHighlight' in item && item.isHighlight) ? (
+                          <Text as="span" bg="linear-gradient(120deg, #b5d9c0 0%, #d1fae5 100%)" px={2} py={1} borderRadius="md" fontWeight="500" color="#047857">
+                            {item.topic}
+                          </Text>
+                        ) : (
+                          item.topic
+                        )}
+                      </Box>
+                    </Flex>
+                  ))}
+                </VStack>
+              </Box>
+            ))}
+          </VStack>
+        </Box>
+      </Box>
+    );
+  }
 
   const renderMobileContent = () => {
     if (selected === 'Course Content') {
@@ -111,22 +528,7 @@ export default function BookingPage() {
       );
     }
     if (selected === 'Curriculum Overview') {
-      return (
-        <VStack align="start" spacing={4} w="100%">
-          <Text fontSize="md" color="#1a202c">
-          Download the full PDF curriculum for students starting Year 10 or 11 this September. 
-          </Text>
-          <Text mb={4} fontSize="md" color="#1a202c">
-          It includes both AQA and Edexcel class plans, with content fully aligned to Triple Science. For Combined students, we clearly flag which topics apply to them.
-          </Text>
-          <Button leftIcon={<DownloadIcon />} as="a" href="/biology-year-10-aqa-and-edexcel-curriculums.pdf" target="_blank" rel="noopener noreferrer" bg="#37a169" color="white" _hover={{ bg: '#2e855d' }} w="100%">
-            Year 10 Curriculum
-          </Button>
-          <Button leftIcon={<DownloadIcon />} as="a" href="/biology-year-11-aqa-and-edexcel-curriculums.pdf" target="_blank" rel="noopener noreferrer" bg="#37a169" color="white" _hover={{ bg: '#2e855d' }} w="100%">
-            Year 11 Curriculum
-          </Button>
-        </VStack>
-      );
+      return renderCurriculumOverview();
     }
     if (selected === 'Meet the Tutors') {
       return (
@@ -310,17 +712,7 @@ export default function BookingPage() {
                       </VStack>
                     </TabPanel>
                     <TabPanel>
-                      <VStack align="start" spacing={4} w="100%">
-                      <Text fontSize="md" mb={4} color="#1a202c">
-                      Download the full PDF curriculum for students starting Year 10 or 11 this September. It includes both AQA and Edexcel class plans, with content fully aligned to Triple Science. For Combined students, we clearly flag which topics apply to them.
-                      </Text>
-                        <Button leftIcon={<DownloadIcon />} as="a" href="/biology-year-10-aqa-and-edexcel-curriculums.pdf" target="_blank" rel="noopener noreferrer" bg="#37a169" color="white" _hover={{ bg: '#2e855d' }} w="100%">
-                          Year 10 Curriculum
-                        </Button>
-                        <Button leftIcon={<DownloadIcon />} as="a" href="/biology-year-11-aqa-and-edexcel-curriculums.pdf" target="_blank" rel="noopener noreferrer" bg="#37a169" color="white" _hover={{ bg: '#2e855d' }} w="100%">
-                          Year 11 Curriculum
-                        </Button>
-                      </VStack>
+                      {renderCurriculumOverview()}
                     </TabPanel>
                     <TabPanel>
                       <Heading as="h3" fontSize="xl" mb={4}>Our Tutors</Heading>
@@ -486,13 +878,13 @@ export default function BookingPage() {
     lineHeight="short"
     textAlign={{ base: "left", md: "center"}}
   >
-  Secure your child’s GCSE Biology place
+  Secure your child's GCSE Biology place
 </Heading>
   <Text fontSize={{ base: 'md', md: 'md' }} lineHeight="relaxed" color="white" maxW="700px" mx="auto" mb={{ base: 10, md: 5}} px={{ base: 15, md: 75}} textAlign={{ base: "left", md: "center"}}
 
 
 >
-Choose a lesson slot and pay £20 to reserve the first session. This includes expert tutoring, feedback, and all resources. After the first lesson, decide if you’d like to continue—if so, we’ll invoice monthly. If not, you won’t be charged again.
+Choose a lesson slot and pay £20 to reserve the first session. This includes expert tutoring, feedback, and all resources. After the first lesson, decide if you'd like to continue—if so, we'll invoice monthly. If not, you won't be charged again.
 </Text>
 
 </Box>
