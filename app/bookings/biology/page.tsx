@@ -450,6 +450,39 @@ export default function BookingPage() {
               >
                 <Box bg={phase.color} color="white" p={4} fontWeight="bold" fontSize="lg">{phase.phase}</Box>
                 <VStack spacing={0} align="stretch">
+                  {/* Date clarification header */}
+                  <Flex
+                    borderBottom="1px solid"
+                    borderColor="gray.200"
+                  >
+                    <Box
+                      w="160px"
+                      p={3}
+                      bg="gray.50"
+                      color="gray.700"
+                      fontWeight="bold"
+                      fontSize="sm"
+                      borderRight="2px solid"
+                      borderColor={phase.border}
+                      display="flex"
+                      alignItems="center"
+                      justifyContent="center"
+                    >
+                      Week Beginning
+                    </Box>
+                    <Box
+                      flex="1"
+                      p={3}
+                      bg="gray.50"
+                      color="gray.700"
+                      fontSize="sm"
+                      fontWeight="bold"
+                      display="flex"
+                      alignItems="center"
+                    >
+                      Topic & Content
+                    </Box>
+                  </Flex>
                   {phase.rows.map((item: any, i: number) => (
                     <Flex
                       key={i}
@@ -460,7 +493,7 @@ export default function BookingPage() {
                       transition="all 0.2s"
                     >
                       <Box
-                        w="120px"
+                        w="160px"
                         p={3}
                         bg={('isBreak' in item && item.isBreak) ? '#fbbf24' : '#b5d9c0'}
                         color={('isBreak' in item && item.isBreak) ? '#92400e' : '#1f2937'}
@@ -468,6 +501,10 @@ export default function BookingPage() {
                         fontSize="sm"
                         borderRight="2px solid"
                         borderColor={phase.border}
+                        textAlign="center"
+                        display="flex"
+                        alignItems="center"
+                        justifyContent="center"
                       >
                         {item.date}
                       </Box>
