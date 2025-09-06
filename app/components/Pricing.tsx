@@ -140,7 +140,7 @@ export default function Pricing() {
             </Text>
             <Stack direction={'row'} align={'baseline'} justify={'center'} mb={2} spacing={1}>
               <Text fontSize={'4xl'} fontWeight={900} color="#1a202c" lineHeight="1">£</Text>
-              <Text fontSize={'6xl'} fontWeight={900} color="#1a202c" lineHeight="1">40</Text>
+              <Text fontSize={'6xl'} fontWeight={900} color="#1a202c" lineHeight="1">50</Text>
               <Text fontSize={'xl'} color="gray.500" mb={1} lineHeight="1">/hour</Text>
             </Stack>
           </Stack>
